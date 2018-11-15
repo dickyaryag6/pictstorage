@@ -47,8 +47,8 @@
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
-                  <a href="http://www.creative-tim.com/product/gaia-bootstrap-template" class="btn btn-danger btn-fill">Login</a>
-                  <a href="http://www.creative-tim.com/product/gaia-bootstrap-template" class="btn btn-danger btn-fill">Register</a>
+                  <a href='{{url("/login")}}' class="btn btn-danger btn-fill">Login</a>
+                  <a href='{{url("/register")}}' class="btn btn-danger btn-fill">Register</a>
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
                     <li class="has-children active">
@@ -441,28 +441,6 @@
     
   </body>
 </html>
-=======
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
->>>>>>> 03582662f5ad6bee4e5c72d8165d25048f63d46f
