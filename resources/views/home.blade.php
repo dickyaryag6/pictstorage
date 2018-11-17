@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    
-    
+
+
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
+
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
+
   </head>
   <body>
-  
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -35,9 +35,9 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-    
-    
-    
+
+
+
       <div class="site-navbar bg-light">
         <div class="container py-1">
           <div class="row align-items-center">
@@ -76,17 +76,22 @@
                       </ul>
                     </li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li class="has-children">
+                      <a href="services.html">Services</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="book-a-shoot">Book A Shoot</a></li>
+                      </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
               </nav>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
     </div>
-  
+
 
     <div class="slide-one-item home-slider owl-carousel">
 
@@ -102,7 +107,7 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
 
       <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -116,7 +121,7 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
 
     </div>
 
@@ -141,7 +146,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-4 mb-0 mb-lg-0" data-aos="fade" data-aos-delay="300">
             <div class="d-flex align-items-center">
               <div class="mr-3"><span class="flaticon-excavator display-3 text-primary"></span></div>
@@ -156,7 +161,7 @@
     </div>
 
     <div class="site-section">
-      
+
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-12 text-center">
@@ -293,9 +298,9 @@
             </div>
           </div>
 
-         
+
         </div>
-        
+
 
       </div>
     </div>
@@ -309,19 +314,19 @@
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum vel, eius nulla inventore aperiam excepturi molestias incidunt, culpa alias repudiandae, a nobis libero vitae repellendus temporibus vero sit natus.</p>
         <p>Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto, dolore totam consequuntur incidunt illo voluptates vero quaerat excepturi. Iusto dolor, cum et.</p>
       </div>
-      
+
     </div>
-      
+
 
     <div class="promo py-5 bg-primary" data-aos="fade">
       <div class="container text-center">
         <h2 class="d-block mb-0 font-weight-light text-white"><a href="#" class="text-white d-block">Contact us for quotations</a></h2>
       </div>
     </div>
-    
+
     <footer class="site-footer">
       <div class="container">
-        
+
 
         <div class="row">
           <div class="col-lg-7">
@@ -365,7 +370,7 @@
             <div class="row mb-5">
               <div class="col-md-12"><h3 class="footer-heading mb-4">Europe</h3></div>
               <div class="col-md-6">
-                <p>London - 2398 <br> 10 Japson Street</p>    
+                <p>London - 2398 <br> 10 Japson Street</p>
               </div>
               <div class="col-md-6">
                 Tel. + (123) 3240-345-9348 <br>
@@ -376,14 +381,14 @@
             <div class="row">
               <div class="col-md-12"><h3 class="footer-heading mb-4">USA</h3></div>
               <div class="col-md-6">
-                <p>New York - 2398 <br> 10 Hadson Carl Street</p>    
+                <p>New York - 2398 <br> 10 Hadson Carl Street</p>
               </div>
               <div class="col-md-6">
                 Tel. + (123) 3240-345-9348 <br>
                 Mail. usa@youdomain.com
               </div>
             </div>
-            
+
           </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
@@ -394,7 +399,7 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
-          
+
         </div>
       </div>
     </footer>
@@ -438,9 +443,6 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>
-
-
-

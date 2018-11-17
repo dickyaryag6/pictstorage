@@ -19,8 +19,12 @@ Route::get('/test', function () {
     return view('home2');
 });
 
-Route::get('/login', function () {
-    return view('login');
+// Route::get('/login', function () {
+    // return view('login');
+// });
+
+Route::get('/book-a-shoot', function () {
+    return view('Pemesanan/book-a-shoot');
 });
 
 Auth::routes();
