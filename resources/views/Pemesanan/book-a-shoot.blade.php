@@ -8,32 +8,46 @@
                 <div class="card-header">{{ __('Form pemesanan') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="konfirmasi-pemesanan.blade.php">
+                    <form method="POST" action="konfirmasi-pemesanan">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="satu" class="col-sm-4 col-form-label text-md-right">{{ __('Satu') }}</label>
+                            <label for="order_type" class="col-sm-4 col-form-label text-md-right">{{ __('Order Type') }}</label>
+                              <div class="col-md-6">
+                                <select class="form-control" name="order_type" placeholder="Jenis Order">
+                                  <!-- jenis order : PreWedding,Wedding,Engagement,Studio,Booth -->
+                                  <option value="prewedding">PreWedding</option>
+                                  <option value="wedding">Wedding</option>
+                                  <option value="engagement">Engagement</option>
+                                  <option value="studio">Studio</option>
+                                  <option value="booth">Booth</option>
+                                </select>
+                              </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
                             <div class="col-md-6">
-                                <input id="satu" type="text" class="form-control{{ $errors->has('satu') ? ' is-invalid' : '' }}" name="satu" value="{{ old('satu') }}" required autofocus>
+                                <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
 
-                                @if ($errors->has('satu'))
+                                @if ($errors->has('location'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('satu') }}</strong>
+                                        <strong>{{ $errors->first('date') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="dua" class="col-sm-4 col-form-label text-md-right">{{ __('Dua') }}</label>
+                            <label for="location" class="col-sm-4 col-form-label text-md-right">{{ __('Location') }}</label>
 
                             <div class="col-md-6">
-                                <input id="dua" type="text" class="form-control{{ $errors->has('dua') ? ' is-invalid' : '' }}" name="dua" value="{{ old('dua') }}" required autofocus>
+                                <input id="location" type="text" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" value="{{ old('location') }}" required autofocus>
 
-                                @if ($errors->has('dua'))
+                                @if ($errors->has('location'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('dua') }}</strong>
+                                        <strong>{{ $errors->first('location') }}</strong>
                                     </span>
                                 @endif
                             </div>

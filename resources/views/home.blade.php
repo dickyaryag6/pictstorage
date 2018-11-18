@@ -79,7 +79,7 @@
                     <li class="has-children">
                       <a href="services.html">Services</a>
                       <ul class="dropdown arrow-top">
-                        <li><a href="book-a-shoot">Book A Shoot</a></li>
+                        <li><a href=book-a-shoot>Book A Shoot</a></li>
                       </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>

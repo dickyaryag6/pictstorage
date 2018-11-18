@@ -31,6 +31,13 @@ Route::get('/book', function () {
     return view('Pemesanan/book-a-shoot');
 });
 
+Route::get('/book-a-shoot', 'BookingController@Isi_Pemesanan')->name('Isi-pemesanan');
+
+Route::get('/konfirmasi-pemesanan', 'BookingController@Konfirmasi_Pemesanan')->name('konfirmasi-pemesanan');
+
+Route::post('/konfirmasi-pemesanan', 'BookingController@Pemesanan_Berhasil')->name('Pemesanan_Berhasil');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
