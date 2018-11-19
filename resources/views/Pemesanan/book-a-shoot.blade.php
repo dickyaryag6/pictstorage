@@ -14,7 +14,7 @@
                         <div class="form-group row">
                             <label for="order_type" class="col-sm-4 col-form-label text-md-right">{{ __('Order Type') }}</label>
                               <div class="col-md-6">
-                                <select class="form-control" name="order_type" placeholder="Jenis Order">
+                                <select class="form-control" name="order_type" placeholder="Jenis Order" required>
                                   <!-- jenis order : PreWedding,Wedding,Engagement,Studio,Booth -->
                                   <option value="prewedding">PreWedding</option>
                                   <option value="wedding">Wedding</option>

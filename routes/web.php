@@ -31,11 +31,21 @@ Route::get('/book', function () {
     return view('Pemesanan/book-a-shoot');
 });
 
+//waktu user klik tombol 'book a shoot' , dipanggil metode isi Pemesanan
+//dari controller BookingControll yang gunanya nampilin halaman pengisian form
+//get data
 Route::get('/book-a-shoot', 'BookingController@Isi_Pemesanan')->name('Isi-pemesanan');
 
-Route::get('/konfirmasi-pemesanan', 'BookingController@Konfirmasi_Pemesanan')->name('konfirmasi-pemesanan');
+//kalo yang ini buat manggil metode Konfirmasi_Pemesanan dari controller yg sama
+//gunanya buat nampilin halaman 'konfirmasi' buat nampilin halaman yang isinya value-value dari
+//yang user isi tadi,
+//post data ke halaman konfirmasi
+Route::post('/konfirmasi-pemesanan', 'BookingController@Konfirmasi_Pemesanan')->name('konfirmasi-pemesanan');
 
-Route::post('/konfirmasi-pemesanan', 'BookingController@Pemesanan_Berhasil')->name('Pemesanan_Berhasil');
+//kalo user udah klik tombol 'konfirmasi' di halaman 'konfirmasi',
+//maka data yg udah dimasukin tadi di-store ke database menggunakan metode Pemesanan_Berhasil
+//post data
+//Route::post('/konfirmasi-pemesanan', 'BookingController@Pemesanan_Berhasil')->name('Pemesanan_Berhasil');
 
 
 Auth::routes();
