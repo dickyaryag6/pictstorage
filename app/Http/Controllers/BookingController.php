@@ -31,7 +31,7 @@ class BookingController extends Controller
     public function Konfirmasi_Pemesanan(request $request)
     {
       $hasilforms = $request->all();
-
+      dd($hasilforms);
       return view('Pemesanan.konfirmasi-pemesanan', compact('hasilforms'));
 
     }
