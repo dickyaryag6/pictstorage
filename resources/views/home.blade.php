@@ -41,8 +41,8 @@
       <div class="site-navbar bg-light">
         <div class="container py-1">
           <div class="row align-items-center">
-            <div class="col-2">
-              <h2 class="mb-0 site-logo"><a href="index.html">PictStorage</a></h2>
+            <div class="col-2" style="background-image: url(images/navbar_logo.png);">
+              <h2 class="mb-0 site-logo"><a href="#">PictStorage</a></h2>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
@@ -99,29 +99,15 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <h1 class="mb-5">Specialized Technical <strong>Solutions</strong></h1>
+              <h1 class="mb-1">PictStorage<br><strong>Photography and Videography</strong></h1>
               <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Download</a>
-                <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Get In Touch</a>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-              <h1 class="mb-5">Specialized Technical <strong>Solutions</strong></h1>
-              <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Download</a>
-                <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Get In Touch</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
 
