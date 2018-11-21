@@ -1,8 +1,10 @@
 @include('layouts.head')
-@include('layouts.loginhead')
+<!-- @include('layouts.loginhead') -->
 
 <!-- content -->
+<br><br>
     <div class="sub-main-w3">
+        <br> <br> <br> <br>
         <form action="{{ route('login') }}" method="POST">
           @csrf
 
@@ -10,10 +12,10 @@
                 <i class="fas fa-level-down-alt"></i>
             </h2>
             <div class="form-style-agile">
-                <label for="email" class="col-sm-4 col-form-label text-md-right">
-                    <i class="fas fa-user"></i>
+                <label for="email" class="col-md-4 col-form-label text-md-right">
+                    <i class="fas fa-envelope"></i>
                 </label>
-                <input id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="email" name="email" type="email" required autofocus>
+                <input id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email" name="email" type="email" required autofocus>
 
                 @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
@@ -51,8 +53,8 @@
             </div>
             <!-- //checkbox -->
 
-            <input type="submit" value="Log In"> <br>
-            <a href='{{url("/register")}}'>Register </a>
+            <input type="submit" value="Login"> <br>
+            Don't have an account?   <a href='{{url("/register")}}'><br> Register </a>
         </form>
     </div>
 

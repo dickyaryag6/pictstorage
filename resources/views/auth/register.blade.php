@@ -1,10 +1,42 @@
 @include('layouts.head')
 @include('layouts.loginhead')
-@extends('layouts.app')
 
-@section('content')
+<div class="sub-main-w3">
+        <form action="#" method="post">
+            <h2>Register Now
+                <i class="fas fa-level-down-alt"></i>
+            </h2>
+            <div class="form-style-agile">
+                <label>
+                    <i class="fas fa-user"></i>
+                </label>
+                <input placeholder="Username" name="Name" type="text" required="">
+            </div>
+             <div class="form-style-agile">
+                <label>
+                    <i class="fas fa-envelope"></i>
+                </label>
+                <input placeholder="Email" name="Name" type="text" required="">
+            </div>
+            <div class="form-style-agile">
+                <label>
+                    <i class="fas fa-unlock-alt"></i>
+                </label>
+                <input placeholder="Password" name="Password" type="password" required="">
+            </div>
+             <div class="form-style-agile">
+                <label>
+                    <i class="fas fa-unlock-alt"></i>
+                </label>
+                <input placeholder="Confirm Password" name="Password" type="password" required="">
+            </div>
+            <input type="submit" value="Register">
+           <br> Already have an account?  <a href='{{url("/login")}}'> <br> Sign in </a>
+        </form>
+    </div>
 
-</div><div class="container">
+
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,6 +47,7 @@
                         @csrf
 
                         <div class="form-group row">
+                             
                             <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
                             <div class="col-md-6">
@@ -91,4 +124,7 @@
         </div>
     </div>
 </div>
+@section('content')
+
+
 @endsection
