@@ -95,7 +95,7 @@
 
     <div class="slide-one-item home-slider owl-carousel">
 
-      <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
@@ -109,7 +109,7 @@
         </div>
       </div>
 
-      <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
@@ -165,10 +165,7 @@
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-12 text-center">
-            <h2 class="font-weight-light text-black display-4">Our Specialty</h2>
-          </div>
-          <div class="col-md-7 text-center">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto eaque qui illo cumque officia nobis assumenda odit perferendis ipsam dolore.</p>
+            <h2 class="font-weight-light text-black display-4">Our Works</h2>
           </div>
         </div>
         <div class="row no-gutters align-items-stretch h-100">
