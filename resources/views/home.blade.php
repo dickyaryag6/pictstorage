@@ -99,7 +99,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <h2 class="mb-5">PictStorage<br><strong>Photography and Videography</strong></h2>
+              <h2 class="mb-5">1<sup>st</sup> Call-in<br><strong>Photo Studio</strong></h2>
               <p>
                 <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
               </p>
@@ -157,22 +157,16 @@
         <div class="row no-gutters align-items-stretch h-100">
           <div class="col-lg-6">
             <div class="row no-gutters align-items-stretch h-100 half-sm">
-              <div class="col-md-6 bg-image bg-sm-height" style="background-image: url('images/img_4_colored.jpg');" data-aos="fade" data-aos-delay="0"></div>
-              <div class="col-md-6 bg-light text">
-                <div class="p-4">
-                  <h2 class="h5 mb-3 text-black line-height-sm">Automative Manufacturing</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptatum vel natus, repellat at optio.</p>
-                  <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
-                </div>
-              </div>
+              <div class="col-md-6 bg-image bg-sm-height" style="background-image: url('images/works_ayu4.jpg');" data-aos="fade" data-aos-delay="0"></div>
+              <div class="col-md-6 bg-image bg-sm-height" style="background-image: url('images/works_ayu3.jpg');" data-aos="fade" data-aos-delay="0"></div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="row no-gutters align-items-stretch h-100 half-sm">
-              <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height" style="background-image: url('images/img_1_colored.jpg');" data-aos="fade" data-aos-delay="200"></div>
+              <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height" style="background-image: url('images/works_ayu2.jpg');" data-aos="fade" data-aos-delay="200"></div>
               <div class="col-md-6 bg-light text order-md-1 order-lg-2">
                 <div class="p-4">
-                  <h2 class="h5 mb-3 text-black line-height-sm">Mechanical Engineering</h2>
+                  <h2 class="h5 mb-3 text-black line-height-sm">Engagement</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, cupiditate officia recusandae velit sint totam.</p>
                   <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
                 </div>
@@ -182,22 +176,16 @@
 
           <div class="col-lg-6">
             <div class="row no-gutters align-items-stretch h-100 half-sm">
-              <div class="col-md-6 bg-image order-md-1 order-lg-2 bg-sm-height" style="background-image: url('images/img_2_colored.jpg');" data-aos="fade" data-aos-delay="300"></div>
-              <div class="col-md-6 bg-light text order-md-2 order-lg-1">
-                <div class="p-4">
-                  <h2 class="h5 mb-3 text-black line-height-sm">Oil &amp; Gas Energy</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugiat facilis quasi ratione ducimus ipsam!</p>
-                  <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
-                </div>
-              </div>
+              <div class="col-md-6 bg-image order-md-1 order-lg-2 bg-sm-height" style="background-image: url('images/works_studio1.jpg');" data-aos="fade" data-aos-delay="300"></div>
+              <div class="col-md-6 bg-image order-md-1 order-lg-2 bg-sm-height" style="background-image: url('images/works_studio2.jpg');" data-aos="fade" data-aos-delay="300"></div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="row no-gutters align-items-stretch h-100 half-sm">
-              <div class="col-md-6 bg-image order-md-2 bg-sm-height" style="background-image: url('images/img_3_colored.jpg');" data-aos="fade" data-aos-delay="400"></div>
+              <div class="col-md-6 bg-image order-md-2 bg-sm-height" style="background-image: url('images/works_studio3.jpg');" data-aos="fade" data-aos-delay="400"></div>
               <div class="col-md-6 bg-light text order-md-1">
                 <div class="p-4">
-                  <h2 class="h5 mb-3 text-black line-height-sm">Industrial Construction</h2>
+                  <h2 class="h5 mb-3 text-black line-height-sm">Photo Studio</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam est alias minus, expedita autem.</p>
                   <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
                 </div>
