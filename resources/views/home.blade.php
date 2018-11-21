@@ -99,7 +99,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <h1 class="mb-1">PictStorage<br><strong>Photography and Videography</strong></h1>
+              <h2 class="mb-5">PictStorage<br><strong>Photography and Videography</strong></h2>
               <p>
                 <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
               </p>
