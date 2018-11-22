@@ -11,7 +11,7 @@
                 <label for="nama">
                     <i class="fas fa-user"></i>
                 </label>
-                <input placeholder="Nama" id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
+                <input placeholder="Name" id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
 
                 @if ($errors->has('username'))
                       <span class="invalid-feedback" role="alert">

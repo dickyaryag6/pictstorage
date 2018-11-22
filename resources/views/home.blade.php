@@ -72,11 +72,15 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="has-children">
-                      <a href="#">Profile</a>
-                    </li>
+                   <li class="has-children">
+                      <a href="about.html">Profile</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="#">Menu One</a></li>
+                        <li><a href="#">Menu Two</a></li>
+                        <li><a href="#">Menu Three</a></li>
+                      </ul>
                     <li><a href='{{url("/book")}}'>Booking</a></li>
-                      <a href="#">PRICE LIST</a>
+                      <li><a href="#">Price List</a> </li>
                     </li>
                     <li><a href="#">Contact</a></li>
                   </ul>
@@ -88,23 +92,53 @@
       </div>
     </div>
 
+      <div class="slide-one-item home-slider owl-carousel">
 
-    <div class="slide-one-item home-slider owl-carousel">
-
-      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <h2 class="mb-5"></h2>
+              <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5">Wedding<br><strong>Ceremony</strong></h1>
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5"><strong>Engagement</strong></h1>
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
-    <div class="site-section">
+
+</div>
+
+ <div class="site-section">
 
       <div class="container">
         <div class="row mb-5 justify-content-center">
@@ -158,46 +192,18 @@
 
     <div class="slide-one-item home-slider owl-carousel">
 
-      <div class="site-blocks-cover overlay" style="background-image: url(images/service1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
-              <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
+              <h2 class="mb-5"></h2>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-              <h1 class="mb-5">Wedding<br><strong>Ceremony</strong></h1>
-              <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="site-blocks-cover overlay" style="background-image: url(images/service3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-              <h1 class="mb-5"><strong>Engagement</strong></h1>
-              <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+
 
     <div class="slide-one-item home-slider owl-carousel">
 
@@ -213,6 +219,8 @@
 </div>
 
 </div>
+
+   
 
 
     <div class="promo py-5 bg-primary" data-aos="fade">
