@@ -99,51 +99,13 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <h2 class="mb-5">1<sup>st</sup> Call-in<br><strong>Photo Studio</strong></h2>
-              <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
+              <h2 class="mb-5"></h2>
             </div>
           </div>
         </div>
       </div>
 
 
-    </div>
-
-    <div class="site-section border-bottom bg-light py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">Let the number speaks for us.</h2></div>
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
-            <div class="d-flex align-items-center">
-              <div class="mr-3"><span class="flaticon-worker display-3 text-primary"></span></div>
-              <div class="">
-                <h2 class="text-black">7000+</h2> <strong class="text-black">Highly Especialized</strong> Employees
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <div class="d-flex align-items-center">
-              <div class="mr-3"><span class="flaticon-planet-earth display-3 text-primary"></span></div>
-              <div class="">
-                <h2 class="text-black">90+</h2> <strong class="text-black">Countries</strong> World Wide
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-0 mb-lg-0" data-aos="fade" data-aos-delay="300">
-            <div class="d-flex align-items-center">
-              <div class="mr-3"><span class="flaticon-excavator display-3 text-primary"></span></div>
-              <div class="">
-                <h2 class="text-black">2900+</h2> <strong class="text-black">Finished</strong> Projects
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
     </div>
 
     <div class="site-section">
@@ -198,95 +160,63 @@
 
     </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url('images/img_1_colored.jpg');" data-aos="fade-up"></div>
-          <div class="col-md-6 pr-md-5 order-md-1">
-            <h2 class="display-3 line-height-xs text-black mb-4">Let's grow <strong>together</strong></h2>
-            <p class="mb-4">Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus quo ab laboriosam qui expedita, cupiditate ex, sed dignissimos facere provident dolores, eius distinctio quas aliquid.</p>
-            <ul class="site-block-check">
-              <li>Magnam iure fugit recusandae</li>
-              <li>Officiis laboriosam repudiandae</li>
-              <li>Quis nostrum numquam</li>
-            </ul>
-            <p><a href="#" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">Read More</a></p>
+    <div class="slide-one-item home-slider owl-carousel">
+
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
+              <p>
+                <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="site-section bg-light">
-      <div class="container">
-
-        <div class="block-13 nonloop-block-13 owl-carousel" data-aos="fade">
-
-          <div class="p-4">
-            <div class="block-47 d-flex">
-              <div class="block-47-image d-none d-sm-block">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid">
-              </div>
-              <blockquote class="block-47-quote">
-                <p>&ldquo;Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus quo ab laboriosam qui expedita, cupiditate ex, sed dignissimos facere provident dolores, eius distinctio quas aliquid.&rdquo;</p>
-                <cite class="block-47-quote-author">&mdash; John doe, CEO <a href="#">XYZ Inc.</a></cite>
-              </blockquote>
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5">Wedding<br><strong>Ceremony</strong></h1>
+              <p>
+                <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
             </div>
           </div>
-
-          <div class="p-4">
-            <div class="block-47 d-flex">
-              <div class="block-47-image d-none d-sm-block">
-                <img src="images/person_2.jpg" alt="Image placeholder" class="img-fluid">
-              </div>
-              <blockquote class="block-47-quote">
-                <p>&ldquo;Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus quo ab laboriosam qui expedita, cupiditate ex, sed dignissimos facere provident dolores, eius distinctio quas aliquid.&rdquo;</p>
-                <cite class="block-47-quote-author">&mdash; John doe, CEO <a href="#">XYZ Inc.</a></cite>
-              </blockquote>
-            </div>
-          </div>
-
-          <div class="p-4">
-            <div class="block-47 d-flex">
-              <div class="block-47-image d-none d-sm-block">
-                <img src="images/person_3.jpg" alt="Image placeholder" class="img-fluid">
-              </div>
-              <blockquote class="block-47-quote">
-                <p>&ldquo;Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus quo ab laboriosam qui expedita, cupiditate ex, sed dignissimos facere provident dolores, eius distinctio quas aliquid.&rdquo;</p>
-                <cite class="block-47-quote-author">&mdash; John doe, CEO <a href="#">XYZ Inc.</a></cite>
-              </blockquote>
-            </div>
-          </div>
-
-          <div class="p-4">
-            <div class="block-47 d-flex">
-              <div class="block-47-image d-none d-sm-block">
-                <img src="images/person_4.jpg" alt="Image placeholder" class="img-fluid">
-              </div>
-              <blockquote class="block-47-quote">
-                <p>&ldquo;Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus quo ab laboriosam qui expedita, cupiditate ex, sed dignissimos facere provident dolores, eius distinctio quas aliquid.&rdquo;</p>
-                <cite class="block-47-quote-author">&mdash; John doe, CEO <a href="#">XYZ Inc.</a></cite>
-              </blockquote>
-            </div>
-          </div>
-
-
         </div>
-
-
       </div>
+
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5"><strong>Engagement</strong></h1>
+              <p>
+                <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="site-block-half d-block d-lg-flex site-block-video" data-aos="fade">
-      <div class="image bg-image order-2" style="background-image: url(images/hero_bg_1.jpg); ">
-        <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-button popup-vimeo"><span class="icon-play"></span></a>
-      </div>
-      <div class="text order-1">
-        <h2 class="site-heading text-black mb-3">See Our <strong>Video</strong></h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum vel, eius nulla inventore aperiam excepturi molestias incidunt, culpa alias repudiandae, a nobis libero vitae repellendus temporibus vero sit natus.</p>
-        <p>Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto, dolore totam consequuntur incidunt illo voluptates vero quaerat excepturi. Iusto dolor, cum et.</p>
-      </div>
+    <div class="slide-one-item home-slider owl-carousel">
 
+<div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col-md-10">
+        <h1 class="mb-5"><strong>About Us<br></strong></h1>
+        <h3>Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus</h3>
+      </div>
     </div>
+  </div>
+</div>
+
+</div>
 
 
     <div class="promo py-5 bg-primary" data-aos="fade">

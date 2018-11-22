@@ -29,7 +29,7 @@
                             <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
                             <div class="col-md-6">
-                                <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
+                                <input id="date" type="datetime-local" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
 
                                 @if ($errors->has('location'))
                                     <span class="invalid-feedback" role="alert">
@@ -43,7 +43,7 @@
                             <label for="location" class="col-sm-4 col-form-label text-md-right">{{ __('Location') }}</label>
 
                             <div class="col-md-6">
-                                <input id="location" type="text" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" value="{{ old('location') }}" required autofocus>
+                                <input id="location" type="text" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" required autofocus>
 
                                 @if ($errors->has('location'))
                                     <span class="invalid-feedback" role="alert">

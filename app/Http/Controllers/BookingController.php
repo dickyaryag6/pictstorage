@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use App\User;
 use App\Booking;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class BookingController extends Controller
 {
@@ -27,11 +28,10 @@ class BookingController extends Controller
 
     //kalo yang dibawah ini gunanya ngarahin user ke halaman konfirmasi setelah ngisi form
     //jadi ditampilin apa yng udah diisi sama user tadi buat dia mastiin udah bener atau belom
-    //kalo belom ada tombol buat dia balik ke halaman form buat ngisi lagi
+    //kalo belom, ada tombol buat dia balik ke halaman form buat ngisi lagi
     public function Konfirmasi_Pemesanan(request $request)
     {
       $hasilforms = $request->all();
-      dd($hasilforms);
       return view('Pemesanan.konfirmasi-pemesanan', compact('hasilforms'));
 
     }
@@ -39,11 +39,18 @@ class BookingController extends Controller
     //kalo yang diisi udah bener, jalanin yang dibawah ini biar apa yg udah diisi dimasukin ke database
     public function Pemesanan_Berhasil()
     {
+      $user = Auth::user();
+      $nama = Auth::id();
+      dd($nama);
       Booking::create([
         'user_id' => Auth::id(),
+        'nama' => Auth::nama(),
+        'email' => Auth::email(),
         'order_type' => request('order_type'),
         'date' => request('date'),
         'location' => request('location')
       ]);
+
+      return view('Pemesanan/pemesanan-berhasil');
     }
 }

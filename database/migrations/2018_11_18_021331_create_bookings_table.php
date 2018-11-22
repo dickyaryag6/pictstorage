@@ -18,7 +18,7 @@ class CreateBookingsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('order_type');
             //jenis order : PreWedding,Wedding,Engagement,Studio,Booth
-            $table->dateTime('date');
+            $table->date('date');
             $table->string('location');
             $table->string('status')->default('Belum Terverifikasi');;
             $table->timestamps();

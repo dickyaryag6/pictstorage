@@ -45,7 +45,7 @@ Route::post('/konfirmasi-pemesanan', 'BookingController@Konfirmasi_Pemesanan')->
 //kalo user udah klik tombol 'konfirmasi' di halaman 'konfirmasi',
 //maka data yg udah dimasukin tadi di-store ke database menggunakan metode Pemesanan_Berhasil
 //post data
-//Route::post('/konfirmasi-pemesanan', 'BookingController@Pemesanan_Berhasil')->name('Pemesanan_Berhasil');
+Route::get('/pemesanan-berhasil', 'BookingController@Pemesanan_Berhasil')->name('Pemesanan_Berhasil');
 
 
 Auth::routes();
