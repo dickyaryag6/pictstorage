@@ -41,18 +41,23 @@
       <div class="site-navbar bg-light">
         <div class="container py-1">
           <div class="row align-items-center">
-            <div class="col-2" style="background-image: url(images/navbar_logo.png);">
-              <h2 class="mb-0 site-logo"><a href="#">PictStorage</a></h2>
+            <div class="col-2" style="#">
+              <h2 class="mb-0 site-logo">
+
+                <a href='{{url("/")}}'> <img src="images/navbar_logo.png" alt="" class="img-fluid" ></a>
+              </h2>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
+                  @guest
                   <a href='{{url("/login")}}' class="btn btn-danger btn-fill">Login</a>
                   <a href='{{url("/register")}}' class="btn btn-danger btn-fill">Register</a>
+                  @endguest
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
                     <li class="has-children active">
-                      <a href="index.html">Home</a>
+                      <a href='{{url("/")}}'>Home</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
@@ -67,22 +72,17 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="has-children">
-                      <a href="about.html">Company</a>
+                   <li class="has-children">
+                      <a href="about.html">Profile</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
                         <li><a href="#">Menu Three</a></li>
                       </ul>
+                    <li><a href='{{url("/book")}}'>Booking</a></li>
+                      <li><a href="#">Price List</a> </li>
                     </li>
-                    <li><a href="news.html">News</a></li>
-                    <li class="has-children">
-                      <a href="services.html">Services</a>
-                      <ul class="dropdown arrow-top">
-                        <li><a href=book-a-shoot>Book A Shoot</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Contact</a></li>
                   </ul>
                 </div>
               </nav>
@@ -92,23 +92,64 @@
       </div>
     </div>
 
+      <div class="slide-one-item home-slider owl-carousel">
 
-    <div class="slide-one-item home-slider owl-carousel">
-
-      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
+<<<<<<< HEAD
               <h2 class="mb-5"></h2>
+=======
+              <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+>>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 
     </div>
 
     <div class="site-section">
+=======
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5">Wedding<br><strong>Ceremony</strong></h1>
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-blocks-cover overlay" style="background-image: url(images/service3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5"><strong>Engagement</strong></h1>
+              <p>
+                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</div>
+
+ <div class="site-section">
+>>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
 
       <div class="container">
         <div class="row mb-5 justify-content-center">
@@ -162,6 +203,7 @@
 
     <div class="slide-one-item home-slider owl-carousel">
 
+<<<<<<< HEAD
       <div class="site-blocks-cover overlay" style="background-image: url(images/service1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -170,10 +212,18 @@
               <p>
                 <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
               </p>
+=======
+      <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h2 class="mb-5"></h2>
+>>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -199,10 +249,27 @@
             </div>
           </div>
         </div>
+=======
+    </div>
+
+
+
+    <div class="slide-one-item home-slider owl-carousel">
+
+<div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col-md-10">
+        <h1 class="mb-5"><strong>About Us<br></strong></h1>
+        <h3>Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus</h3>
+>>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
       </div>
 
     </div>
+  </div>
+</div>
 
+<<<<<<< HEAD
     <div class="slide-one-item home-slider owl-carousel">
 
 <div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -217,6 +284,11 @@
 </div>
 
 </div>
+=======
+</div>
+
+   
+>>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
 
 
     <div class="promo py-5 bg-primary" data-aos="fade">

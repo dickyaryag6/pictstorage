@@ -39,7 +39,10 @@
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-2">
-              <h2 class="mb-0 site-logo"><a href="index.html">PictStorage</a></h2>
+              <h2 class="mb-0 site-logo">
+                <a href='{{url("/")}}'> <img src="images/navbar_logo.png" alt="" class="img-fluid" >
+                </a>
+              </h2>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
@@ -48,7 +51,7 @@
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
                     <li class="has-children active">
-                      <a href="index.html">Home</a>
+                      <a href={{url("/")}}>Home</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
@@ -64,21 +67,16 @@
                       </ul>
                     </li>
                     <li class="has-children">
-                      <a href="about.html">Company</a>
+                      <a href="about.html">Profile</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
                         <li><a href="#">Menu Three</a></li>
                       </ul>
+                    <li><a href='{{url("/book")}}'>Booking</a></li>
+                      <li><a href="#">Price List</a> </li>
                     </li>
-                    <li><a href="news.html">News</a></li>
-                    <li class="has-children">
-                      <a href="services.html">Services</a>
-                      <ul class="dropdown arrow-top">
-                        <li><a href="book-a-shoot">Book A Shoot</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Contact</a></li>
                   </ul>
                 </div>
               </nav>
