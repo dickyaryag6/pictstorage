@@ -98,25 +98,15 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-<<<<<<< HEAD
-              <h2 class="mb-5"></h2>
-=======
               <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
               <p>
                 <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
               </p>
->>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-
-    </div>
-
-    <div class="site-section">
-=======
       <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -149,7 +139,6 @@
 </div>
 
  <div class="site-section">
->>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
 
       <div class="container">
         <div class="row mb-5 justify-content-center">
@@ -203,73 +192,19 @@
 
     <div class="slide-one-item home-slider owl-carousel">
 
-<<<<<<< HEAD
-      <div class="site-blocks-cover overlay" style="background-image: url(images/service1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-              <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
-              <p>
-                <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
-=======
       <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
               <h2 class="mb-5"></h2>
->>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-      <div class="site-blocks-cover overlay" style="background-image: url(images/service2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-              <h1 class="mb-5">Wedding<br><strong>Ceremony</strong></h1>
-              <p>
-                <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="site-blocks-cover overlay" style="background-image: url(images/service3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-              <h1 class="mb-5"><strong>Engagement</strong></h1>
-              <p>
-                <a href="book-a-shoot" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-=======
     </div>
 
 
 
-    <div class="slide-one-item home-slider owl-carousel">
-
-<div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-  <div class="container">
-    <div class="row align-items-center justify-content-center text-center">
-      <div class="col-md-10">
-        <h1 class="mb-5"><strong>About Us<br></strong></h1>
-        <h3>Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus</h3>
->>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<<<<<<< HEAD
     <div class="slide-one-item home-slider owl-carousel">
 
 <div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -284,11 +219,8 @@
 </div>
 
 </div>
-=======
-</div>
 
-   
->>>>>>> 15fcdb62d2bbce3c622c409c38a6d8525e0a0784
+
 
 
     <div class="promo py-5 bg-primary" data-aos="fade">
@@ -418,4 +350,4 @@
   <script src="js/main.js"></script>
 
   </body>
-</html>
+</html
