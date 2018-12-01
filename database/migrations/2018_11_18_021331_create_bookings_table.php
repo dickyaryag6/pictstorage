@@ -17,10 +17,12 @@ class CreateBookingsTable extends Migration
             $table->increments('order_id');
             $table->integer('user_id')->unsigned();
             $table->string('order_type');
-            //jenis order : PreWedding,Wedding,Engagement,Studio,Booth
+            //jenis order : Wedding,Engagement,Studio,Booth
             $table->date('date');
+            $table->time('jam');
             $table->string('location');
-            $table->string('status')->default('Belum Terverifikasi');;
+            $table->string('linkhasil')->default('Belum Ada');
+            $table->string('status')->default('Belum Terverifikasi');
             $table->timestamps();
 
             //dibawah ini ngasi tau kalo atribut user_id dari kolom 'bookings' adalah foreign key dari

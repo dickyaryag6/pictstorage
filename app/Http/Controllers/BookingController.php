@@ -8,13 +8,16 @@ use App\User;
 use App\Booking;
 use App\Http\Controllers\Controller;
 use Auth;
+use Illuminate\Support\Facades;
 
 class BookingController extends Controller
 {
+    public $hasilforms;
+
     //method dibawah ini gunanya ngarahin user ke form pemesanan
-    public function Isi_Pemesanan()
+    public function Form()
     {
-    return view('Pemesanan/book-a-shoot');
+    return view('Booking/form');
 
     /*return Validator::make($data, [
     'user_id' => ['required', 'integer', 'unique:users'],
@@ -29,28 +32,29 @@ class BookingController extends Controller
     //kalo yang dibawah ini gunanya ngarahin user ke halaman konfirmasi setelah ngisi form
     //jadi ditampilin apa yng udah diisi sama user tadi buat dia mastiin udah bener atau belom
     //kalo belom, ada tombol buat dia balik ke halaman form buat ngisi lagi
-    public function Konfirmasi_Pemesanan(request $request)
+    public function Konfirmasi(request $request)
     {
-      $hasilforms = $request->all();
-      return view('Pemesanan.konfirmasi-pemesanan', compact('hasilforms'));
+      $this->$hasilforms = $request->all();
+      return view('Booking.konfirmasi', compact('hasilforms'));
 
     }
 
     //kalo yang diisi udah bener, jalanin yang dibawah ini biar apa yg udah diisi dimasukin ke database
-    public function Pemesanan_Berhasil()
+    public function Pembayaran()
     {
       $user = Auth::user();
-      $nama = Auth::id();
-      dd($nama);
-      Booking::create([
-        'user_id' => Auth::id(),
-        'nama' => Auth::nama(),
-        'email' => Auth::email(),
+      dd($hasilforms);
+      return Booking::create([
+        'user_id' => $user->id,
+        'nama' => $user->nama,
+        'email' => $user->email,
         'order_type' => request('order_type'),
         'date' => request('date'),
-        'location' => request('location')
+        'jam' => request('jam'),
+        'location' => request('location'),
+        'created_at' => request('created_at')
       ]);
 
-      return view('Pemesanan/pemesanan-berhasil');
+      return view('Booking/pembayaran');
     }
 }

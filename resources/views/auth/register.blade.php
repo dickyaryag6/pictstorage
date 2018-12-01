@@ -19,7 +19,7 @@
                      </span>
                 @endif
 
-            </div>
+            <!-- </div>
             <div class="form-style-agile">
                 <label for="username">
                     <i class="fas fa-user"></i>
@@ -32,7 +32,7 @@
                      </span>
                 @endif
 
-            </div>
+            </div> -->
              <div class="form-style-agile">
                 <label for="email">
                     <i class="fas fa-envelope"></i>
