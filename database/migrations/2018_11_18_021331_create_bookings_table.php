@@ -21,7 +21,9 @@ class CreateBookingsTable extends Migration
             $table->date('date');
             $table->time('jam');
             $table->string('location');
-            $table->string('linkhasil')->default('Belum Ada');
+            $table->time('durasi')->nullable();
+            $table->integer('jumlah_orang')->nullable();
+            $table->string('linkhasil')->nullable();
             $table->string('status')->default('Belum Terverifikasi');
             $table->timestamps();
 

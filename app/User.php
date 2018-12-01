@@ -28,4 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token', 'level',
     ];
 
+    public function bookings()
+    {
+        return $this->hasMany('App\Booking');
+    }
 }
