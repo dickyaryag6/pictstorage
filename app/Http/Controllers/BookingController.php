@@ -34,27 +34,44 @@ class BookingController extends Controller
     //kalo belom, ada tombol buat dia balik ke halaman form buat ngisi lagi
     public function Konfirmasi(request $request)
     {
-      $this->$hasilforms = $request->all();
+      $hasilforms = $request->all();
+
       return view('Booking.konfirmasi', compact('hasilforms'));
 
     }
 
+
+
     //kalo yang diisi udah bener, jalanin yang dibawah ini biar apa yg udah diisi dimasukin ke database
-    public function Pembayaran()
+    public function Pembayaran(Request $request)
     {
       $user = Auth::user();
-      dd($hasilforms);
-      return Booking::create([
-        'user_id' => $user->id,
-        'nama' => $user->nama,
-        'email' => $user->email,
-        'order_type' => request('order_type'),
-        'date' => request('date'),
-        'jam' => request('jam'),
-        'location' => request('location'),
-        'created_at' => request('created_at')
-      ]);
+      $hasilforms = $request->all();
 
+      if($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {
+
+          Booking::create([
+         'user_id' => $user->id,
+         'order_type' => $hasilforms['order_type'],
+         'date' => $hasilforms['date'],
+         'jam' => $hasilforms['jam'],
+         'location' => $hasilforms['location'],
+         'created_at' => request('created_at')
+       ]);
+
+      }
+      else {
+            Booking::create([
+            'user_id' => $user->id,
+            'order_type' => $hasilforms['order_type'],
+            'date' => $hasilforms['date'],
+            'jam' => $hasilforms['jam'],
+            'durasi' => $hasilforms['durasi'],
+            'jumlah_orang' => $hasilforms['jumlah_orang'],
+            'location' => $hasilforms['location'],
+            'created_at' => request('created_at')
+             ]);
+      }
       return view('Booking/pembayaran');
     }
 }
