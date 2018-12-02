@@ -25,6 +25,23 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/edit-profile', function () {
+    return view('edit-profile');
+});
+
+Route::get('/pricelist', function () {
+    return view('pricelist');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+
 // Route::get('/book', function () {
 //     return view('Pemesanan/book');
 // });

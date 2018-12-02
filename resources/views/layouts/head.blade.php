@@ -50,9 +50,9 @@
                  
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
-                    <li class="has-children active">
+                    <li class=" active">
                       <a href={{url("/")}}>Home</a>
-                      <ul class="dropdown arrow-top">
+                     <!--  <ul class="dropdown">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
                         <li><a href="#">Menu Three</a></li>
@@ -64,19 +64,20 @@
                             <li><a href="#">Menu Three</a></li>
                           </ul>
                         </li>
-                      </ul>
+                      </ul> -->
                     </li>
                     <li class="has-children">
-                      <a href="about.html">Profile</a>
+                      <a href='{{url("/book")}}'>Booking</a>
                       <ul class="dropdown arrow-top">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
+                        <li><a href="#">Wadding</a></li>
+                        <li><a href="#">Engagement</a></li>
+                        <li><a href="#">Photobooth</a></li>
+                        <li><a href="#">Photo Studio</a></li>
                       </ul>
-                    <li><a href='{{url("/book")}}'>Booking</a></li>
-                      <li><a href="#">Price List</a> </li>
+                    <li><a href= '{{url("/profile")}}'>Profile</a></li>
+                      <li><a href='{{url("/pricelist")}}'>Price List</a> </li>
                     </li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href='{{url("/contact")}}'>Contact</a></li>
                   </ul>
                 </div>
               </nav>

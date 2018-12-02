@@ -60,16 +60,16 @@
                       <a href='{{url("/")}}'>Home</a>
                     </li>
                     <li>
-                      <a href="about.html">Profile</a>
+                      <a href='{{url("/profile")}}'>Profile</a>
                     </li>
                     <li>
                       <a href='{{url("/book")}}'>Booking</a>
                     </li>
                     <li>
-                      <a href="#">Price List</a>
+                      <a href='{{url("/pricelist")}}'>Price List</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a href='{{url("/contact")}}'>Contact</a>
                     </li>
                     @auth
                     <li>
