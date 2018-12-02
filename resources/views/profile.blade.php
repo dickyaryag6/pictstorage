@@ -1,4 +1,4 @@
-@include('layouts.head')
+
 
 
 <html>
@@ -6,6 +6,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+@include('layouts.head')
 </head>
 <body>
 <hr class="">
@@ -79,14 +80,14 @@
         <!--/col-3-->
         <div class="col-sm-9" style="" contenteditable="false">
             <div class="panel panel-default">
-                <div class="panel-heading"><b>Shared Treatment Section</b></div>
+                <div class="panel-heading"><b>Shared Photo Section</b></div>
                 <div class="panel-body"><i>Select the plan corresponding to your need. You will be redirected to the access page where you can edit the selected pre-made scheme.</i><br>
-                <button type="button" class="btn btn-primary">Treatment Plan A</button>   <button type="button" class="btn btn-primary">Treatment Plan B</button>   <button type="button" class="btn btn-primary">Treatment Plan C</button>   <button type="button" class="btn btn-primary">Treatment Plan D</button>   <button type="button" class="btn btn-Primary">Create Plan</button>
+                <button type="button" class="btn btn-primary">Wedding</button>   <button type="button" class="btn btn-primary">Engagement</button>   <button type="button" class="btn btn-primary">Photobooth</button>   <button type="button" class="btn btn-primary">Photo Studio</button>   <button type="button" class="btn btn-Primary">Create Plan</button>
 
                 </div>
             </div>
             <div class="panel panel-default target">
-                <div class="panel-heading" contenteditable="false"><b>Treatments and Medications Needed</b></div>
+                <div class="panel-heading" contenteditable="false"><b>Hasil Foto</b></div>
                 <div class="panel-body">
                   <div class="row">
 				<div class="col-md-4">

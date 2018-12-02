@@ -66,15 +66,15 @@
                         </li>
                       </ul> -->
                     </li>
+                    <li><a href= '{{url("/profile")}}'>Profile</a></li>
                     <li class="has-children">
                       <a href='{{url("/book")}}'>Booking</a>
                       <ul class="dropdown arrow-top">
-                        <li><a href="#">Wadding</a></li>
+                        <li><a href="#">Wedding</a></li>
                         <li><a href="#">Engagement</a></li>
                         <li><a href="#">Photobooth</a></li>
                         <li><a href="#">Photo Studio</a></li>
                       </ul>
-                    <li><a href= '{{url("/profile")}}'>Profile</a></li>
                       <li><a href='{{url("/pricelist")}}'>Price List</a> </li>
                     </li>
                     <li><a href='{{url("/contact")}}'>Contact</a></li>

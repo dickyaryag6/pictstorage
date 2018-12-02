@@ -1,4 +1,3 @@
-@include('layouts.head')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@
     <!-- Custom CSS -->
     <style>
     body {
-        padding-top: 70px;
+       
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
 
@@ -40,7 +39,8 @@
 </head>
 
 <body>
-   <div class="container">
+  @include('layouts.head')
+   <div class="">
 <div class="row">
 <div class="col-md-10 ">
 <form class="form-horizontal">
