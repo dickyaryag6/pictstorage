@@ -66,7 +66,7 @@
                 <input  id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required>
             </div>
             <input type="submit" value="Register">
-           <br> Already have an account?  <a href='{{url("/login")}}'> <br> Sign in </a>
+           <br> <br> Already have an account?  <a href='{{url("/login")}}'>  Sign in </a>
         </form>
     </div>
 
