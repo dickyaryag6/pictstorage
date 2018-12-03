@@ -72,6 +72,15 @@ class BookingController extends Controller
             'created_at' => request('created_at')
              ]);
       }
-      return view('Booking/pembayaran');
+      return view('Booking/pembayaran', compact('hasilforms'));
+    }
+
+    public function buktiPembayaran(request $request)
+    {
+      $bukti = $request->all();
+
+      Booking::create([
+        'bukti_pembayaran' => $bukti['bukti_pembayaran'];
+      ]);
     }
 }

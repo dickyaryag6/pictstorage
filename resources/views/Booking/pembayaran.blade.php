@@ -9,9 +9,14 @@
 
 <?php echo "Sudah melakukan pembayaran? Upload bukti pembayaran anda" ?>
 <div class="card-body">
-  <form action="#" method="post" enctype="multipart/form-data">
+  <form action="buktiPembayaran" method="post" enctype="multipart/form-data">
     <div class="form-group">
-      <input type="file" id="bukti_pembayaran" name="bukti_pembayaran">
+      <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" required>
+    </div>
+    <div class="col-md-8 offset-md-4">
+        <button type="submit" class="btn btn-primary">
+            {{ __('Upload') }}
+        </button>
     </div>
   </form>
 </div>
