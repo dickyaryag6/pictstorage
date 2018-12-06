@@ -82,39 +82,44 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><b>Daftar Booking</b></div>
                 <div class="panel-body">
+                  @if(count($booking_list) > 0)
+                    @foreach ($booking_list as $order)
+                      @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
+                        <ul>
+                            <li><?php echo $order->order_type; ?></li>
+                            <li><?php echo $order->date; ?></li>
+                            <li><?php echo $order->jam; ?></li>
+                            <li><?php echo $order->location; ?></li>
+                            <li><?php echo $order->status; ?></li>
+                            <li><?php echo $order->linkhasil; ?></li>
+                          @if ($order->bukti_pembayaran === null)
+                            <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
+                          @else
+                            <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayara</a></li>
+                          @endif
+                        </ul>
+                      @else
+                        <ul>
+                            <li><?php echo $order->order_type; ?></li>
+                            <li><?php echo $order->date; ?></li>
+                            <li><?php echo $order->jam; ?></li>
+                            <li><?php echo $order->location; ?></li>
+                            <li><?php echo $order->status; ?></li>
+                            <li><?php echo $order->durasi; ?></li>
+                            <li><?php echo $order->jumlah_orang; ?></li>
+                          @if ($order->bukti_pembayaran === null)
+                            <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
+                          @else
+                            <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
+                          @endif
+                        </ul>
+                     @endif
+                   @endforeach
+                  @else
+                    <h3>Anda belum pernah Booking</h3>
 
-                    <?php foreach ($booking_list as $order) { ?>
-                    <?php if ($order->order_type === 'wedding' || $order->order_type === 'engagement') {?>
-                    <ul>
-                      <li><?php echo $order->order_type; ?></li>
-                      <li><?php echo $order->date; ?></li>
-                      <li><?php echo $order->jam; ?></li>
-                      <li><?php echo $order->location; ?></li>
-                      <li><?php echo $order->status; ?></li>
-                      <li><?php echo $order->linkhasil; ?></li>
-                      <?php if ($order->bukti_pembayaran === null) :?>
-                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
-                      <?php else : ?>
-                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayara</a></li>
-                      <?php endif; ?>
-                    </ul>
-                    <?php } else { ?>
-                    <ul>
-                      <li><?php echo $order->order_type; ?></li>
-                      <li><?php echo $order->date; ?></li>
-                      <li><?php echo $order->jam; ?></li>
-                      <li><?php echo $order->location; ?></li>
-                      <li><?php echo $order->status; ?></li>
-                      <li><?php echo $order->durasi; ?></li>
-                      <li><?php echo $order->jumlah_orang; ?></li>
-                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
-                      <?php else : ?>
-                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
-                      <?php endif; ?>
-                    </ul>
-                    <?php } ?>
+                  @endif
 
-                <?php } ?>
                 </div>
                 <div class="panel-body"><i>Select the plan corresponding to your need. You will be redirected to the access page where you can edit the selected pre-made scheme.</i><br>
                 <button type="button" class="btn btn-primary">Wedding</button>   <button type="button" class="btn btn-primary">Engagement</button>   <button type="button" class="btn btn-primary">Photobooth</button>   <button type="button" class="btn btn-primary">Photo Studio</button>   <button type="button" class="btn btn-Primary">Create Plan</button>

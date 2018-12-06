@@ -56,6 +56,8 @@ Route::get('/book', 'BookingController@Form');
 //post data ke halaman konfirmasi
 Route::post('/konfirmasi', 'BookingController@Konfirmasi');
 
+Route::post('/save', 'BookingController@Save');
+
 //kalo user udah klik tombol 'konfirmasi' di halaman 'konfirmasi',
 //maka data yg udah dimasukin tadi di-store ke database menggunakan metode Pemesanan_Berhasil
 //post data

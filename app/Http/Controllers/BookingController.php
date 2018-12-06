@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades;
 use DB;
+use Redirect;
 
 class BookingController extends Controller
 {
@@ -46,7 +47,7 @@ class BookingController extends Controller
 
 
     //kalo yang diisi udah bener, jalanin yang dibawah ini biar apa yg udah diisi dimasukin ke database
-    public function Pembayaran(Request $request)
+    public function Save(Request $request)
     {
       $user = Auth::user();
       $hasilforms = $request->all();
@@ -77,8 +78,10 @@ class BookingController extends Controller
              ]);
       }
 
-      return view('/Profile/$user->id');
-
+      return redirect('profile/'.$user->id);
+      // return redirect()->route('profile/{user}', ['user' => $user->id]);
+      //return redirect()->route('/profile', [$user->id]);
+      //return redirect()->route('profile/{user}', ['user' => $user->id]);
     }
 
     public function showprofile($user_id)
@@ -140,6 +143,7 @@ class BookingController extends Controller
               //   array('bukti_pembayaran' => $filenameyangdipake))
               // ->update(array('status' => 'Sedang diverfikasi'));
 
-      return Redirect::action('BookingController@showprofile');
+      //return Redirect::action('BookingController@showprofile');
+      return redirect('profile/'.$user->id);
       }
 }
