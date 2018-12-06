@@ -17,7 +17,7 @@ class Booking extends Model
 
   //ini buat ngasi tau atribut apa aja yang bisa diisi sama user
     protected $fillable = [
-      'order_type', 'date', 'jam' , 'location', 'user_id', 'durasi', 'jumlah_orang',
+    'order_type', 'date', 'jam' , 'location', 'user_id', 'durasi', 'jumlah_orang', 'status','bukti_pembayaran',
     ];
 
 

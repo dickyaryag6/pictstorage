@@ -60,7 +60,9 @@
                       <a href='{{url("/")}}'>Home</a>
                     </li>
                     <li>
-                      <a href='{{url("/profile")}}'>Profile</a>
+                      <!-- <a href='{{url("/profile")}}'>Profile</a> -->
+                        <?php $user = Auth::user(); ?>
+                      <a href="/profile/<?php echo $user->id ?>">Profile</a>
                     </li>
                     <li>
                       <a href='{{url("/book")}}'>Booking</a>

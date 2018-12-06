@@ -2,6 +2,8 @@
 
 @section('content')
 
+<?php $user = Auth::user(); ?>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -48,7 +50,7 @@ $(document).ready(function(){
 
 <div class="container form" id="weddingform">
   <div class="card-body">
-      <form method="POST" action="konfirmasi">
+      <form method="POST" action="konfirmasi/php">
           @csrf
 
           <!-- <div class="form-group row">

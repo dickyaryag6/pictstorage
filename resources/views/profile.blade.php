@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-sm-10">
              <h1 class="">DOCTOR</h1>
-         
+
          <a href='{{url("/edit-profile")}}'> <button type="button" class="btn btn-warning">Edit Profile</button></a>  <button type="button" class="btn btn-success">Access Calendar</button>
 <br>
         </div>
@@ -37,15 +37,15 @@
                 <li class="list-group-item text-muted" contenteditable="false">Contact Details</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Telephone Number: </strong></span>       514-1132</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Cellphone Number: </strong></span>09159092245</li>
-                
+
             </ul>
            <div class="panel panel-default">
-             
+
              <div class="panel-heading">Reminders:
 
                 </div>
                 <div class="panel-body"><button type="button" class="btn btn-info">Patient Compliance<br><button type="button" class="btn btn-secondary">Approve Uploads
-                
+
 
                 </div>
             </div>
@@ -57,7 +57,7 @@
 
                 </div>
             </div>
-          
+
             <ul class="list-group">
                 <li class="list-group-item text-muted">PATIENT LIBRARY<i class="fa fa-dashboard fa-1x"></i>
 
@@ -68,10 +68,10 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="#">Zysa del Mundo</a></strong></span></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class=""><button type="button" class="btn btn-info">Schedule Patient</strong></span></li>
             </ul>
-            
+
             <div class="panel panel-default">
                 <div class="panel-heading">UPLOADED MEDICAL-RELATED DOCUMENTS</div>
-                <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i> 
+                <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i>
                     <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
 
                 </div>
@@ -80,7 +80,42 @@
         <!--/col-3-->
         <div class="col-sm-9" style="" contenteditable="false">
             <div class="panel panel-default">
-                <div class="panel-heading"><b>Shared Photo Section</b></div>
+                <div class="panel-heading"><b>Daftar Booking</b></div>
+                <div class="panel-body">
+
+                    <?php foreach ($booking_list as $order) { ?>
+                    <?php if ($order->order_type === 'wedding' || $order->order_type === 'engagement') {?>
+                    <ul>
+                      <li><?php echo $order->order_type; ?></li>
+                      <li><?php echo $order->date; ?></li>
+                      <li><?php echo $order->jam; ?></li>
+                      <li><?php echo $order->location; ?></li>
+                      <li><?php echo $order->status; ?></li>
+                      <li><?php echo $order->linkhasil; ?></li>
+                      <?php if ($order->bukti_pembayaran === null) :?>
+                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
+                      <?php else : ?>
+                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayara</a></li>
+                      <?php endif; ?>
+                    </ul>
+                    <?php } else { ?>
+                    <ul>
+                      <li><?php echo $order->order_type; ?></li>
+                      <li><?php echo $order->date; ?></li>
+                      <li><?php echo $order->jam; ?></li>
+                      <li><?php echo $order->location; ?></li>
+                      <li><?php echo $order->status; ?></li>
+                      <li><?php echo $order->durasi; ?></li>
+                      <li><?php echo $order->jumlah_orang; ?></li>
+                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
+                      <?php else : ?>
+                      <li><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
+                      <?php endif; ?>
+                    </ul>
+                    <?php } ?>
+
+                <?php } ?>
+                </div>
                 <div class="panel-body"><i>Select the plan corresponding to your need. You will be redirected to the access page where you can edit the selected pre-made scheme.</i><br>
                 <button type="button" class="btn btn-primary">Wedding</button>   <button type="button" class="btn btn-primary">Engagement</button>   <button type="button" class="btn btn-primary">Photobooth</button>   <button type="button" class="btn btn-primary">Photo Studio</button>   <button type="button" class="btn btn-Primary">Create Plan</button>
 
@@ -98,10 +133,10 @@
 								Computed Tomography Scan
 							</h3>
 							<p>
-								For potential transcatheter repair and replacement of heart valves 
+								For potential transcatheter repair and replacement of heart valves
 							</p>
 							<p>
-							
+
 							</p>
 						</div>
 					</div>
@@ -117,7 +152,7 @@
 								For stability of emotional threshold throughout the battery of tests
 							</p>
 							<p>
-							
+
 							</p>
 						</div>
 					</div>
@@ -133,17 +168,17 @@
 								For further evaluation of other implicitly acquired cardiovascular conditions
 							</p>
 							<p>
-							
+
 							</p>
 						</div>
                 </div>
-                 
+
             </div>
-                     
+
             </div>
-                 
+
         </div>
-              
+
     </div>
            <div class="panel panel-default">
                 <div class="panel-heading"><b>Daily Medication and Treatment Breakdown:</b></div>
@@ -152,7 +187,7 @@
 
                 </div>
 </div></div>
-                
+
 </div>
 </body>
 </html>

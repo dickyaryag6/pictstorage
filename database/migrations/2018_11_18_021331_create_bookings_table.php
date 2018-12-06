@@ -23,6 +23,7 @@ class CreateBookingsTable extends Migration
             $table->string('location');
             $table->time('durasi')->nullable();
             $table->integer('jumlah_orang')->nullable();
+            $table->string('bukti_pembayaran')->nullable();
             $table->string('linkhasil')->nullable();
             $table->string('status')->default('Belum Terverifikasi');
             $table->timestamps();

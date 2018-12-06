@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -25,9 +26,11 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+// Route::get('/profile/{user}', function () {
+//     return view('profile');
+// });
+Route::get('/profile/{user}', 'BookingController@showprofile');
+
 Route::get('/edit-profile', function () {
     return view('edit-profile');
 });
@@ -56,10 +59,13 @@ Route::post('/konfirmasi', 'BookingController@Konfirmasi');
 //kalo user udah klik tombol 'konfirmasi' di halaman 'konfirmasi',
 //maka data yg udah dimasukin tadi di-store ke database menggunakan metode Pemesanan_Berhasil
 //post data
-Route::post('/pembayaran', 'BookingController@Pembayaran');
 
 
-Route::post('/buktiPembayaran', 'BookingController@buktiPembayaran');
+Route::get('/profile/buktiPembayaran/{userid}/{orderid}', 'BookingController@BuktiPembayaran');
+
+Route::post('uploadBuktiPembayaran/{userid}/{orderid}', 'BookingController@uploadBuktiPembayaran');
+
+//Route::get('/pembayaran/{user}', 'BookingController@Pembayaran');
 
 Auth::routes();
 

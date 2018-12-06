@@ -9,12 +9,11 @@ use App\Booking;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Support\Facades;
+use DB;
 
 class BookingController extends Controller
 {
-    public $hasilforms;
 
-    //method dibawah ini gunanya ngarahin user ke form pemesanan
     public function Form()
     {
     return view('Booking/form');
@@ -34,6 +33,10 @@ class BookingController extends Controller
     //kalo belom, ada tombol buat dia balik ke halaman form buat ngisi lagi
     public function Konfirmasi(request $request)
     {
+      // $this->validate($request, [
+      //   'blabla' => 'required'
+      // ])
+
       $hasilforms = $request->all();
 
       return view('Booking.konfirmasi', compact('hasilforms'));
@@ -47,6 +50,7 @@ class BookingController extends Controller
     {
       $user = Auth::user();
       $hasilforms = $request->all();
+    //  dd($hasilforms);
 
       if($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {
 
@@ -56,8 +60,8 @@ class BookingController extends Controller
          'date' => $hasilforms['date'],
          'jam' => $hasilforms['jam'],
          'location' => $hasilforms['location'],
-         'created_at' => request('created_at')
-       ]);
+         // 'created_at' => request('created_at')
+         ]);
 
       }
       else {
@@ -69,18 +73,73 @@ class BookingController extends Controller
             'durasi' => $hasilforms['durasi'],
             'jumlah_orang' => $hasilforms['jumlah_orang'],
             'location' => $hasilforms['location'],
-            'created_at' => request('created_at')
+            // 'created_at' => request('created_at')
              ]);
       }
-      return view('Booking/pembayaran', compact('hasilforms'));
+
+      return view('/Profile/$user->id');
+
     }
 
-    public function buktiPembayaran(request $request)
+    public function showprofile($user_id)
     {
-      $bukti = $request->all();
+      $booking_list = Booking::where('user_id', $user_id)->get();
 
-      Booking::create([
-        'bukti_pembayaran' => $bukti['bukti_pembayaran'];
-      ]);
+      return view('profile', compact('booking_list'));
     }
+
+    public function buktiPembayaran($userid,$orderid)
+    {
+      $user = Booking::where('user_id', $userid)->get();
+      $order = Booking::where('order_id', $orderid)->get();
+      return view('Booking.pembayaran',compact('user', 'order'));
+    }
+
+    public function uploadBuktiPembayaran(request $request,$user_id, $orderid)
+    {
+      // $order_id = Bookings::findOrFail()
+      $bukti = $request->all();
+      //$ordertype  = DB::select('select order_type from bookings where order_id = :id', ['id' => $order_id]);
+      $ordertype = DB::table('bookings')->where('order_id', '=', $orderid)->value('order_type');
+      $createdatonlydate = DB::table('bookings')->where('order_id', '=', $orderid)->value('created_at');
+      $createdatonlydate=substr( $createdatonlydate, 0, 10);
+      // $date = DB::table('bookings')->where('order_id', '=', $orderid)->value('date');
+      // $jam =  DB::table('bookings')->where('order_id', '=', $orderid)->value('jam');
+      // $location =  DB::table('bookings')->where('order_id', '=', $orderid)->value('location');
+      $user = Auth::user();
+      //yang dibawah ini buat mastiin kalo yang diupload itu file gambar dan berukuran max 2mb
+      $this->validate($request, [
+        'bukti_pembayaran' => 'image|required|max:1999'
+      ]);
+
+      $namafiledenganextension = $request->file('bukti_pembayaran')->getClientOriginalName();
+      $namafile = pathinfo($namafiledenganextension, PATHINFO_FILENAME);
+      $extensionfile = $request->file('bukti_pembayaran')->getClientOriginalExtension();
+      $filenameyangdipake = $user_id.'_'.$orderid.'_'.$ordertype.'_'.$createdatonlydate.'.'.$extensionfile;
+
+      $path = $request->file('bukti_pembayaran')->storeAs('public/buktiPembayaran', $filenameyangdipake);
+
+      // Booking::create([
+      //   'user_id' => $user_id,
+      //   'order_id' => $order_id,
+      //   'order_type' => $ordertype,
+      //   'date' => $date,
+      //   'jam' => $jam,
+      //   'location' => $location,
+      //   'bukti_pembayaran' => $filenameyangdipake,
+      //   'status' => 'Sedang diverfikasi'
+      // ]);
+
+      //Proses yg buat update
+      Booking::where('order_id', $orderid)
+              ->update([
+                'bukti_pembayaran' => $filenameyangdipake,
+                'status' => 'Sedang diverfikasi',
+              ]);
+
+              //   array('bukti_pembayaran' => $filenameyangdipake))
+              // ->update(array('status' => 'Sedang diverfikasi'));
+
+      return Redirect::action('BookingController@showprofile');
+      }
 }

@@ -24,6 +24,7 @@
           <th></th>
         </tr> -->
       </table>
+      <?php $user = Auth::user(); ?>
       <form action="pembayaran" method="post">
           @csrf
           <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {?>
@@ -39,12 +40,13 @@
             <input type="hidden" id="durasi" name="durasi" value=<?php echo $hasilforms['durasi']; ?>>
             <input type="hidden" id="jumlah_orang" name="jumlah_orang" value=<?php echo $hasilforms['jumlah_orang']; ?>>
         <?php  } ?>
-        <button type="submit" class="btn btn-primary">
+        <button type="button" href='/Edit' class="btn btn-primary">Edit</button>
+        <button type="submit" href="/profile/<?php echo $user->id ?>" class="btn btn-primary">
             {{ __('Konfirmasi') }}
         </button>
-        <button type="button" name="button" onclick="javascript:location.href='book'" class="btn btn-primary">
+        <!-- <button type="button" name="button" onclick="javascript:location.href='book'" class="btn btn-primary">
           {{ __('Ubah') }}
-        </button>
+        </button> -->
       </form>
 
       <!-- <button type="button" name="button" onclick="javascript:location.href='book'">Ubah</button> -->
