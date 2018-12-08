@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+   public function getDownload()
+    {
+
+//PDF file is stored under project/public/download/info.pdf
+
+    $file= public_path(). "/download/pricelist.pdf";   
+
+    return response()->download($file);
+    }
 }
+

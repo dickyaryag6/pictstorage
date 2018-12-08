@@ -41,6 +41,17 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/download', function(){
+	$file = public_path()."/pricelist.pdf";
+
+	$header = array(
+		'Content-Type: application/pdf',
+	);
+
+	return Response::download($file, "pricelist.pdf", $header);
+});
+
+
 // Route::get('/book', function () {
 //     return view('Pemesanan/book');
 // });
@@ -63,7 +74,7 @@ Route::post('/save', 'BookingController@Save');
 //post data
 
 
-Route::get('/profile/buktiPembayaran/{userid}/{orderid}', 'BookingController@BuktiPembayaran');
+Route::get('profile/buktiPembayaran/{userid}/{orderid}', 'BookingController@BuktiPembayaran');
 
 Route::post('uploadBuktiPembayaran/{userid}/{orderid}', 'BookingController@uploadBuktiPembayaran');
 

@@ -89,7 +89,7 @@ a {
 .form-control {
   height: 47px; }
   .form-control:active, .form-control:focus {
-    border-color: #f23a2e; }
+    border-color: #c6403f; }
   .form-control:hover, .form-control:active, .form-control:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
@@ -113,7 +113,7 @@ a {
     position: absolute;
     width: 40px;
     height: 2px;
-    background: #f23a2e; }
+    background: #c6403f; }
   .site-section-heading.text-center:before {
     content: "";
     left: 50%;
@@ -124,7 +124,7 @@ a {
     position: absolute;
     width: 40px;
     height: 2px;
-    background: #f23a2e; }
+    background: #c6403f; }
 
 .site-footer {
   padding: 4em 0; }
@@ -295,7 +295,7 @@ a {
             padding: 5px 20px;
             display: block; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
-              color: #f23a2e; }
+              color: #c6403f; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
             right: 20px; }
@@ -303,7 +303,7 @@ a {
             left: 100%;
             top: 0; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:active > a, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children:focus > a {
-            color: #f23a2e; }
+            color: #c6403f; }
       .site-navbar .site-navigation .site-menu .has-children a {
         text-transform: uppercase; }
       .site-navbar .site-navigation .site-menu .has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
@@ -387,12 +387,12 @@ a {
       position: relative;
       color: #212529; }
       .site-mobile-menu .site-nav-wrap a:hover {
-        color: #f23a2e; }
+        color: #c6403f; }
     .site-mobile-menu .site-nav-wrap li {
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li.active > a {
-        color: #f23a2e; }
+        color: #c6403f; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -613,7 +613,7 @@ a {
     display: block;
     border-radius: 50%;
     opacity: 1;
-    color: #f23a2e !important; }
+    color: #c6403f !important; }
     .site-block-half.site-block-video .image .play-button:hover {
       opacity: 1; }
     .site-block-half.site-block-video .image .play-button > span {
@@ -703,7 +703,7 @@ a {
       -o-transition: .3s all ease;
       transition: .3s all ease; }
     .block-13 .owl-dots .owl-dot.active > span {
-      background: #f23a2e; }
+      background: #c6403f; }
 
 .slide-one-item.home-slider .owl-nav {
   position: absolute !important;
@@ -806,7 +806,7 @@ a {
         width: 80px;
         height: 4px;
         margin-top: -4px;
-        background: #f23a2e;
+        background: #c6403f;
         top: 0; }
       .block-12 .text .text-inner .heading {
         font-size: 20px;
@@ -829,7 +829,7 @@ a {
     display: block;
     border-radius: 50%;
     opacity: 1;
-    color: #f23a2e !important; }
+    color: #c6403f !important; }
     .block-16 figure .play-button:hover {
       opacity: 1; }
     .block-16 figure .play-button > span {
@@ -872,7 +872,7 @@ a {
   color: #999999; }
 
 .block-25 ul li a .meta {
-  color: #f23a2e; }
+  color: #c6403f; }
 
 .block-25 ul li a:hover img {
   opacity: .5; }
@@ -901,7 +901,7 @@ a {
     position: absolute;
     width: 30px;
     height: 30px;
-    background: #f23a2e;
+    background: #c6403f;
     border-radius: 50%;
     color: #fff; }
     .player .team-number > span {
@@ -936,7 +936,7 @@ a {
     border-radius: 50%;
     border: 1px solid #ccc; }
   .site-block-27 ul li.active a, .site-block-27 ul li.active span {
-    background: #f23a2e;
+    background: #c6403f;
     color: #fff;
     border: 1px solid transparent; }
 
@@ -1005,7 +1005,7 @@ a {
   border-bottom: 2px solid transparent; }
 
 .half-sm:hover .text, .half-sm:focus .text {
-  background: #f23a2e !important;
+  background: #c6403f !important;
   color: #fff; }
   .half-sm:hover .text h2, .half-sm:focus .text h2 {
     color: #fff !important; }
@@ -1041,7 +1041,7 @@ a {
       transition: .3s all ease;
       top: 0;
       left: 0;
-      background-color: #f23a2e; }
+      background-color: #c6403f; }
     .block-37 .image .block-37-overlay {
       z-index: 3;
       position: absolute;

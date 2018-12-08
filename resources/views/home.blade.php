@@ -67,7 +67,7 @@
                     <li>
                       <!-- <a href='{{url("/profile")}}'>Profile</a> -->
                         <?php $user = Auth::user(); ?>
-                      <a href="/profile/<?php echo $user->id ?>">Profile</a>
+                      <a href='profile/<?php echo $user->id ?>'>Profile</a>
                     </li>
                     @endauth
                     <li>
@@ -155,9 +155,12 @@
               <div class="col-md-6 bg-light text order-md-1 order-lg-2">
                 <div class="p-4">
                   <h2 class="h5 mb-3 text-black line-height-sm">Engagement</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, cupiditate officia recusandae velit sint totam.</p>
-                  <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
-                </div>
+                  <p>“Love does not consist of gazing at each other, but in looking together in the same direction.”<br>
+                  – Antoine de Saint-Exupery<br>
+                  <br>
+                  Let us capture your very first step of the new life and journey in to the storage.
+                  </p>
+                  </div>
               </div>
             </div>
           </div>
@@ -174,9 +177,12 @@
               <div class="col-md-6 bg-light text order-md-1">
                 <div class="p-4">
                   <h2 class="h5 mb-3 text-black line-height-sm">Photo Studio</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum error perspiciatis odit ullam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam est alias minus, expedita autem.</p>
-                  <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold text-black">Read More</small></a></p>
-                </div>
+                  <p>“The best thing about a picture is that it never changes, even when the people in it do.”<br>
+                  — Andy Warhol<br>
+                  <br>
+                  Take unlimited amount of photos and let us provide the storage, <br>just for you.
+                  </p>
+                   </div>
               </div>
             </div>
           </div>
@@ -208,7 +214,13 @@
     <div class="row align-items-center justify-content-center text-center">
       <div class="col-md-10">
         <h1 class="mb-5"><strong>About Us<br></strong></h1>
-        <h3>Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus Magnam iure fugit recusandae nobis a amet, officiis laboriosam repudiandae? Quis nostrum numquam ducimus</h3>
+        <h2>We could say that we were the first to introduce Call-in Photo Studio in town.
+        But also we provide many kinds of photography and videography services to capture your precious moment just like a storage, larger and more flexible.
+        <br>
+        <br></h2>
+        <h4>Sincerely,<br>
+        PictStorage.
+        </h4>
       </div>
     </div>
   </div>
@@ -233,60 +245,28 @@
           <div class="col-lg-7">
             <div class="row">
               <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">Company</h3>
+                <h3 class="footer-heading mb-4">Navigation</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Approach</a></li>
-                  <li><a href="#">Sustainability</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a href='{{url("/")}}'>Home</a></li>
+                  <li><a href="#">Our Works</a></li>
+                  <li><a href='{{url("/pricelist")}}'>Pricelist</a></li>
+                  <li><a href='{{url("/contact")}}'>Contact Us</a></li>
+                  <li><a href='{{url("/book")}}' class="btn btn-primary py-1 px-3 rounded-10">Book Now</a></li>
                 </ul>
               </div>
-              <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">Navigations</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Approach</a></li>
-                  <li><a href="#">Sustainability</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">Quick Menu</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Approach</a></li>
-                  <li><a href="#">Sustainability</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
-              </div>
+              
             </div>
           </div>
           <div class="col-lg-5">
             <div class="row mb-5">
-              <div class="col-md-12"><h3 class="footer-heading mb-4">Europe</h3></div>
+              <div class="col-md-12"><h3 class="footer-heading mb-4">Office</h3></div>
               <div class="col-md-6">
-                <p>London - 2398 <br> 10 Japson Street</p>
+                <p>Dramaga Cantik Residence S.08, Dramaga, Bogor, Jawa Barat.
+                </p>
               </div>
               <div class="col-md-6">
-                Tel. + (123) 3240-345-9348 <br>
-                Mail. europe@youdomain.com
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12"><h3 class="footer-heading mb-4">USA</h3></div>
-              <div class="col-md-6">
-                <p>New York - 2398 <br> 10 Hadson Carl Street</p>
-              </div>
-              <div class="col-md-6">
-                Tel. + (123) 3240-345-9348 <br>
-                Mail. usa@youdomain.com
+                Tel. + (62) 896-0482-4602 <br>
+                Mail. pict.storage16@gmail.com
               </div>
             </div>
 
@@ -296,7 +276,7 @@
           <div class="col-md-12">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | <strong>PictStorage</strong>: 1st Call-in Photo Studio.
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
@@ -319,11 +299,11 @@
               <div class="d-flex ml-auto">
                 <a href="#" class="d-flex align-items-center ml-auto mr-4">
                   <span class="icon-phone mr-2"></span>
-                  <span class="d-none d-md-inline-block">youremail@domain.com</span>
+                  <span class="d-none d-md-inline-block">pict.storage16@gmail.com</span>
                 </a>
                 <a href="#" class="d-flex align-items-center">
                   <span class="icon-envelope mr-2"></span>
-                  <span class="d-none d-md-inline-block">+1 291 2830 302</span>
+                  <span class="d-none d-md-inline-block">+62 896 0482 4602</span>
                 </a>
               </div>
             </div>

@@ -219,7 +219,7 @@ img {
 /*end reset*/
 
 body {
-    background: url(../images/2.jpg) no-repeat;
+    background: url(../images/1.jpg);
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -253,7 +253,7 @@ h2 {
 }
 
 h2 i {
-    color: #fb5252;
+    color: #c6403f;
 }
 
 /*--//header--*/
@@ -310,7 +310,7 @@ h2 i {
 .sub-main-w3 label i {
     font-size: 15px;
     margin-left: 5px;
-    color: #fb5252;
+    color: #c6403f;
     background: #fff;
     border-radius: 50%;
     width: 30px;
@@ -335,7 +335,7 @@ h2 i {
 
 .sub-main-w3 input[type="submit"] {
     color: #fff;
-    background: #fb5252;
+    background: #c6403f;
     border: none;
     padding: 13px 0;
     margin-top: 30px;
@@ -399,7 +399,7 @@ h2 i {
 }
 
 input.checkbox {
-    background: #fb5252;
+    background: #c6403f;
     cursor: pointer;
     width: 1.2em;
     height: 1.2em;
@@ -507,7 +507,7 @@ input.checkbox:checked:after {
 }
 
 .footer p a {
-    color: #fb5252;
+    color: #c6403f;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
     -moz-transition: 0.5s all;
