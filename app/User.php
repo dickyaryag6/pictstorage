@@ -32,4 +32,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Booking');
     }
+
+    const ADMIN_TYPE = 'Admin';
+    const USER_TYPE = 'User';
+
+    public function isAdmin()
+    {
+    return $this->type === self::ADMIN_TYPE;
+    }
 }
