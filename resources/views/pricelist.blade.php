@@ -10,8 +10,11 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/pricelist.css">
+
+	
 </head>
 <body>
+
 	<section id="pricePlans">
 		<ul id="plans">
 			<li class="plan">
@@ -83,5 +86,6 @@
 			</li>
 		</ul> <!-- End ul#plans -->
 	</section>
+
 </body>
 </html>

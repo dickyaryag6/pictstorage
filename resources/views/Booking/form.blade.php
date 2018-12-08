@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+@include('layouts.head')
 
 <?php $user = Auth::user(); ?>
 
@@ -409,5 +407,7 @@ $(document).ready(function(){
       </form>
   </div>
 </div>
+
+@section('content')
 
 @endsection
