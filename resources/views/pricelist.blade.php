@@ -10,9 +10,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/pricelist.css">
+
+	
 </head>
 <body>
+<<<<<<< HEAD
 	<div  style="background-image: url(images/service3.jpg);" >
+=======
+
+>>>>>>> 7d78b653c79f6489ca34648166d3b84dfa83c5bd
 	<section id="pricePlans">
 		<ul id="plans">
 			<li class="plan">
@@ -85,6 +91,10 @@
 			</li>
 		</ul> <!-- End ul#plans -->
 	</section>
+<<<<<<< HEAD
 	<a href='{{url("/download")}}' class="btn btn-danger btn-fill" style="width:100%"><i class="fa fa-download"></i>Download</a>
+=======
+
+>>>>>>> 7d78b653c79f6489ca34648166d3b84dfa83c5bd
 </body>
 </html>

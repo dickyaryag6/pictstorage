@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Redirect;
 
 class IsAdmin
 {
@@ -15,9 +16,12 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-      if(auth()->user()->isAdmin()) {
-                 return $next($request);
+      if(!(auth()->user()->isAdmin())) {
+                return redirect('home');
              }
-             return redirect('Admin.master');
-    }
+            // return redirect('admin');
+            //return Redirect::to('admin');
+            //return Redirect::action('AdminController@admin');
+              return $next($request);
+      }
 }
