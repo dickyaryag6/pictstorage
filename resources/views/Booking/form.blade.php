@@ -1,6 +1,5 @@
-@extends('layouts.app')
+@include('layouts.head')
 
-@section('content')
 
 <?php $user = Auth::user(); ?>
 
@@ -50,7 +49,7 @@ $(document).ready(function(){
 
 <div class="container form" id="weddingform">
   <div class="card-body">
-      <form method="POST" action="konfirmasi/php">
+      <form method="POST" action="konfirmasi">
           @csrf
 
           <!-- <div class="form-group row">
@@ -410,4 +409,3 @@ $(document).ready(function(){
   </div>
 </div>
 
-@endsection
