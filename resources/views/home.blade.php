@@ -54,6 +54,10 @@
                   <a href='{{url("/login")}}' class="btn btn-danger btn-fill">Login</a>
                   <a href='{{url("/register")}}' class="btn btn-danger btn-fill">Register</a>
                   @endguest
+                  @auth
+                      <a class="btn btn-danger btn-fill" href='{{url("/logout")}}'>Logout  </a>
+                    
+                    @endauth
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
                     <li>
@@ -75,11 +79,6 @@
                     <li>
                       <a href='{{url("/contact")}}'>Contact</a>
                     </li>
-                    @auth
-                    <li>
-                      <a class="btn btn-danger btn-fill" href='{{url("/logout")}}'>Logout  </a>
-                    </li>
-                    @endauth
                   </ul>
                 </div>
               </nav>
