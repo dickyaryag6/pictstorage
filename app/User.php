@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'nama', 'email', 'password',
+        'nama', 'email', 'password',
     ];
 
     /**
@@ -27,4 +27,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'level',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany('App\Booking');
+    }
+
+    const ADMIN_TYPE = 'Admin';
+    const USER_TYPE = 'User';
+
+    public function isAdmin()
+    {
+    return $this->type === self::ADMIN_TYPE;
+    }
 }

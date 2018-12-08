@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
-
   <body>
-    <div class="site-wrap">
+
+  <div class="site-wrap">
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -35,53 +35,49 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-<div class="site-navbar bg-light">
+
+
+
+      <div class="site-navbar bg-light">
         <div class="container py-1">
           <div class="row align-items-center">
-            <div class="col-2">
+            <div class="col-2" style="#">
               <h2 class="mb-0 site-logo">
-                <a href='{{url("/")}}'> <img src="images/navbar_logo.png" alt="" class="img-fluid" >
-                </a>
+
+                <a href='{{url("/")}}'> <img src="images/navbar_logo.png" alt="" class="img-fluid" ></a>
               </h2>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
                 <div class="container">
-                 
+                  @guest
+                  <a href='{{url("/login")}}' class="btn btn-danger btn-fill">Login</a>
+                  <a href='{{url("/register")}}' class="btn btn-danger btn-fill">Register</a>
+                  @endguest
+                  @auth
+                      <a class="btn btn-danger btn-fill" href='{{url("/logout")}}'>Logout  </a>
+                  @endauth
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
-                    <li class="has-children active">
-                      <a href="index.html">Home</a>
-                      <ul class="dropdown arrow-top">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                        <li class="has-children">
-                          <a href="#">Sub Menu</a>
-                          <ul class="dropdown">
-                            <li><a href="#">Menu One</a></li>
-                            <li><a href="#">Menu Two</a></li>
-                            <li><a href="#">Menu Three</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                    <li>
+                      <a href='{{url("/")}}'>Home</a>
                     </li>
-                    <li class="has-children">
-                      <a href="about.html">Company</a>
-                      <ul class="dropdown arrow-top">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
+                    @auth
+                    <li>
+                      <!-- <a href='{{url("/profile")}}'>Profile</a> -->
+                        <?php $user = Auth::user(); ?>
+                      <a href="/profile/<?php echo $user->id ?>">Profile</a>
                     </li>
-                    <li><a href="news.html">News</a></li>
-                    <li class="has-children">
-                      <a href="services.html">Services</a>
-                      <ul class="dropdown arrow-top">
-                        <li><a href="book-a-shoot">Book A Shoot</a></li>
-                      </ul>
+                    @endauth
+                    <li>
+                      <a href='{{url("/book")}}'>Booking</a>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                      <a href='{{url("/pricelist")}}'>Price List</a>
+                    </li>
+                    <li>
+                      <a href='{{url("/contact")}}'>Contact</a>
+                    </li>
                   </ul>
                 </div>
               </nav>
@@ -90,4 +86,3 @@
         </div>
       </div>
     </div>
-  </body>

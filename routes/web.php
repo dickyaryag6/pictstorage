@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -25,27 +26,56 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/book', function () {
-    return view('Pemesanan/book-a-shoot');
+// Route::get('/profile/{user}', function () {
+//     return view('profile');
+// });
+Route::get('/profile/{user}', 'BookingController@showprofile');
+
+Route::get('/edit-profile', function () {
+    return view('edit-profile');
 });
+Route::get('/pricelist', function () {
+    return view('pricelist');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+// Route::get('/book', function () {
+//     return view('Pemesanan/book');
+// });
 
 //waktu user klik tombol 'book a shoot' , dipanggil metode isi Pemesanan
 //dari controller BookingControll yang gunanya nampilin halaman pengisian form
 //get data
-Route::get('/book-a-shoot', 'BookingController@Isi_Pemesanan')->name('Isi-pemesanan');
+Route::get('/book', 'BookingController@Form');
 
 //kalo yang ini buat manggil metode Konfirmasi_Pemesanan dari controller yg sama
 //gunanya buat nampilin halaman 'konfirmasi' buat nampilin halaman yang isinya value-value dari
 //yang user isi tadi,
 //post data ke halaman konfirmasi
-Route::post('/konfirmasi-pemesanan', 'BookingController@Konfirmasi_Pemesanan')->name('konfirmasi-pemesanan');
+Route::post('/konfirmasi', 'BookingController@Konfirmasi');
+
+Route::post('/save', 'BookingController@Save');
 
 //kalo user udah klik tombol 'konfirmasi' di halaman 'konfirmasi',
 //maka data yg udah dimasukin tadi di-store ke database menggunakan metode Pemesanan_Berhasil
 //post data
-//Route::post('/konfirmasi-pemesanan', 'BookingController@Pemesanan_Berhasil')->name('Pemesanan_Berhasil');
 
+
+Route::get('/profile/buktiPembayaran/{userid}/{orderid}', 'BookingController@BuktiPembayaran');
+
+Route::post('uploadBuktiPembayaran/{userid}/{orderid}', 'BookingController@uploadBuktiPembayaran');
+
+//Route::get('/pembayaran/{user}', 'BookingController@Pembayaran');
 
 Auth::routes();
 
+//yang dibawah ini buat logout
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');

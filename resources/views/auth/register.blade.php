@@ -11,7 +11,7 @@
                 <label for="nama">
                     <i class="fas fa-user"></i>
                 </label>
-                <input placeholder="Nama" id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
+                <input placeholder="Name" id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
 
                 @if ($errors->has('username'))
                       <span class="invalid-feedback" role="alert">
@@ -19,7 +19,7 @@
                      </span>
                 @endif
 
-            </div>
+            <!-- </div>
             <div class="form-style-agile">
                 <label for="username">
                     <i class="fas fa-user"></i>
@@ -32,7 +32,7 @@
                      </span>
                 @endif
 
-            </div>
+            </div> -->
              <div class="form-style-agile">
                 <label for="email">
                     <i class="fas fa-envelope"></i>
@@ -66,7 +66,7 @@
                 <input  id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required>
             </div>
             <input type="submit" value="Register">
-           <br> Already have an account?  <a href='{{url("/login")}}'> <br> Sign in </a>
+           <br> <br> Already have an account?  <a href='{{url("/login")}}'>  Sign in </a>
         </form>
     </div>
 
