@@ -84,7 +84,7 @@
                 <div class="panel-body">
                   @if(count($booking_list) > 0)
                     @foreach ($booking_list as $order)
-                      @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
+                      @if($order->order_type === 'wedding' || $order->order_type === 'engagement')
                         <ul>
                             <li><?php echo $order->order_type; ?></li>
                             <li><?php echo $order->date; ?></li>
@@ -117,7 +117,6 @@
                    @endforeach
                   @else
                     <h3>Anda belum pernah Booking</h3>
-
                   @endif
 
                 </div>

@@ -20,6 +20,11 @@ class AdminController extends Controller
  }
  public function admin()
  {
-     return view('Admin.master');
+     $order_lists = DB::table('bookings')
+                        ->orderBy('created_at')
+                        ->get();
+      //dd($order_lists);
+
+     return view('Admin.master', compact('order_lists'));
  }
 }

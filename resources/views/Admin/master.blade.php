@@ -229,19 +229,94 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6">
-            <div class="card">
+
+            <div class="card card-primary card-outline">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h5 class='card-title'>Belum Diverifikasi</h5>
               </div>
+              @if (count($order_lists) > 0)
+                @foreach ($order_lists as $order)
+                  @if($order->status === 'Sedang diverfikasi')
+                    @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
+                      <ul>
+                          <li><?php echo $order->order_type; ?></li>
+
+                          <a href="#">Verifikasi</a>
+                      </ul>
+                    @else
+                      <ul>
+                          <li><?php echo $order->order_type; ?></li>
+
+                          <a href="#">Verifikasi</a>
+                      </ul>
+                    @endif
+                  @endif
+                @endforeach
+              @else
+                <h4>apakek</h4>
+              @endif
+
             </div>
+
+            <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class='card-title'>Sudah diverifikasi</h5>
+              </div>
+              <!-- @if (count($order_lists) > 0)
+                @foreach ($order_lists as $order)
+                  @if($order->status === 'Sudah diverfikasi')
+                    @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
+                      <ul>
+                          <li><?php //echo $order->order_type; ?></li>
+
+                          <a href="#">Verifikasi</a>
+                      </ul>
+                    @else
+                      <ul>
+                          <li><?php //echo $order->order_type; ?></li>
+
+                          <a href="#">Verifikasi</a>
+                      </ul>
+                    @endif
+                  @endif
+                @endforeach
+                <h4>apakek</h4>-->
+              <!-- @else -->
+                <?php echo 'hantu'; ?>
+              <!-- @endif -->
+
+
+            </div>
+
+            <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class='card-title'>Belum ada bukti pembayaran</h5>
+              </div>
+              @if (count($order_lists) > 0)
+                @foreach ($order_lists as $order)
+                  @if($order->status === 'Belum diverfikasi')
+                    @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
+                      <ul>
+                          <li><?php echo $order->order_type; ?></li>
+                          <!-- <li><?php //echo $order->linkhasil; ?></li> -->
+                          <a href="#">Verifikasi</a>
+                      </ul>
+                    @else
+                      <ul>
+                          <li><?php echo $order->order_type; ?></li>
+                          <!-- <li><?php //echo $order->linkhasil; ?></li> -->
+                          <a href="#">Verifikasi</a>
+                      </ul>
+                    @endif
+                  @endif
+                @endforeach
+              @else
+                <h4>apakek</h4>
+              @endif
+
+            </div>
+
+
 
             <div class="card card-primary card-outline">
               <div class="card-body">
