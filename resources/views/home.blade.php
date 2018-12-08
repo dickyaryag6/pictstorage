@@ -219,8 +219,8 @@
         <br>
         <br></h2>
         <h4>Sincerely,<br>
+      </h4>
         PictStorage.
-        </h4>
       </div>
     </div>
   </div>
