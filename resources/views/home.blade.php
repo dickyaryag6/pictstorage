@@ -67,7 +67,7 @@
                     <li>
                       <!-- <a href='{{url("/profile")}}'>Profile</a> -->
                         <?php $user = Auth::user(); ?>
-                      <a href="/profile/<?php echo $user->id ?>">Profile</a>
+                      <a href='profile/<?php echo $user->id ?>'>Profile</a>
                     </li>
                     @endauth
                     <li>

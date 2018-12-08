@@ -52,7 +52,6 @@ class BookingController extends Controller
       $user = Auth::user();
       $hasilforms = $request->all();
     //  dd($hasilforms);
-
       if($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {
 
           Booking::create([
