@@ -1,8 +1,4 @@
 @include('layouts.head')
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d78b653c79f6489ca34648166d3b84dfa83c5bd
 
 <?php $user = Auth::user(); ?>
 
@@ -13,34 +9,41 @@ $(document).ready(function(){
     $("#engagementform").hide();
     $("#photoboothform").hide();
     $("#studioform").hide();
-
     $("#wedding").click(function(){
         $(".form").hide();
         $("#weddingform").fadeToggle();
     });
-
     $("#engagement").click(function(){
         $(".form").hide();
         $("#engagementform").fadeToggle();
     });
-
     $("#photobooth").click(function(){
         $(".form").hide();
         $("#photoboothform").fadeToggle();
     });
-
     $("#studio").click(function(){
         $(".form").hide();
         $("#studioform").fadeToggle();
     });
-
 });
 </script>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
 </head>
 <body>
 
-<p>Klik jenis order yang anda inginkan</p>
-
+<div class="text-center">
+  <br><br>
+  <div class="form-header">
+              <h2>Klik jenis order yang anda inginkan</h2>
+  </div>
+<br>
+<br>
+<div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
 <div class="container">
   <ul>
     <li type="button" class="btn btn-dark" id="wedding">Wedding</li>
@@ -409,12 +412,12 @@ $(document).ready(function(){
               </div>
           </div>
       </form>
+    </div>
   </div>
 </div>
-
-<<<<<<< HEAD
-=======
-@section('content')
-
-@endsection
->>>>>>> 7d78b653c79f6489ca34648166d3b84dfa83c5bd
+</div>
+</div>
+</div>
+  </div>
+</div>
+</body>
