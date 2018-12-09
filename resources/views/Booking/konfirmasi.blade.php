@@ -1,28 +1,28 @@
-@extends('layouts.app')
+@include('layouts.head')
 
-@section('content')
+
+<head>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+</head>
 <body>
-    <div class="container">
-      <table>
+    <div class="container text-center">
+      <br>
+      <table align="center">
+        <h2> Konfirmasi Pemesanan </h2>
         @foreach ($hasilforms as $hasilform)
         <tr>
-          <th>
+          <th><h4>
             <?php
             if ($hasilform !== $hasilforms['_token']) :
               echo $hasilform;
             endif;
             ?>
-          </th><br>
+          </h4></th><br>
         </tr>
         @endforeach
-        <!-- <tr>
-          <th>
-
-        </th>
-        </tr>
-        <tr>
-          <th></th>
-        </tr> -->
+   
       </table>
       <form action='save' method="post">
           @csrf
@@ -49,5 +49,8 @@
       <!-- <button type="button" name="button" onclick="javascript:location.href='book'">Ubah</button> -->
 
   </div>
+
 </body>
+@section('content')
+
 @endsection

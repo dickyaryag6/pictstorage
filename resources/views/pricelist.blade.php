@@ -14,12 +14,10 @@
 	
 </head>
 <body>
-<<<<<<< HEAD
-	<div  style="background-image: url(images/service3.jpg);" >
-=======
 
->>>>>>> 7d78b653c79f6489ca34648166d3b84dfa83c5bd
+
 	<section id="pricePlans">
+		<br><br>
 		<ul id="plans">
 			<li class="plan">
 				<ul class="planContainer">
@@ -91,10 +89,13 @@
 			</li>
 		</ul> <!-- End ul#plans -->
 	</section>
-<<<<<<< HEAD
-	<a href='{{url("/download")}}' class="btn btn-danger btn-fill" style="width:100%"><i class="fa fa-download"></i>Download</a>
-=======
-
->>>>>>> 7d78b653c79f6489ca34648166d3b84dfa83c5bd
+	
+	<div class="row mb-5 justify-content-center">
+        <div class="col-12 text-center">
+          <br><br><br>
+          <a href='{{url("/download")}}' class="btn btn-danger btn-fill py-2 px-3 rounded-10" ><i class="fa fa-download"></i>Download</a>
+        </div>
+      </div>
+@include('layouts.footer')
 </body>
 </html>

@@ -47,11 +47,20 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>User profile form requirement</legend>
+<br>
+<h2 align="center">Edit Profile</h2>
+<br>
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
+  <div class="col-md-4">
+    <input id="Upload photo" name="Upload photo" class="input-file" type="file">
+  </div>
+</div>
+
 
 <!-- Text input-->
-
-
 <div class="form-group">
   <label class="col-md-4 control-label" for="Name (Full name)">Name (Full name)</label>  
   <div class="col-md-4">
@@ -61,19 +70,44 @@
         </i>
        </div>
        <input id="Name (Full name)" name="Name (Full name)" type="text" placeholder="Name (Full name)" class="form-control input-md">
-      </div>
-
-    
+      </div>  
   </div>
-
-  
 </div>
 
-<!-- File Button --> 
+<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
+  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Permanent Address</label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="District" class="form-control input-md ">
+  </div>
+
+  <div class="col-md-2 col-xs-4">
+
+  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Area" class="form-control input-md ">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Permanent Address"></label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Street" class="form-control input-md ">
+  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
   <div class="col-md-4">
-    <input id="Upload photo" name="Upload photo" class="input-file" type="file">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-envelope-o"></i>
+        
+       </div>
+    <input id="Email Address" name="Email Address" type="text" placeholder="Email Address" class="form-control input-md">
+    
+      </div>
+  
   </div>
 </div>
 
@@ -89,43 +123,10 @@
        </div>
        <input id="Date Of Birth" name="Date Of Birth" type="text" placeholder="Date Of Birth" class="form-control input-md">
       </div>
-  
-    
   </div>
 </div>
 
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Father">Father's name</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-      <i class="fa fa-male" style="font-size: 20px;"></i>
-        
-       </div>
-      <input id="Father" name="Father" type="text" placeholder="Father's name" class="form-control input-md">
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Mother">Mother's Name</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-      <i class="fa fa-female" style="font-size: 20px;"></i>
-        
-       </div>
-  <input id="Mother" name="Mother" type="text" placeholder="Mother's Name" class="form-control input-md">
-
-      </div>
-    
-  </div>
-</div>
 
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
@@ -144,95 +145,6 @@
       Other
     </label>
   </div>
-</div>
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Marital Status:</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      Married
-    </label> 
-    <label class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      Unmarried
-    </label>
-  </div>
-</div>
-
-<!-- Text input-->
-<!-- <div class="form-group">
-  <label class="col-md-4 control-label" for="Temporary Address">Temporary Address</label>  
-  <div class="col-md-4">
-
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-home" style="font-size:20px;"></i>
-        
-       </div>
- <input id="Temporary Address" name="Temporary Address" type="text" placeholder="Temporary Address" class="form-control input-md">
-      </div>
- 
-    
-  </div>
-</div>
- -->
-
-
-<div class="form-group">
-  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Permanent Address</label>  
-  <div class="col-md-2  col-xs-4">
-  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="District" class="form-control input-md ">
-  </div>
-
-  <div class="col-md-2 col-xs-4">
-
-  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Area" class="form-control input-md ">
-  </div>
-
-  
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Permanent Address"></label>  
-  <div class="col-md-2  col-xs-4">
-  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Street" class="form-control input-md ">
-  
-  </div>
-
-  
-
-  
-</div>
-
-
-
-
-<div class="form-group">
-  <label class="col-md-4 control-label col-xs-12" for="Temporary Address">Temporary Address</label>  
-  <div class="col-md-2  col-xs-4">
-  <input id="Temporary Address" name="Temporary Address" type="text" placeholder="District" class="form-control input-md ">
-  </div>
-
-  <div class="col-md-2 col-xs-4">
-
-  <input id="Temporary Address" name="Temporary Address" type="text" placeholder="Area" class="form-control input-md ">
-  </div>
-
-  
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Temporary Address"></label>  
-  <div class="col-md-2  col-xs-4">
-  <input id="Temporary Address" name="Temporary Address" type="text" placeholder="Street" class="form-control input-md ">
-  
-  </div>
-
-  
-
-  
 </div>
 
 
@@ -254,37 +166,7 @@
   </div>
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Secondary Occupation (if any)">Secondary Occupation (if any)</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-      <i class="fa fa-briefcase"></i>
-        
-       </div>
-     <input id="Secondary Occupation (if any)" name="Secondary Occupation (if any)" type="text" placeholder="Secondary Occupation (if any)" class="form-control input-md">
-      </div>
-  
-    
-  </div>
-</div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Skills">Skills</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-graduation-cap"></i>
-        
-       </div>
-     <input id="Skills" name="Skills" type="text" placeholder="Skills" class="form-control input-md">
-      </div>
- 
-    
-  </div>
-</div>
 
 <!-- Text input-->
 <div class="form-group">
@@ -310,75 +192,10 @@
   </div>
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-envelope-o"></i>
-        
-       </div>
-    <input id="Email Address" name="Email Address" type="text" placeholder="Email Address" class="form-control input-md">
-    
-      </div>
-  
-  </div>
-</div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Availability time">Availability time</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-clock-o"></i>
-        
-       </div>
-    <input id="Availability time" name="Availability time" type="text" placeholder="Availability time" class="form-control input-md">
-    
-      </div>
-  
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Available Service Area">Available Service Area</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-street-view"></i>
-        
-       </div>
-   <input id="Available Service Area" name="Available Service Area" type="text" placeholder="Available Service Area" class="form-control input-md">
-    
-      </div>
-  
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Citizenship No.">Citizenship No.</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-sticky-note-o"></i>
-        
-       </div>
-   <input id="Citizenship No." name="Citizenship No." type="text" placeholder="Citizenship No." class="form-control input-md">
-    
-      </div>
- 
-    
-  </div>
-</div>
-
+<!-- 
 <!-- Multiple Checkboxes -->
-<div class="form-group">
+<!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Languages Known">Languages Known</label>
   <div class="col-md-4">
   <div class="checkbox">
@@ -419,7 +236,7 @@
   </div>
 </div>
 
-<!-- Text input-->
+ Text input
 <div class="form-group">
   <label class="col-md-4 control-label" for="License No.">License No.</label>  
   <div class="col-md-4">
@@ -437,7 +254,7 @@
 </div>
 
 <!-- Multiple Radios -->
-<div class="form-group">
+<!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Owns Vehicle">Owns Vehicle?</label>
   <div class="col-md-4">
   <div class="checkbox">
@@ -459,25 +276,9 @@
     </label>
     </div>
   </div>
-</div>
+</div> --> --> -->
 
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Working Experience (time period)">Working Experience (time period)</label>  
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-clock-o"></i>
-        
-       </div>
-    <input id="Working Experience (time period)" name="Working Experience" type="text" placeholder="Enter time period " class="form-control input-md">
-    
-    
-      </div>
- 
-  </div>
-</div>
 
 <!-- Textarea -->
 <div class="form-group">
