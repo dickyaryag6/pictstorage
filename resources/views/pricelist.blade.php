@@ -89,7 +89,11 @@
 			</li>
 		</ul> <!-- End ul#plans -->
 	</section>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 4d368635346c83c1323d5c52e47003b36528be95
 	<div class="row mb-5 justify-content-center">
         <div class="col-12 text-center">
           <br><br><br>
