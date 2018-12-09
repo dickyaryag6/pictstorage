@@ -41,6 +41,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/portofolio', function () {
+    return view('portofolio');
+});
+
 Route::get('/download', function(){
 	$file = public_path()."/pricelist.pdf";
 

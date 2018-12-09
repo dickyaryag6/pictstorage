@@ -186,14 +186,19 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
+      
+      <div class="row mb-5 justify-content-center">
+        <div class="col-12 text-center">
+          <br><br><br>
+          <a href='{{url("/works")}}' class="btn btn-primary py-1 px-3 rounded-10">See More</a>
+        </div>
+      </div>
+    
     </div>
 
     <div class="slide-one-item home-slider owl-carousel">
-
       <div class="site-blocks-cover overlay" style="background-image: url(images/ps_header1a.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -205,28 +210,21 @@
       </div>
     </div>
 
-
-
     <div class="slide-one-item home-slider owl-carousel">
-
-<div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-  <div class="container">
-    <div class="row align-items-center justify-content-center text-center">
-      <div class="col-md-10">
-        <h1 class="mb-5"><strong>About Us<br></strong></h1>
-        <h2>We could say that we were the first to introduce Call-in Photo Studio in town.
-        But also we provide many kinds of photography and videography services to capture your precious moment just like a storage, larger and more flexible.
-        <br>
-        <br></h2>
-        <h4>Sincerely,<br>
-        PictStorage.
-        </h4>
+      <div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5"><strong>About Us<br></strong></h1>
+              <h2>We could say that we were the first to introduce Call-in Photo Studio in town.
+              But also we provide many kinds of photography and videography services to capture your precious moment just like a storage, larger and more flexible.
+              <br><br></h2>
+              <h4>Sincerely,<br>PictStorage.</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-</div>
 
 
 

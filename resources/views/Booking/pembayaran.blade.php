@@ -14,7 +14,7 @@
   <?php $user_id=$orderqu->user_id ?>
 <?php } ?>
 <div class="card-body">
-  <form action="/uploadBuktiPembayaran/<?php echo $user_id ?>/<?php echo $order_id ?>" method="post" enctype="multipart/form-data">
+  <form action='{{url("uploadBuktiPembayaran")}}/<?php echo $user_id ?>/<?php echo $order_id ?>' method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
       <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" required>
