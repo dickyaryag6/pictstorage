@@ -36,11 +36,9 @@ $(document).ready(function(){
 <div class="text-center">
   <br><br>
   <div class="form-header">
-<<<<<<< HEAD
+
               <h2>Klik jenis order yang anda inginkan</h2>
-=======
-              <h2>Klik jenis order yang anda inginkan</h2>            
->>>>>>> 4d368635346c83c1323d5c52e47003b36528be95
+
   </div>
 <br>
 <br>
@@ -417,7 +415,6 @@ $(document).ready(function(){
           </div>
       </form>
     </div>
-<<<<<<< HEAD
   </div>
 </div>
 </div>
@@ -426,17 +423,3 @@ $(document).ready(function(){
   </div>
 </div>
 </body>
-=======
-  </div>
-</div>
-</div>
-</div>
-</div>
-  </div>
-</div>
-</body>
-
-
-
-
->>>>>>> 4d368635346c83c1323d5c52e47003b36528be95

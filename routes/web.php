@@ -63,7 +63,8 @@ Route::get('/download', function(){
 //waktu user klik tombol 'book a shoot' , dipanggil metode isi Pemesanan
 //dari controller BookingControll yang gunanya nampilin halaman pengisian form
 //get data
-Route::get('/book', 'BookingController@Form');
+Route::get('/book', 'BookingController@Form')
+            ->middleware('auth');
 
 //kalo yang ini buat manggil metode Konfirmasi_Pemesanan dari controller yg sama
 //gunanya buat nampilin halaman 'konfirmasi' buat nampilin halaman yang isinya value-value dari

@@ -33,7 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <!-- <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -42,20 +42,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </button>
         </div>
       </div>
-    </form>
+    </form> -->
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+     <!-- <ul class="navbar-nav ml-auto"> -->
+       <!-- Messages Dropdown Menu  -->
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fa fa-comments-o"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
-            <div class="media">
+            <!-- <div class="media">
               <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -65,13 +65,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p class="text-sm">Call me whenever you can...</p>
                 <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
-            <div class="media">
+            <!-- <div class="media">
               <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -81,13 +81,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p class="text-sm">I got your message bro</p>
                 <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
+          <!-- </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
-            <div class="media">
+            <!-- <div class="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
@@ -97,15 +97,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p class="text-sm">The subject goes here</p>
                 <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
+            </div> -->
             <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
+          <!-- </a> -->
+          <!-- <div class="dropdown-divider"></div> -->
+          <!-- <a href="#" class="dropdown-item dropdown-footer">See All Messages</a> -->
+        <!-- </div>
+      </li> -->
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fa fa-bell-o"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -130,22 +130,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
             class="fa fa-th-large"></i></a>
-      </li>
-    </ul>
+      </li> -->
+    <!-- </ul> -->
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    <a href="" class="brand-link">
+      <img src="images/navbar_logo.png" alt="" class="brand-image"
+           style="background-color: #FFF">
+      <span class="brand-text font-weight-light">PictStorage</span>
     </a>
 
     <!-- Sidebar -->
@@ -153,10 +153,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="#" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -228,7 +228,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-12">
 
             <div class="card card-primary card-outline">
               <div class="card-body">
@@ -238,17 +238,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 @foreach ($order_lists as $order)
                   @if($order->status === 'Sedang diverfikasi')
                     @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
-                      <ul>
-                          <li><?php echo $order->order_type; ?></li>
+                    <div>
+                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
 
-                          <a href="#">Verifikasi</a>
-                      </ul>
+                      <a href="/verifikasi" class="btn btn-primary">Verifikasi</a>
+                    </div>
                     @else
-                      <ul>
-                          <li><?php echo $order->order_type; ?></li>
-
-                          <a href="#">Verifikasi</a>
-                      </ul>
+                    <div>
+                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
+                      <a href="verifikasi" class="btn btn-primary">Verifikasi</a>
+                    </div>
                     @endif
                   @endif
                 @endforeach
@@ -262,7 +261,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <h5 class='card-title'>Sudah diverifikasi</h5>
               </div>
-              <!-- @if (count($order_lists) > 0)
+              @if (count($order_lists) > 0)
                 @foreach ($order_lists as $order)
                   @if($order->status === 'Sudah diverfikasi')
                     @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
@@ -280,10 +279,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     @endif
                   @endif
                 @endforeach
-                <h4>apakek</h4>-->
-              <!-- @else -->
-                <?php echo 'hantu'; ?>
-              <!-- @endif -->
+
+              @else
+                <h4>apakek</h4>
+              @endif
 
 
             </div>
@@ -298,13 +297,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
                       <ul>
                           <li><?php echo $order->order_type; ?></li>
-                          <!-- <li><?php //echo $order->linkhasil; ?></li> -->
+                          <li><?php echo $order->linkhasil; ?></li>
                           <a href="#">Verifikasi</a>
                       </ul>
                     @else
                       <ul>
                           <li><?php echo $order->order_type; ?></li>
-                          <!-- <li><?php //echo $order->linkhasil; ?></li> -->
+                          <li><?php echo $order->linkhasil; ?></li>
                           <a href="#">Verifikasi</a>
                       </ul>
                     @endif
@@ -317,7 +316,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
 
 
-
+<!--
             <div class="card card-primary card-outline">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -329,10 +328,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a>
               </div>
-            </div><!-- /.card -->
+            </div><! /.card -->
           </div>
           <!-- /.col-md-6 -->
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
             <div class="card">
               <div class="card-header">
                 <h5 class="m-0">Featured</h5>
@@ -356,7 +355,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->
