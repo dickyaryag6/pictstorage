@@ -18,6 +18,7 @@ class AdminController extends Controller
  {
      $this->middleware('auth');
  }
+
  public function admin()
  {
      $order_lists = DB::table('bookings')
@@ -27,4 +28,25 @@ class AdminController extends Controller
 
      return view('Admin.master', compact('order_lists'));
  }
+
+ public function VerifikasiPembayaran($orderid)
+ {
+   //dd($orderid);
+   Booking::where('order_id', $orderid)
+           ->update([
+             // 'bukti_pembayaran' => $filenameyangdipake,
+             'status' => 'Terverifikasi',
+           ]);
+
+   $order_lists = DB::table('bookings')
+                  ->orderBy('created_at')
+                  ->get();
+            //dd($order_lists);
+
+  return redirect('admin')->with('$order_lists');
+   //return redirect('/admin', compact('order_lists'));
+  // return view('Admin.master', compact('order_lists'));
+
+ }
+
 }

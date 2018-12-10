@@ -11,11 +11,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>Admin PictStorage</title>
-
+  @csrf
   <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
@@ -166,29 +166,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <!-- <a href="#" class="nav-link active">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Starter Pages
                 <i class="right fa fa-angle-left"></i>
               </p>
-            </a>
+            </a> -->
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Active Page</p>
-                </a>
+                <router-link href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Dashboard</p>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Inactive Page</p>
+                <a href="{{url("/logout")}}" class="nav-link">
+                  <i class="nav-icon fa fa-power-off"></i>
+                  <p>Logout</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-th"></i>
               <p>
@@ -196,7 +196,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -209,6 +209,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+        <router-view></router-view>
+
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Starter Page</h1>
@@ -234,26 +236,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <h5 class='card-title'>Belum Diverifikasi</h5>
               </div>
-              @if (count($order_lists) > 0)
+              <!-- @if (count($order_lists) > 0)
                 @foreach ($order_lists as $order)
                   @if($order->status === 'Sedang diverfikasi')
-                    @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
-                    <div>
-                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
 
-                      <a href="/verifikasi" class="btn btn-primary">Verifikasi</a>
-                    </div>
-                    @else
                     <div>
-                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
-                      <a href="verifikasi" class="btn btn-primary">Verifikasi</a>
+                      <span class="btn btn-light"><?php// echo $order->order_type; ?></span>
+                      <span class="btn btn-light"><?php //echo $order->date; ?></span>
+
+                      <a href="#">Detail</a>
+                      <a href="verifikasi/<?php //echo $order->order_id; ?>" class="btn btn-primary">Verifikasi</a>
+                      <br>
+                       <form action="#" method="post" class="col-sm-3">
+                        <div>
+                              <label for="linkhasil">Link hasil foto</label>
+                              <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
+
+                              @if ($errors->has('linkhasil'))
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $errors->first('linkhasil') }}</strong>
+                                  </span>
+                              @endif
+                        </div>
+
+                      </form>
                     </div>
-                    @endif
                   @endif
                 @endforeach
               @else
                 <h4>apakek</h4>
-              @endif
+              @endif -->
+
+              <div>
+              <?php if ((count($order_lists) > 0)) :?>
+                <?php foreach ($order_lists as $order) : ?>
+                  <?php if ($order->status === 'Belum diverifikasi') : ?>
+                      <span class="btn btn-light"><?php echo $order->order_id; ?></span>
+                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
+                      <span class="btn btn-light"><?php echo $order->date; ?></span>
+                      <a href="#">Detail</a>
+                      <a href="/verifikasi/<?php echo $order->order_id; ?>" class="btn btn-primary">Verifikasi</a>
+                      <br>
+                      <form action="#" method="post">
+                        <div>
+                              <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
+
+                              @if ($errors->has('linkhasil'))
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $errors->first('linkhasil') }}</strong>
+                                  </span>
+                              @endif
+                        </div>
+                      </form>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              <?php else : ?>
+                <h4>Kosong</h4>
+              <?php endif; ?>
+              </div>
 
             </div>
 
@@ -261,33 +301,49 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <h5 class='card-title'>Sudah diverifikasi</h5>
               </div>
-              @if (count($order_lists) > 0)
-                @foreach ($order_lists as $order)
-                  @if($order->status === 'Sudah diverfikasi')
-                    @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
-                      <ul>
-                          <li><?php //echo $order->order_type; ?></li>
+              <div>
+              <?php if ((count($order_lists) > 0)) :?>
+                <?php foreach ($order_lists as $order) : ?>
+                  <?php if ($order->status === 'Terverifikasi') : ?>
+                      <span class="btn btn-light"><?php echo $order->order_id; ?></span>
+                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
+                      <span class="btn btn-light"><?php echo $order->date; ?></span>
 
-                          <a href="#">Verifikasi</a>
-                      </ul>
-                    @else
-                      <ul>
-                          <li><?php //echo $order->order_type; ?></li>
+                      <a href="#">Detail</a>
+                      <br>
+                      <form action="#" method="post" class='col-md-3'>
+                        <div class="form-group row">
+                          <label for="linkhasil" class="col-form-label text-md-right">Input link hasil foto :</label>
+                          <div>
+                              <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
 
-                          <a href="#">Verifikasi</a>
-                      </ul>
-                    @endif
+                              @if ($errors->has('linkhasil'))
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $errors->first('linkhasil') }}</strong>
+                                  </span>
+                              @endif
+                          </div>
+                        </div>
+                      </form>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              <?php endif; ?>
+              </div>
+              <!-- @if (count($order_lists) > 0) :
+                @foreach ($order_lists as $order) :
+                  @if($order->status === 'Terverifikasi') :
+
+
+                      </form>
+                    </div>
                   @endif
                 @endforeach
-
-              @else
-                <h4>apakek</h4>
-              @endif
+              @endif -->
 
 
             </div>
 
-            <div class="card card-primary card-outline">
+            <!-- <div class="card card-primary card-outline">
               <div class="card-body">
                 <h5 class='card-title'>Belum ada bukti pembayaran</h5>
               </div>
@@ -296,14 +352,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   @if($order->status === 'Belum diverfikasi')
                     @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
                       <ul>
-                          <li><?php echo $order->order_type; ?></li>
-                          <li><?php echo $order->linkhasil; ?></li>
+                          <li><?php //echo //$order->order_type; ?></li>
+                          <li><?php //echo //$order->linkhasil; ?></li>
                           <a href="#">Verifikasi</a>
                       </ul>
                     @else
                       <ul>
-                          <li><?php echo $order->order_type; ?></li>
-                          <li><?php echo $order->linkhasil; ?></li>
+                          <li><?php //echo //$order->order_type; ?></li>
+                          <li><?php //echo //$order->linkhasil; ?></li>
                           <a href="#">Verifikasi</a>
                       </ul>
                     @endif
@@ -313,7 +369,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h4>apakek</h4>
               @endif
 
-            </div>
+            </div> -->
 
 
 <!--

@@ -121,17 +121,6 @@ class BookingController extends Controller
 
       $path = $request->file('bukti_pembayaran')->storeAs('public/buktiPembayaran', $filenameyangdipake);
 
-      // Booking::create([
-      //   'user_id' => $user_id,
-      //   'order_id' => $order_id,
-      //   'order_type' => $ordertype,
-      //   'date' => $date,
-      //   'jam' => $jam,
-      //   'location' => $location,
-      //   'bukti_pembayaran' => $filenameyangdipake,
-      //   'status' => 'Sedang diverfikasi'
-      // ]);
-
       //Proses yg buat update
       Booking::where('order_id', $orderid)
               ->update([
