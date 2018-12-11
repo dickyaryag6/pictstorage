@@ -31,6 +31,7 @@ $(document).ready(function(){
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
 </head>
+
 <body>
 
 <div class="text-center">

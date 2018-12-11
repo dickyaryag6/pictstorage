@@ -14,11 +14,15 @@
 
 </head>
 <body>
+	<div class="row mb-5 justify-content-center">
+        <div class="col-12 text-center">
+		<br>
+        	<h2 class="font-weight-light text-black display-4">Pricelist</h2>
+        </div>
+    </div>
 
-
-	<section id="pricePlans">
-		<br><br>
-		<ul id="plans">
+	<section id="pricePlans" >
+		<ul id="plans" >
 			<li class="plan">
 				<ul class="planContainer">
 					<li class="title"><h2>Wedding</h2></li>
@@ -93,7 +97,7 @@
 	<div class="row mb-5 justify-content-center">
         <div class="col-12 text-center">
           <br><br><br>
-          <a href='{{url("/download")}}' class="btn btn-danger btn-fill py-2 px-3 rounded-10" ><i class="fa fa-download"></i>Download</a>
+          <a href='{{url("/download")}}' class="btn btn-danger btn-fill py-2 px-3 rounded-10" ><i class="fa fa-download"></i>Download as Pdf</a>
         </div>
       </div>
 @include('layouts.footer')
