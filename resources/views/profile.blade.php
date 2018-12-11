@@ -29,10 +29,11 @@
         <div class="col-sm-3">
             <!--left col-->
             <ul class="list-group">
+              <?php $user = Auth::user(); ?>
                 <li class="list-group-item text-muted" contenteditable="false"><strong>Profile</strong></li>
-                <li class="list-group-item "><strong class="">Name: </strong> Joaquin Buenaobra</li>
+                <li class="list-group-item "><strong class="">Name: </strong> <?php echo $user->nama; ?></li>
                 <li class="list-group-item "><span class="pull-left"><strong class="">Address: </strong></span> Ermita, Manila</li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Email: </strong></span> "jwbuenaobra@hotmail.com"</li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Email: </strong></span> <?php echo $user->email; ?></li>
                 <li class="list-group-item "><span class="pull-left"><strong class="">Birthday: </strong></span>3 May 1981</li>
                 <li class="list-group-item "><span class="pull-left"><strong class="">Age: </strong></span>37</li>
                 <li class="list-group-item "><span class="pull-left"><strong class="">Sex: </strong></span>M</li>

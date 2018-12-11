@@ -237,36 +237,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <h5 class='card-title'>Belum Diverifikasi</h5>
               </div>
-              <!-- @if (count($order_lists) > 0)
-                @foreach ($order_lists as $order)
-                  @if($order->status === 'Sedang diverfikasi')
-
-                    <div>
-                      <span class="btn btn-light"><?php// echo $order->order_type; ?></span>
-                      <span class="btn btn-light"><?php //echo $order->date; ?></span>
-
-                      <a href="#">Detail</a>
-                      <a href="verifikasi/<?php //echo $order->order_id; ?>" class="btn btn-primary">Verifikasi</a>
-                      <br>
-                       <form action="#" method="post" class="col-sm-3">
-                        <div>
-                              <label for="linkhasil">Link hasil foto</label>
-                              <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
-
-                              @if ($errors->has('linkhasil'))
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $errors->first('linkhasil') }}</strong>
-                                  </span>
-                              @endif
-                        </div>
-
-                      </form>
-                    </div>
-                  @endif
-                @endforeach
-              @else
-                <h4>apakek</h4>
-              @endif -->
 
               <div>
               <?php if ((count($order_lists) > 0)) :?>
@@ -327,47 +297,49 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <?php endforeach; ?>
               <?php endif; ?>
               </div>
-              <!-- @if (count($order_lists) > 0) :
-                @foreach ($order_lists as $order) :
-                  @if($order->status === 'Terverifikasi') :
-
-
-                      </form>
-                    </div>
-                  @endif
-                @endforeach
-              @endif -->
-
-
             </div>
 
-            <!-- <div class="card card-primary card-outline">
+            <div class="card card-primary card-outline">
               <div class="card-body">
-                <h5 class='card-title'>Belum ada bukti pembayaran</h5>
+                <h5 class='card-title'>Sudah Selesai</h5>
               </div>
-              @if (count($order_lists) > 0)
-                @foreach ($order_lists as $order)
-                  @if($order->status === 'Belum diverfikasi')
-                    @if ($order->order_type === 'wedding' || $order->order_type === 'engagement')
-                      <ul>
-                          <li><?php //echo //$order->order_type; ?></li>
-                          <li><?php //echo //$order->linkhasil; ?></li>
-                          <a href="#">Verifikasi</a>
-                      </ul>
-                    @else
-                      <ul>
-                          <li><?php //echo //$order->order_type; ?></li>
-                          <li><?php //echo //$order->linkhasil; ?></li>
-                          <a href="#">Verifikasi</a>
-                      </ul>
-                    @endif
-                  @endif
-                @endforeach
-              @else
-                <h4>apakek</h4>
-              @endif
+              <div>
+              <?php if ((count($order_lists) > 0)) :?>
+                <?php foreach ($order_lists as $order) : ?>
+                  <?php if ($order->linkhasil !== null) : ?>
+                      <span class="btn btn-light"><?php echo $order->order_id; ?></span>
+                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
+                      <span class="btn btn-light"><?php echo $order->date; ?></span>
 
-            </div> -->
+                      <a href="#">Detail</a>
+                      <?php if($order->linkhasil === null) : ?>
+                      <br>
+                      <form action="/linkhasil/<?php echo $order->order_id; ?>" method="post" class='col-md-3'>
+                        @csrf
+                        <div>
+                          <label for="linkhasil" class="col-form-label text-md-right" style="display:inline-block;">Input link hasil foto :</label>
+                          <div style="display:inline-block;">
+                              <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
+
+                              @if ($errors->has('linkhasil'))
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $errors->first('linkhasil') }}</strong>
+                                  </span>
+                              @endif
+                          </div>
+                        </div>
+                        <div class="col-md-8" style="display:inline-block;">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Submit') }}
+                            </button>
+                        </div>
+                      </form>
+                    <?php endif; ?>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              <?php endif; ?>
+              </div>
+            </div>
 
 
 <!--
