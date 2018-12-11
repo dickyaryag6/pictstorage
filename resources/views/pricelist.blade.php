@@ -49,7 +49,7 @@
 			<li class="plan">
 				<ul class="planContainer">
 					<li class="title"><h2 class="bestPlanTitle">Gold Wedding</h2></li>
-					<li class="price"><p class="bestPlanPrice">IDR 7000K</p></li>
+					<li class="price"><p class="bestPlanPrice" >IDR 7000K</p></li>
 					<li>
 						<ul class="options">
 							<li>2x <span>Photographers</span></li>
@@ -63,7 +63,7 @@
 							<li><strong>FREE <span>30 Edited Photos</span></strong></li>
 						</ul>
 					</li>
-					<li class="button"><a class="bestPlanButton" href="#">ORDER NOW</a></li>
+					<li class="button"><a  href="#">ORDER NOW</a></li>
 				</ul>
 			</li>
 
@@ -109,8 +109,8 @@
 
 	<div class="row mb-5 justify-content-center">
         <div class="col-12 text-center">
-          <br><br><br>
-          <a href='{{url("/download")}}' class="btn btn-danger btn-fill py-2 px-3 rounded-10" ><i class="fa fa-download"></i>Download as Pdf</a>
+          <h3> Download Here for more price </h3>
+          <a href='{{url("/download")}}' class="btn btn-danger btn-fill py-2 px-5 rounded-10" ><i class="fa fa-download"></i>Download</a>
         </div>
       </div>
 @include('layouts.footer')
