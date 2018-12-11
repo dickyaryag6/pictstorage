@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\PembayaranReminder;
 
 class User extends Authenticatable
 {
@@ -41,4 +42,6 @@ class User extends Authenticatable
     {
     return $this->user_type === self::ADMIN_TYPE;
     }
+
+    //$user->notify(new InvoicePaid($invoice));
 }

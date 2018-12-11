@@ -77,6 +77,8 @@ class BookingController extends Controller
              ]);
       }
 
+      //$user->notify(new PembayaranReminder($user->id));
+
       return redirect('profile/'.$user->id);
       // return redirect()->route('profile/{user}', ['user' => $user->id]);
       //return redirect()->route('/profile', [$user->id]);
@@ -86,8 +88,9 @@ class BookingController extends Controller
     public function showprofile($user_id)
     {
       $booking_list = Booking::where('user_id', $user_id)->get();
+      $profile = User::where('id', $user_id)->get();
 
-      return view('profile', compact('booking_list'));
+      return view('profile', compact('booking_list', 'profile'));
     }
 
     public function buktiPembayaran($userid,$orderid)
@@ -125,7 +128,7 @@ class BookingController extends Controller
       Booking::where('order_id', $orderid)
               ->update([
                 'bukti_pembayaran' => $filenameyangdipake,
-                'status' => 'Sedang diverfikasi',
+                'status' => 'Sedang diverifikasi',
               ]);
 
               //   array('bukti_pembayaran' => $filenameyangdipake))

@@ -2,7 +2,7 @@
 
 
 <head>
-  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
 </head>
@@ -11,18 +11,23 @@
       <br>
       <table align="center">
         <h2> Konfirmasi Pemesanan </h2>
-        @foreach ($hasilforms as $hasilform)
-        <tr>
-          <th><h4>
-            <?php
-            if ($hasilform !== $hasilforms['_token']) :
-              echo $hasilform;
-            endif;
-            ?>
-          </h4></th><br>
-        </tr>
-        @endforeach
-   
+
+        <ul class="list-group">
+              <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') : ?>
+                <li class="list-group-item"><h4><?php echo "Jenis : ".$hasilforms['order_type']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Tanggal : ".$hasilforms['date']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Jam : ".$hasilforms['jam']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Lokasi : ".$hasilforms['location']; ?></h4></li>
+              <?php else : ?>
+                <li class="list-group-item"><h4><?php echo "Jenis : ".$hasilforms['order_type']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Tanggal : ".$hasilforms['date']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Jam : ".$hasilforms['jam']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Lokasi : ".$hasilforms['location']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Durasi : ".$hasilforms['durasi']; ?></h4></li>
+                <li class="list-group-item"><h4><?php echo "Jumlah Orang :".$hasilforms['jumlah_orang']; ?></h4></li>
+              <?php endif; ?>
+          <br>
+        </ul>
       </table>
       <form action='save' method="post">
           @csrf

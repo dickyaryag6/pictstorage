@@ -11,6 +11,7 @@ use Auth;
 use Illuminate\Support\Facades;
 use DB;
 use Redirect;
+use App\Notifications\KonfirmasiPembayaran;
 
 class AdminController extends Controller
 {
@@ -34,9 +35,14 @@ class AdminController extends Controller
    //dd($orderid);
    Booking::where('order_id', $orderid)
            ->update([
-             // 'bukti_pembayaran' => $filenameyangdipake,
              'status' => 'Terverifikasi',
            ]);
+
+   $userid = DB::table('bookings')->where('order_id', '=', $orderid)->value('user_id');
+   $book = DB::table('bookings')->where('order_id', '=', $orderid)->get();
+   $user = DB::table('users')->where('id', '=', $userid)->get();
+
+   $user->notify(new KonfirmasiPembayaran($book));
 
    $order_lists = DB::table('bookings')
                   ->orderBy('created_at')
@@ -46,6 +52,25 @@ class AdminController extends Controller
   return redirect('admin')->with('$order_lists');
    //return redirect('/admin', compact('order_lists'));
   // return view('Admin.master', compact('order_lists'));
+
+ }
+
+ public function UpdateLinkHasil($orderid, request $request)
+ {
+     $linkhasil = $request->all();
+     $linkhasil = $linkhasil['linkhasil'];
+
+     Booking::where('order_id', $orderid)
+             ->update([
+               'linkhasil' => $linkhasil,
+             ]);
+
+    $order_lists = DB::table('bookings')
+                    ->orderBy('created_at')
+                    ->get();
+                      //dd($order_lists);
+
+    return redirect('admin')->with('$order_lists');
 
  }
 

@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Notifications\PembayaranReminder;
 
 Route::get('/', function () {
     return view('home');
@@ -97,3 +97,5 @@ Route::get('/admin', 'AdminController@admin')
     ->name('admin');
 
 Route::get('/verifikasi/{orderid}', 'AdminController@VerifikasiPembayaran');
+
+Route::post('/linkhasil/{orderid}', 'AdminController@UpdateLinkHasil');
