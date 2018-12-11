@@ -24,6 +24,28 @@
 
   </head>
 <body>
+    <div class="slide-one-item home-slider owl-carousel">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/aboutus.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+              <h1 class="mb-5"><strong>About Us<br></strong></h1>
+              <h2>We could say that we were the first to introduce Call-in Photo Studio in town.
+              But also we provide many kinds of photography and videography services to capture your precious moment just like a storage, larger and more flexible.
+              <br><br></h2>
+              <h4>Sincerely,<br>PictStorage.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promo py-5 bg-primary" data-aos="fade">
+      <div class="container text-center">
+        <h2 class="d-block mb-0 font-weight-light text-white"><a href="#" class="text-white d-block">Contact us for quotations</a></h2>
+      </div>
+    </div>
+    
  <footer class="site-footer">
       <div class="container">
 
