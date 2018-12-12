@@ -96,7 +96,13 @@
             <div class="col-md-10">
               <h1 class="mb-5">Photo<br><strong>Studio</strong></h1>
               <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+                @guest
+                   <a href='{{url("/login")}}' class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+                  @endguest
+                  @auth
+                      <a href='{{url("/book")}}' class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+
+                  @endauth
               </p>
             </div>
           </div>
@@ -109,7 +115,13 @@
             <div class="col-md-10">
               <h1 class="mb-5">Wedding<br><strong>Ceremony</strong></h1>
               <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+                 @guest
+                   <a href='{{url("/login")}}' class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+                  @endguest
+                  @auth
+                      <a href='{{url("/book")}}' class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+
+                  @endauth
               </p>
             </div>
           </div>
@@ -122,7 +134,13 @@
             <div class="col-md-10">
               <h1 class="mb-5"><strong>Engagement</strong></h1>
               <p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+                @guest
+                   <a href='{{url("/login")}}' class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+                  @endguest
+                  @auth
+                      <a href='{{url("/book")}}' class="btn btn-primary py-3 px-5 rounded-0">Book Now</a>
+
+                  @endauth
               </p>
             </div>
           </div>
