@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>Admin PictStorage</title>
   @csrf
-  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="{{asset('/css/app.css')}}">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
@@ -246,12 +246,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <span class="btn btn-light"><?php echo $order->order_type; ?></span>
                       <span class="btn btn-light"><?php echo $order->date; ?></span>
                       <a href="#">Detail</a>
-                      <a href="/verifikasi/<?php echo $order->order_id; ?>" class="btn btn-primary">Verifikasi</a>
+                      <a href='{{url("/verifikasi")}}/<?php echo $order->order_id; ?>' class="btn btn-primary">Verifikasi</a>
                       <br>
                   <?php endif; ?>
                 <?php endforeach; ?>
-              <?php else : ?>
-                <?php echo "kosong"; ?>
+              <?php else : ?><br>
+                <?php echo "Tidak ada pemesanan"; ?>
               <?php endif; ?>
               </div>
 
@@ -272,7 +272,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <a href="#">Detail</a>
                       <?php if($order->linkhasil === null) : ?>
                       <br>
-                      <form action="/linkhasil/<?php echo $order->order_id; ?>" method="post" class='col-md-3'>
+                     
+                      <form action='{{url("/linkhasil")}}/<?php echo $order->order_id; ?>' method="post" class='col-md-3'>
                         @csrf
                         <div>
                           <label for="linkhasil" class="col-form-label text-md-right" style="display:inline-block;">Input link hasil foto :</label>
