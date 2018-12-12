@@ -12,6 +12,7 @@ use Illuminate\Support\Facades;
 use DB;
 use Redirect;
 use App\Notifications\KonfirmasiPembayaran;
+use App\Mail\HasilFoto;
 
 class AdminController extends Controller
 {
@@ -42,7 +43,9 @@ class AdminController extends Controller
    $book = DB::table('bookings')->where('order_id', '=', $orderid)->get();
    $user = DB::table('users')->where('id', '=', $userid)->get();
 
-   $user->notify(new KonfirmasiPembayaran($book));
+   //$user->notify(new KonfirmasiPembayaran($book));
+  // Notification::send($user, new KonfirmasiPembayaran($book));
+  //Mail::to($user)->send(new Email);
 
    $order_lists = DB::table('bookings')
                   ->orderBy('created_at')
@@ -63,7 +66,13 @@ class AdminController extends Controller
      Booking::where('order_id', $orderid)
              ->update([
                'linkhasil' => $linkhasil,
+               'status' => 'Selesai',
              ]);
+
+     $userid = DB::table('bookings')->where('order_id', '=', $orderid)->value('user_id');
+     $user = DB::table('users')->where('id', '=', $userid)->get();
+     //dd($user);
+    \Mail::to($user)->send(new HasilFoto);
 
     $order_lists = DB::table('bookings')
                     ->orderBy('created_at')

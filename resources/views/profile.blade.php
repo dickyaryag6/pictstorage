@@ -89,32 +89,37 @@
                   @if(count($booking_list) > 0)
                     @foreach ($booking_list as $order)
                       @if($order->order_type === 'wedding' || $order->order_type === 'engagement')
-                        <ul>
-                            <li><strong><?php echo $order->order_type; ?></strong></li>
-                            <li style='list-style-type: none;'><?php echo $order->date; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->jam; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->location; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->status; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->linkhasil; ?></li>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong><?php echo $order->order_type; ?></strong></li>
+                            <li class="list-group-item"><?php echo $order->date; ?></li>
+                            <li class="list-group-item"><?php echo $order->jam; ?></li>
+                            <li class="list-group-item"><?php echo $order->location; ?></li>
+                            <li class="list-group-item"><?php echo $order->status; ?></li>
+                          @if ($order->linkhasil !== null)
+                            <li class="list-group-item"><?php echo $order->linkhasil; ?></li>
+                          @endif
                           @if ($order->bukti_pembayaran === null)
-                            <li style='list-style-type: none;'><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
+                            <li class="list-group-item"><a type="button" class="btn btn-danger" href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
                           @else
-                            <li style='list-style-type: none;'><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
+                            <li class="list-group-item"><a type="button" class="btn btn-danger" href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
                           @endif
                         </ul>
                       @else
-                        <ul>
+                        <ul class="list-group">
                             <li ><strong><?php echo $order->order_type; ?></strong></li>
-                            <li style='list-style-type: none;'><?php echo $order->date; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->jam; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->location; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->status; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->durasi; ?></li>
-                            <li style='list-style-type: none;'><?php echo $order->jumlah_orang; ?></li>
+                            <li class="list-group-item"><?php echo $order->date; ?></li>
+                            <li class="list-group-item"><?php echo $order->jam; ?></li>
+                            <li class="list-group-item"><?php echo $order->location; ?></li>
+                            <li class="list-group-item"><?php echo $order->status; ?></li>
+                            <li class="list-group-item"><?php echo $order->durasi; ?></li>
+                            <li class="list-group-item"><?php echo $order->jumlah_orang; ?></li>
+                          @if ($order->linkhasil !== null)
+                            <li class="list-group-item"><?php echo $order->linkhasil; ?></li>
+                          @endif
                           @if ($order->bukti_pembayaran === null)
-                            <li style='list-style-type: none;'><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
+                            <li class="list-group-item"><a type="button" class="btn btn-danger" href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
                           @else
-                            <li style='list-style-type: none;'><a href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
+                            <li class="list-group-item"><a type="button" class="btn btn-danger" href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Ulang Bukti Pembayaran</a></li>
                           @endif
                         </ul>
                      @endif
