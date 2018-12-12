@@ -4,9 +4,9 @@
 <div class="sub-main-w3">
         <form action="{{ route('register') }}" method="POST">
                 @csrf
-            <h2>Register Now
+            <h1>Register Now
                 <i class="fas fa-level-down-alt"></i>
-            </h2>
+            </h1>
             <div class="form-style-agile">
                 <label for="nama">
                     <i class="fas fa-user"></i>
@@ -66,7 +66,10 @@
                 <input  id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required>
             </div>
             <input type="submit" value="Register">
-           <br> <br> Already have an account?  <a href='{{url("/login")}}'>  Sign in </a>
+            </div>
+            <label class="anim">
+         <br> <span>Already have an account?  <a href='{{url("/login")}}'>  Sign in </a> </span> </div>
+          
         </form>
     </div>
 

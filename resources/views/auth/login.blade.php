@@ -8,9 +8,9 @@
         <form action="{{ route('login') }}" method="POST">
           @csrf
 
-            <h2>Login
+            <h1>Login
                 <i class="fas fa-level-down-alt"></i>
-            </h2>
+            </h1>
             <div class="form-style-agile">
                 <label for="email" class="col-md-4 col-form-label text-md-right">
                     <i class="fas fa-envelope"></i>
@@ -53,8 +53,9 @@
             </div>
             <!-- //checkbox -->
 
-            <input type="submit" value="Login"> <br>
-            Don't have an account?   <a href='{{url("/register")}}'><br> Register </a>
+            <input type="submit" value="Login"> 
+           <label class="anim">
+         <br> <span>Don't have an account?   <a href='{{url("/register")}}'>Register </a> </span> </div>
         </form>
     </div>
 

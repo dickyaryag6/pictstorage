@@ -114,7 +114,7 @@ class BookingController extends Controller
       $user = Auth::user();
       //yang dibawah ini buat mastiin kalo yang diupload itu file gambar dan berukuran max 2mb
       $this->validate($request, [
-        'bukti_pembayaran' => 'image|required|max:1999'
+        'bukti_pembayaran' => 'image|required|max:1999|mimes:jpeg,jpg,bmp,png,pdf'
       ]);
 
       $namafiledenganextension = $request->file('bukti_pembayaran')->getClientOriginalName();
