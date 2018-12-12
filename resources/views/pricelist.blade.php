@@ -41,7 +41,14 @@
 							<li><strong>FREE <span>30 Edited Photos</span></strong></li>
 						</ul>
 					</li>
-					<li class="button"><a  href="#">BOOK NOW</a></li>
+					<li class="button">
+						@guest
+							<a  href='{{url("/login")}}'>BOOK NOW</a>
+						@endguest
+						@auth
+						<a  href='{{url("/book")}}'>BOOK NOW</a>
+						@endauth
+					</li>
 				</ul>
 			</li>
 
@@ -61,7 +68,15 @@
 							<li><strong>FREE <span>30 Edited Photos</span></strong></li>
 						</ul>
 					</li>
-					<li class="button"><a href="#">BOOK NOW</a></li>
+					
+					<li class="button">
+						@guest
+							<a  href='{{url("/login")}}'>BOOK NOW</a>
+						@endguest
+						@auth
+						<a  href='{{url("/book")}}'>BOOK NOW</a>
+						@endauth
+					</li>
 				</ul>
 			</li>
 
@@ -82,7 +97,14 @@
 							<li><strong>FREE <span>Paper Frame</span></strong></li>
 						</ul>
 					</li>
-					<li class="button"><a href="#">BOOK NOW</a></li>
+					<li class="button">
+						@guest
+							<a  href='{{url("/login")}}'>BOOK NOW</a>
+						@endguest
+						@auth
+						<a  href='{{url("/book")}}'>BOOK NOW</a>
+						@endauth
+					</li>
 				</ul>
 			</li>
 
@@ -99,7 +121,14 @@
 							<li><strong>FREE <span>10 Edited Photos</span></strong></li>
 						</ul>
 					</li>
-					<li class="button"><a href="#">BOOK NOW</a></li>
+					<li class="button">
+						@guest
+							<a  href='{{url("/login")}}'>BOOK NOW</a>
+						@endguest
+						@auth
+						<a  href='{{url("/book")}}'>BOOK NOW</a>
+						@endauth
+					</li>
 				</ul>
 			</li>
 
