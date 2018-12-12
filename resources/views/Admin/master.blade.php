@@ -12,7 +12,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>Admin PictStorage</title>
   @csrf
+
   <link rel="stylesheet" href="{{asset('/css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
+
+  <!-- <link rel="stylesheet" href="/css/desaintabel.css"> -->
+ 
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
@@ -213,14 +219,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <router-view></router-view>
 
         <div class="row mb-2">
+        <!-- /.col -->
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Starter Page</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
-            </ol>
+
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -235,10 +236,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="card card-primary card-outline">
               <div class="card-body">
-                <h5 class='card-title'>Belum Diverifikasi</h5>
+                <h5 class='card-title'>Belum diverifikasi</h5>
               </div>
-
               <div>
+
               <?php if ((count($order_lists) > 0)) :?>
                 <?php foreach ($order_lists as $order) : ?>
                   <?php if ($order->status === 'Sedang diverifikasi') : ?>
@@ -253,8 +254,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <?php else : ?><br>
                 <?php echo "Tidak ada pemesanan"; ?>
               <?php endif; ?>
-              </div>
 
+              </div>
             </div>
 
             <div class="card card-primary card-outline">
@@ -262,22 +263,136 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h5 class='card-title'>Sudah diverifikasi</h5>
               </div>
               <div>
-              <?php if ((count($order_lists) > 0)) :?>
-                <?php foreach ($order_lists as $order) : ?>
-                  <?php if ($order->status === 'Terverifikasi') : ?>
-                      <span class="btn btn-light"><?php echo $order->order_id; ?></span>
-                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
-                      <span class="btn btn-light"><?php echo $order->date; ?></span>
+                <table>
+                     <thead>
+                       <tr>
+                         <th>No. Order</th>
+                         <th>Jenis</th>
+                         <th>Tanggal</th>
+                         <th>Detail</th>
+                         <th> </th>
+                         <th> </th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                   <?php if (count($order_lists) > 0) :?>
+                     <?php foreach ($order_lists as $order) : ?>
+                       <?php if ($order->status === 'Terverifikasi') : ?>
+                       <tr>
+                         <td><?php echo $order->order_id; ?></td>
+                         <td><?php echo $order->order_type; ?></td>
+                         <td><?php echo $order->date; ?></td>
+                         <td><a href="#">Detail</a></td>
+                         <?php if ($order->linkhasil === null) ?>
+                         <td>
+                           <form action="/linkhasil/<?php echo $order->order_id; ?>" method="post" class='col-md-9' >
+                             @csrf
+                               <div>
+                                   <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil" placeholder="Link Hasil Foto">
+
+                                   @if ($errors->has('linkhasil'))
+                                       <span class="invalid-feedback" role="alert">
+                                           <strong>{{ $errors->first('linkhasil') }}</strong>
+                                       </span>
+                                   @endif
+                               </div>
+
+                             <div class="col-md-8">
+                                 <button type="submit" class="btn btn-primary">
+                                     {{ __('Submit') }}
+                                 </button>
+                             </div>
+                           </form>
+                          </td>
+                       </tr>
+                       <?php endif; ?>
+                     <?php endforeach; ?>
+                   <?php else : ?>
+                     <tr>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                     </tr>
+                  <?php endif; ?>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+
+
+            <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class='card-title'>Sudah diverifikasi</h5>
+              </div>
+              <div>
+                <table>
+                     <thead>
+                       <tr>
+                         <th>No. Order</th>
+                         <th>Jenis</th>
+                         <th>Tanggal</th>
+                         <th>Detail</th>
+                         <th> </th>
+                         <th> </th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                   <?php if (count($order_lists) > 0) :?>
+                     <?php foreach ($order_lists as $order) : ?>
+                       <?php if ($order->status === 'Selesai') : ?>
+                       <tr>
+                         <td><?php echo $order->order_id; ?></td>
+                         <td><?php echo $order->order_type; ?></td>
+                         <td><?php echo $order->date; ?></td>
+                         <td><a href="#">Detail</a></td>
+                       </tr>
+                       <?php endif; ?>
+                     <?php endforeach; ?>
+                   <?php else : ?>
+                     <tr>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                     </tr>
+                  <?php endif; ?>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+
+
+
+            <!-- <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class='card-title'>Sudah diverifikasi</h5>
+              </div>
+              <div>
+              <?php //if ((count($order_lists) > 0)) :?>
+                <?php //foreach ($order_lists as $order) : ?>
+                  <?php //if ($order->status === 'Terverifikasi') : ?>
+                      <span class="btn btn-light"><?php //echo $order->order_id; ?></span>
+                      <span class="btn btn-light"><?php //echo $order->order_type; ?></span>
+                      <span class="btn btn-light"><?php //echo $order->date; ?></span>
 
                       <a href="#">Detail</a>
-                      <?php if($order->linkhasil === null) : ?>
+                      <?php //if($order->linkhasil === null) : ?>
                       <br>
+
                      
                       <form action='{{url("/linkhasil")}}/<?php echo $order->order_id; ?>' method="post" class='col-md-3'>
+
+                      <form action="/linkhasil/<?php //echo $order->order_id; ?>" method="post" class='col-md-3'>
+
                         @csrf
                         <div>
-                          <label for="linkhasil" class="col-form-label text-md-right" style="display:inline-block;">Input link hasil foto :</label>
-                          <div style="display:inline-block;">
+                          <label for="linkhasil" class="col-form-label text-md-right">Input link hasil foto :</label>
+                          <div>
                               <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
 
                               @if ($errors->has('linkhasil'))
@@ -293,54 +408,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </button>
                         </div>
                       </form>
-                    <?php endif; ?>
-                  <?php endif; ?>
-                <?php endforeach; ?>
-              <?php endif; ?>
+                    <?php //endif; ?>
+                  <?php //endif; ?>
+                <?php //endforeach; ?>
+              <?php //endif; ?>
               </div>
-            </div>
+            </div> -->
 
-            <div class="card card-primary card-outline">
+            <!-- <div class="card card-primary card-outline">
               <div class="card-body">
                 <h5 class='card-title'>Sudah Selesai</h5>
               </div>
               <div>
-              <?php if ((count($order_lists) > 0)) :?>
-                <?php foreach ($order_lists as $order) : ?>
-                  <?php if ($order->linkhasil !== null) : ?>
-                      <span class="btn btn-light"><?php echo $order->order_id; ?></span>
-                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
-                      <span class="btn btn-light"><?php echo $order->date; ?></span>
+              <?php //if ((count($order_lists) > 0)) :?>
+                <?php //foreach ($order_lists as $order) : ?>
+                  <?php //if ($order->linkhasil !== null) : ?>
+                      <span class="btn btn-light"><?php //echo $order->order_id; ?></span>
+                      <span class="btn btn-light"><?php //echo $order->order_type; ?></span>
+                      <span class="btn btn-light"><?php //echo $order->date; ?></span>
 
                       <a href="#">Detail</a>
-                      <?php if($order->linkhasil === null) : ?>
                       <br>
-                      <form action="/linkhasil/<?php echo $order->order_id; ?>" method="post" class='col-md-3'>
-                        @csrf
-                        <div>
-                          <label for="linkhasil" class="col-form-label text-md-right" style="display:inline-block;">Input link hasil foto :</label>
-                          <div style="display:inline-block;">
-                              <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil">
-
-                              @if ($errors->has('linkhasil'))
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $errors->first('linkhasil') }}</strong>
-                                  </span>
-                              @endif
-                          </div>
-                        </div>
-                        <div class="col-md-8" style="display:inline-block;">
-                            <button type="submit" class="btn btn-primary">
-                                {{ __('Submit') }}
-                            </button>
-                        </div>
-                      </form>
-                    <?php endif; ?>
-                  <?php endif; ?>
-                <?php endforeach; ?>
-              <?php endif; ?>
+                  <?php //endif; ?>
+                <?php //endforeach; ?>
+              <?php //endif; ?>
               </div>
-            </div>
+            </div> -->
 
 
 <!--

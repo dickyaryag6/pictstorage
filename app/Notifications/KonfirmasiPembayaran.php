@@ -42,10 +42,11 @@ class KonfirmasiPembayaran extends Notification
     {
       // uploadBuktiPembayaran/{userid}/{orderid}
         return (new MailMessage)
-                    ->line('Pembayaran anda untuk order'.$this->bookingdata['id'].'untuk tanggal'.$this->bookingdata['date'])
-                    ->line('sebesar *jumlahpembayaran* sudah dikonfirmasi ' )
-                    ->action('Notification Action', url('/'))
-                    ->line('Terima Kasih');
+                    // ->line('Pembayaran anda untuk order'.$this->bookingdata['id'].'untuk tanggal'.$this->bookingdata['date'])
+                    // ->line('sebesar *jumlahpembayaran* sudah dikonfirmasi ' )
+                    // ->action('Notification Action', url('/'))
+                    // ->line('Terima Kasih');
+                    ->greeting('Hello');
     }
 
     /**
