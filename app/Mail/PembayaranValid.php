@@ -10,15 +10,15 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class PembayaranValid extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $book;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($book)
     {
-        //
+        $this->book=$book;
     }
 
     /**
@@ -28,6 +28,6 @@ class PembayaranValid extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.PembayaranValid');
+        return $this->view('email.PembayaranValid');
     }
 }
