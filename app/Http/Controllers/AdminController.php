@@ -45,7 +45,8 @@ class AdminController extends Controller
 
    //$user->notify(new KonfirmasiPembayaran($book));
   // Notification::send($user, new KonfirmasiPembayaran($book));
-   Mail::to($user)->send(new PembayaranValid);
+   $book=$book[0];
+   Mail::to($user)->send(new PembayaranValid($book));
 
   //Kirim email ke user yang ngasi tau kalo pembayarannya udah diterima
 
@@ -67,8 +68,10 @@ class AdminController extends Controller
              'status' => 'Pembayaran tidak valid',
            ]);
 
+  $book = DB::table('bookings')->where('order_id', '=', $orderid)->get();
     //kirim email yg ngasi tau ke user kalo pembayaran ditolak
-    \Mail::to($user)->send(new PembayaranTidakValid);
+    $book=$book[0];
+    \Mail::to($user)->send(new PembayaranTidakValid($book));
 
     $order_lists = DB::table('bookings')
                    ->orderBy('created_at')
@@ -101,7 +104,9 @@ class AdminController extends Controller
      $user = DB::table('users')->where('id', '=', $userid)->get();
      //dd($user);
      //email ke user ngasi tau kalo hasil fotonya sudah selesai
-    \Mail::to($user)->send(new HasilFoto);
+     $book = DB::table('bookings')->where('order_id', '=', $orderid)->get();
+     $book = $book[0];
+    \Mail::to($user)->send(new HasilFoto($book));
 
     $order_lists = DB::table('bookings')
                     ->orderBy('created_at')

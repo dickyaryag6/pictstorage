@@ -10,15 +10,15 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class PembayaranTidakValid extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $book;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($book)
     {
-        //
+        $this->book=$book;
     }
 
     /**
@@ -28,6 +28,11 @@ class PembayaranTidakValid extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.PembayaranTidakValid');
+        return $this->view('email.PembayaranTidakValid')
+                    ->with([
+                     'orderjenis' => $this->book->order_type,
+                     'ordertanggal' => $this->book->date,
+                     'orderjam' => $this->book->jam,
+     ]);
     }
 }

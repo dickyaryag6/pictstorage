@@ -426,5 +426,6 @@ $(document).ready(function(){
 </div>
   </div>
 </div>
+<br><br><br><br><br>
 @include('layouts.footer')
 </body>

@@ -14,17 +14,27 @@
 
         <ul class="list-group">
               <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') : ?>
-                <li class="list-group-item"><h4><?php echo "Jenis : ".$hasilforms['order_type']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Tanggal : ".$hasilforms['date']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Jam : ".$hasilforms['jam']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Lokasi : ".$hasilforms['location']; ?></h4></li>
+                <li class="list-group-item"><h5><?php echo "Jenis : ".$hasilforms['order_type']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Tanggal : ".$hasilforms['date']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Jam : ".$hasilforms['jam']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Lokasi : ".$hasilforms['location']; ?></h5></li>
+                <?php if ($hasilforms['order_type'] === 'wedding'): ?>
+                <li class="list-group-item"><h5>Harga : <strong>Rp700.000</strong></h5></li>
+                <?php else: ?>
+                <li class="list-group-item"><h5>Harga : <strong>Rp350.000</strong></h5></li>
+                <?php endif; ?>
               <?php else : ?>
-                <li class="list-group-item"><h4><?php echo "Jenis : ".$hasilforms['order_type']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Tanggal : ".$hasilforms['date']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Jam : ".$hasilforms['jam']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Lokasi : ".$hasilforms['location']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Durasi : ".$hasilforms['durasi']; ?></h4></li>
-                <li class="list-group-item"><h4><?php echo "Jumlah Orang :".$hasilforms['jumlah_orang']; ?></h4></li>
+                <li class="list-group-item"><h5><?php echo "Jenis : ".$hasilforms['order_type']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Tanggal : ".$hasilforms['date']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Jam : ".$hasilforms['jam']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Lokasi : ".$hasilforms['location']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Durasi : ".$hasilforms['durasi']; ?></h5></li>
+                <li class="list-group-item"><h5><?php echo "Jumlah Orang :".$hasilforms['jumlah_orang']; ?></h5></li>
+                <?php if ($hasilforms['order_type'] === 'photobooth'):?>
+                <li class="list-group-item"><h5>Harga : <strong>Rp150.000</strong></h5></li>
+                <?php else: ?>
+                <li class="list-group-item"><h5>Harga : <strong>Rp200.000</strong></h5></li>
+                <?php endif; ?>
               <?php endif; ?>
           <br>
         </ul>

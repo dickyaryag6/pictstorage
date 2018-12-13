@@ -2,7 +2,8 @@
  @include('layouts.head')
 <head>
 
-<link href="{{ asset('//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css') }}">
+<!-- <link href="{{ asset('//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css') }}"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 
 
@@ -32,17 +33,17 @@
               <?php $user = Auth::user(); ?>
                 <li class="list-group-item text-muted" contenteditable="false"><strong>Profile</strong></li>
                 <li class="list-group-item "><strong class="">Name: </strong> <?php echo $user->nama; ?></li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Address: </strong></span> Ermita, Manila</li>
+                <!-- <li class="list-group-item "><span class="pull-left"><strong class="">Address: </strong></span> Ermita, Manila</li> -->
                 <li class="list-group-item "><span class="pull-left"><strong class="">Email: </strong></span> <?php echo $user->email; ?></li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Birthday: </strong></span>3 May 1981</li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Age: </strong></span>37</li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Sex: </strong></span>M</li>
-                <li class="list-group-item text-muted" contenteditable="false">Contact Details</li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Telephone Number: </strong></span>       514-1132</li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Cellphone Number: </strong></span>09159092245</li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Birthday: </strong></span></li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Age: </strong></span></li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Sex: </strong></span></li>
+                <!-- <li class="list-group-item text-muted" contenteditable="false">Contact Details</li> -->
+                <!-- <li class="list-group-item "><span class="pull-left"><strong class="">Telephone Number: </strong></span>       514-1132</li> -->
+                <!-- <li class="list-group-item "><span class="pull-left"><strong class="">Cellphone Number: </strong></span>09159092245</li> -->
 
             </ul>
-           <div class="panel panel-default">
+           <!-- <div class="panel panel-default">
             <hr>
              <div class="panel-heading">Reminders:
 
@@ -52,15 +53,15 @@
 
                 </div>
             </div>
-            <hr>
-            <div class="panel panel-default">
+            <hr>-->
+            <!-- <div class="panel panel-default">
                 <div class="panel-heading">NOTIFICATIONS <i class="fa fa-link fa-1x"></i>
 
                 </div>
                 <div class="panel-body"><a href="http://bootply.com" class="">~Non-compliance to certain checklist items~</a>
 
                 </div>
-            </div>
+            </div> -->
 
            <!--  <ul class="list-group">
                 <li class="list-group-item text-muted">PATIENT LIBRARY<i class="fa fa-dashboard fa-1x"></i>
@@ -71,14 +72,14 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="#">Zysa del Mundo</a></strong></span></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class=""><button type="button" class="btn btn-info">Schedule Patient</strong></span></li>
             </ul> -->
-            <hr>
+            <!-- <hr>
             <div class="panel panel-default">
                 <div class="panel-heading">UPLOADED PHOTO</div>
                 <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i>
                     <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
 
                 </div>
-            </div>
+            </div> -->
         </div>
         <!--/col-3-->
         <div class="col-sm-9" style="" contenteditable="false">
@@ -127,10 +128,10 @@
                   @else
                     <h5>Anda belum pernah Booking</h5>
                   @endif
-
+                  <br>
                 </div>
-                <div class="panel-body"><i>Select the plan </i><br>
-                <a href='{{url("/book")}}' type="button" class="btn btn-success">Wedding</a>   <a href='{{url("/book")}}' type="button" class="btn btn-success">Engagement</a>   <a href='{{url("/book")}}'  type="button" class="btn btn-success">Photobooth</a>   <a href='{{url("/book")}}'type="button" class="btn btn-success">Photo Studio</a>
+                <div class="panel-body"><i>Ingin melakukan booking lagi?</i><br>
+                <a href='{{url("/book")}}' type="button" class="btn btn-primary">Book</a>
                 <br>
                 <hr>
 
