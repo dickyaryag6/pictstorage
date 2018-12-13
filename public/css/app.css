@@ -3182,6 +3182,11 @@ fieldset:disabled a.btn {
   background-color: #23272b;
   border-color: #1d2124;
 }
+.btn-dark:active {
+  color: blue;
+  background-color: #23272b;
+  border-color: #1d2124;
+}
 
 .btn-dark:focus,
 .btn-dark.focus {

@@ -10,7 +10,7 @@
     <div class="container text-center">
       <br>
       <table align="center">
-        <h2> Konfirmasi Pemesanan </h2>
+        <h2> <strong>Konfirmasi Pemesanan</strong> </h2>
 
         <ul class="list-group">
               <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') : ?>

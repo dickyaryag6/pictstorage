@@ -16,7 +16,7 @@
         <div class="col-sm-8">
              <h1 class="">DOCTOR</h1>
 
-         <a href='{{url("/edit-profile")}}'> <button type="button" class="btn btn-primary">Edit Profile</button></a>  <button type="button" class="btn btn-success">Access Calendar</button>
+         <a href='{{url("/edit-profile")}}'> <button type="button" class="btn btn-success">Edit Profile</button></a>  <!-- <button type="button" class="btn btn-success">Access Calendar</button> -->
 <br>
         </div>
       <div class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBG685vI07-3MsuqJxjCfzIabfFJJG-8yM-ppvjjNpD5QNtWNE4A"></a>
