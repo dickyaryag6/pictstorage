@@ -45,7 +45,7 @@ class AdminController extends Controller
 
    //$user->notify(new KonfirmasiPembayaran($book));
   // Notification::send($user, new KonfirmasiPembayaran($book));
-  //Mail::to($user)->send(new Email);
+   Mail::to($user)->send(new PembayaranValid);
 
   //Kirim email ke user yang ngasi tau kalo pembayarannya udah diterima
 
@@ -68,6 +68,7 @@ class AdminController extends Controller
            ]);
 
     //kirim email yg ngasi tau ke user kalo pembayaran ditolak
+    \Mail::to($user)->send(new PembayaranTidakValid);
 
     $order_lists = DB::table('bookings')
                    ->orderBy('created_at')

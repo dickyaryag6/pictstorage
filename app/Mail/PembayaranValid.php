@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class HasilFoto extends Mailable
+class PembayaranValid extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class HasilFoto extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.emailhasilfoto');
+        return $this->view('emails.PembayaranValid');
     }
 }
