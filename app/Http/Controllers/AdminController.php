@@ -47,6 +47,8 @@ class AdminController extends Controller
   // Notification::send($user, new KonfirmasiPembayaran($book));
   //Mail::to($user)->send(new Email);
 
+  //Kirim email ke user yang ngasi tau kalo pembayarannya udah diterima
+
    $order_lists = DB::table('bookings')
                   ->orderBy('created_at')
                   ->get();
@@ -58,10 +60,28 @@ class AdminController extends Controller
 
  }
 
+ public function TolakPembayaran($orderid)
+ {
+   Booking::where('order_id', $orderid)
+           ->update([
+             'status' => 'Pembayaran tidak valid',
+           ]);
+
+    //kirim email yg ngasi tau ke user kalo pembayaran ditolak
+
+    $order_lists = DB::table('bookings')
+                   ->orderBy('created_at')
+                   ->get();
+             //dd($order_lists);
+
+   return redirect('admin')->with('$order_lists');
+ }
+
+
  public function detailbuktipembayaran($orderid)
  {
    $buktipembayaran = DB::table('bookings')->where('order_id', '=', $orderid)->value('bukti_pembayaran');
-
+   //dd($buktipembayaran);
    return view('Admin.detailbuktipembayaran', compact('buktipembayaran'));
  }
 
@@ -79,6 +99,7 @@ class AdminController extends Controller
      $userid = DB::table('bookings')->where('order_id', '=', $orderid)->value('user_id');
      $user = DB::table('users')->where('id', '=', $userid)->get();
      //dd($user);
+     //email ke user ngasi tau kalo hasil fotonya sudah selesai
     \Mail::to($user)->send(new HasilFoto);
 
     $order_lists = DB::table('bookings')

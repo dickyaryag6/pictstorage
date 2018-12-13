@@ -261,8 +261,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                          <td><?php echo $order->date; ?></td>
                          <td><a href="#">Detail</a></td>
                          <td><a href="detailbuktipembayaran/<?php echo $order->order_id; ?>">Lihat Bukti Pembayaran</a></td>
-                         <td><a href="#" type="button" class="btn btn-success">Verifikasi</a></td>
-                         <td><a href="#" type="button" class="btn btn-danger">Tolak</a></td>
+                         <td><a href="/verifikasi/<?php echo $order->order_id; ?>" type="button" class="btn btn-success">Verifikasi</a></td>
+                         <td><a href="/tolak/<?php echo $order->order_id; ?>" type="button" class="btn btn-danger">Tolak</a></td>
                        </tr>
                        <?php endif; ?>
                      <?php endforeach; ?>

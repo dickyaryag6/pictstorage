@@ -68,7 +68,7 @@ class BookingController extends Controller
     }
     public function showprofile($user_id)
     {
-      $booking_list = Booking::where('user_id', $user_id)->get();
+      $booking_list = Booking::where('user_id', $user_id)->orderBy('order_id', 'desc')->get();
       $profile = User::where('id', $user_id)->get();
       return view('profile', compact('booking_list', 'profile'));
     }

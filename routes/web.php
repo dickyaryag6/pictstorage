@@ -100,4 +100,6 @@ Route::get('/admin', 'AdminController@admin')
 
 Route::get('/verifikasi/{orderid}', 'AdminController@VerifikasiPembayaran');
 
+Route::get('/tolak/{orderid}', 'AdminController@TolakPembayaran');
+
 Route::post('/linkhasil/{orderid}', 'AdminController@UpdateLinkHasil');

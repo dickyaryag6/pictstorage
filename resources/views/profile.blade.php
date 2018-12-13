@@ -90,13 +90,13 @@
                     @foreach ($booking_list as $order)
                       @if($order->order_type === 'wedding' || $order->order_type === 'engagement')
                         <ul class="list-group">
-                            <li class="list-group-item"><strong><?php echo $order->order_type; ?></strong></li>
-                            <li class="list-group-item"><?php echo $order->date; ?></li>
-                            <li class="list-group-item"><?php echo $order->jam; ?></li>
-                            <li class="list-group-item"><?php echo $order->location; ?></li>
-                            <li class="list-group-item"><?php echo $order->status; ?></li>
+                            <li class="list-group-item">Jenis Order : <?php echo $order->order_type; ?></li>
+                            <li class="list-group-item">Tanggal : <?php echo $order->date; ?></li>
+                            <li class="list-group-item">Jam : <?php echo $order->jam; ?></li>
+                            <li class="list-group-item">Lokasi : <?php echo $order->location; ?></li>
+                            <li class="list-group-item">Status : <?php echo $order->status; ?></li>
                           @if ($order->linkhasil !== null)
-                            <li class="list-group-item"><?php echo $order->linkhasil; ?></li>
+                            <li class="list-group-item">Link Hasil Foto : <?php echo $order->linkhasil; ?></li>
                           @endif
                           @if ($order->bukti_pembayaran === null)
                             <li class="list-group-item"><a type="button" class="btn btn-danger" href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
@@ -106,15 +106,15 @@
                         </ul>
                       @else
                         <ul class="list-group">
-                            <li ><strong><?php echo $order->order_type; ?></strong></li>
-                            <li class="list-group-item"><?php echo $order->date; ?></li>
-                            <li class="list-group-item"><?php echo $order->jam; ?></li>
-                            <li class="list-group-item"><?php echo $order->location; ?></li>
-                            <li class="list-group-item"><?php echo $order->status; ?></li>
-                            <li class="list-group-item"><?php echo $order->durasi; ?></li>
-                            <li class="list-group-item"><?php echo $order->jumlah_orang; ?></li>
+                            <li class="list-group-item">Jenis Order : <?php echo $order->order_type; ?></li>
+                            <li class="list-group-item">Tanggal : <?php echo $order->date; ?></li>
+                            <li class="list-group-item">Jam : <?php echo $order->jam; ?></li>
+                            <li class="list-group-item">Lokasi : <?php echo $order->location; ?></li>
+                            <li class="list-group-item">Status : <?php echo $order->status; ?></li>
+                            <li class="list-group-item">Durasi : <?php echo $order->durasi; ?></li>
+                            <li class="list-group-item">Jumlah Orang : <?php echo $order->jumlah_orang; ?></li>
                           @if ($order->linkhasil !== null)
-                            <li class="list-group-item"><?php echo $order->linkhasil; ?></li>
+                            <li class="list-group-item">Link Hasil Foto : <?php echo $order->linkhasil; ?></li>
                           @endif
                           @if ($order->bukti_pembayaran === null)
                             <li class="list-group-item"><a type="button" class="btn btn-danger" href="buktiPembayaran/<?php echo $order->user_id?>/<?php echo $order->order_id ?>">Upload Bukti Pembayaran</a></li>
