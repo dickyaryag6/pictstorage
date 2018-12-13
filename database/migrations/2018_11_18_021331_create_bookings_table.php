@@ -17,7 +17,6 @@ class CreateBookingsTable extends Migration
             $table->increments('order_id');
             $table->integer('user_id')->unsigned();
             $table->string('order_type');
-            //jenis order : Wedding,Engagement,Studio,Booth
             $table->date('date');
             $table->time('jam');
             $table->string('location');

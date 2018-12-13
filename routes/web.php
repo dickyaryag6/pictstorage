@@ -83,6 +83,8 @@ Route::get('profile/buktiPembayaran/{userid}/{orderid}', 'BookingController@Bukt
 
 Route::post('uploadBuktiPembayaran/{userid}/{orderid}', 'BookingController@uploadBuktiPembayaran');
 
+Route::get('detailbuktipembayaran/{orderid}','AdminController@detailbuktipembayaran');
+
 //Route::get('/pembayaran/{user}', 'BookingController@Pembayaran');
 
 Auth::routes();

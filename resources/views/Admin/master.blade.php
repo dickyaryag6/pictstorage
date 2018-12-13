@@ -17,7 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
 
   <!-- <link rel="stylesheet" href="/css/desaintabel.css"> -->
- 
+
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -239,22 +239,45 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h5 class='card-title'>Belum diverifikasi</h5>
               </div>
               <div>
-
-              <?php if ((count($order_lists) > 0)) :?>
-                <?php foreach ($order_lists as $order) : ?>
-                  <?php if ($order->status === 'Sedang diverifikasi') : ?>
-                      <span class="btn btn-light"><?php echo $order->order_id; ?></span>
-                      <span class="btn btn-light"><?php echo $order->order_type; ?></span>
-                      <span class="btn btn-light"><?php echo $order->date; ?></span>
-                      <a href="#">Detail</a>
-                      <a href='{{url("/verifikasi")}}/<?php echo $order->order_id; ?>' class="btn btn-primary">Verifikasi</a>
-                      <br>
+                <table>
+                     <thead>
+                       <tr>
+                         <th>No. Order</th>
+                         <th>Jenis</th>
+                         <th>Tanggal</th>
+                         <th>Detail</th>
+                         <th>Lihat Bukti Pembayaran</th>
+                         <th>Verifikasi</th>
+                         <th>Tolak</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                   <?php if (count($order_lists) > 0) :?>
+                     <?php foreach ($order_lists as $order) : ?>
+                       <?php if ($order->status === 'Sedang diverifikasi') : ?>
+                       <tr>
+                         <td><?php echo $order->order_id; ?></td>
+                         <td><?php echo $order->order_type; ?></td>
+                         <td><?php echo $order->date; ?></td>
+                         <td><a href="#">Detail</a></td>
+                         <td><a href="detailbuktipembayaran/<?php echo $order->order_id; ?>">Lihat Bukti Pembayaran</a></td>
+                         <td><a href="#" type="button" class="btn btn-success">Verifikasi</a></td>
+                         <td><a href="#" type="button" class="btn btn-danger">Tolak</a></td>
+                       </tr>
+                       <?php endif; ?>
+                     <?php endforeach; ?>
+                   <?php else : ?>
+                     <tr>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>-</td>
+                     </tr>
                   <?php endif; ?>
-                <?php endforeach; ?>
-              <?php else : ?><br>
-                <?php echo "Tidak ada pemesanan"; ?>
-              <?php endif; ?>
-
+                    </tbody>
+                </table>
               </div>
             </div>
 
@@ -325,7 +348,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="card card-primary card-outline">
               <div class="card-body">
-                <h5 class='card-title'>Sudah diverifikasi</h5>
+                <h5 class='card-title'>Selesai</h5>
               </div>
               <div>
                 <table>
@@ -384,7 +407,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <?php //if($order->linkhasil === null) : ?>
                       <br>
 
-                     
+
                       <form action='{{url("/linkhasil")}}/<?php echo $order->order_id; ?>' method="post" class='col-md-3'>
 
                       <form action="/linkhasil/<?php //echo $order->order_id; ?>" method="post" class='col-md-3'>

@@ -58,6 +58,13 @@ class AdminController extends Controller
 
  }
 
+ public function detailbuktipembayaran($orderid)
+ {
+   $buktipembayaran = DB::table('bookings')->where('order_id', '=', $orderid)->value('bukti_pembayaran');
+
+   return view('Admin.detailbuktipembayaran', compact('buktipembayaran'));
+ }
+
  public function UpdateLinkHasil($orderid, request $request)
  {
      $linkhasil = $request->all();

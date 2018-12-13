@@ -98,7 +98,7 @@ class BookingController extends Controller
       $namafile = pathinfo($namafiledenganextension, PATHINFO_FILENAME);
       $extensionfile = $request->file('bukti_pembayaran')->getClientOriginalExtension();
       $filenameyangdipake = $user_id.'_'.$orderid.'_'.$ordertype.'_'.$createdatonlydate.'.'.$extensionfile;
-      $path = $request->file('bukti_pembayaran')->storeAs('public/buktiPembayaran', $filenameyangdipake);
+      $path = $request->file('bukti_pembayaran')->storeAs('buktiPembayaran', $filenameyangdipake);
       //Proses yg buat update
       Booking::where('order_id', $orderid)
               ->update([
