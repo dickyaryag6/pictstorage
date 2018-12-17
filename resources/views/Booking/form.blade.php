@@ -30,6 +30,9 @@ $(document).ready(function(){
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+<style type="text/css">
+  #nav li.active a {background-color: blue;}
+</style>
 </head>
 
 <body>
@@ -49,9 +52,9 @@ $(document).ready(function(){
         <div class="row">
 <div class="container">
   <ul>
-    <li type="button" class="btn btn-dark" id="wedding">Wedding</li>
+    <li type="button" class="btn btn-dark " id="wedding">Wedding</li>
     <li type="button" class="btn btn-dark" id="engagement">Engagement</li>
-    <li type="button" class="btn btn-dark" id="photobooth">Photobooth</li>
+    <li type="button" class="btn btn-dark active" id="photobooth">Photobooth</li>
     <li type="button" class="btn btn-dark" id="studio">Studio</li>
   </ul>
 </div>
@@ -81,7 +84,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -156,7 +159,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -231,7 +234,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -289,7 +292,7 @@ $(document).ready(function(){
               <label for="jumlah_orang" class="col-sm-4 col-form-label text-md-right">{{ __('Jumlah') }}</label>
 
               <div class="col-md-1">
-                  <input type="number" id="jumlah_orang" class="form-control{{ $errors->has('jumlah_orang') ? ' is-invalid' : '' }}" name="jumlah_orang" min="1" max="5" required autofocus>
+                  <input type="number" id="jumlah_orang" class="form-control{{ $errors->has('jumlah_orang') ? ' is-invalid' : '' }}" name="jumlah_orang" min="1" max="10" required autofocus>
                   <!-- <input type="time" id="durasi" class="form-control{{ $errors->has('durasi') ? ' is-invalid' : '' }}" name="durasi" min="0:00" max="06:00" required autofocus> -->
                   @if ($errors->has('jumlah_orang'))
                       <span class="invalid-feedback" role="alert">
@@ -337,7 +340,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -395,7 +398,7 @@ $(document).ready(function(){
               <label for="jumlah_orang" class="col-sm-4 col-form-label text-md-right">{{ __('Jumlah') }}</label>
 
               <div class="col-md-1">
-                  <input type="number" id="jumlah_orang" class="form-control{{ $errors->has('jumlah_orang') ? ' is-invalid' : '' }}" name="jumlah_orang" min="1" max="5" required autofocus>
+                  <input type="number" id="jumlah_orang" class="form-control{{ $errors->has('jumlah_orang') ? ' is-invalid' : '' }}" name="jumlah_orang" min="1" max="10" required autofocus>
                   <!-- <input type="time" id="durasi" class="form-control{{ $errors->has('durasi') ? ' is-invalid' : '' }}" name="durasi" min="0:00" max="06:00" required autofocus> -->
                   @if ($errors->has('jumlah_orang'))
                       <span class="invalid-feedback" role="alert">

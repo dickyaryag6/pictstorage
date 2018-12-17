@@ -17,7 +17,7 @@
 <div class="card-body">
   <form action='{{url("uploadBuktiPembayaran")}}/<?php echo $user_id ?>/<?php echo $order_id ?>' method="post" enctype="multipart/form-data">
     @csrf
-    <div class="form-group">
+    <div class="form-group alert alert-danger">
       <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" required>
     </div>
     <div class="">
