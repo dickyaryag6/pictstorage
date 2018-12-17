@@ -17,7 +17,7 @@
         <div class="col-sm-8">
              <h1 class="">DOCTOR</h1>
 
-         <a href='{{url("/edit-profile")}}'> <button type="button" class="btn btn-primary">Edit Profile</button></a>  <button type="button" class="btn btn-success">Access Calendar</button>
+         <a href='{{url("/edit-profile")}}'> <button type="button" class="btn btn-success">Edit Profile</button></a>  <!-- <button type="button" class="btn btn-success">Access Calendar</button> -->
 <br>
         </div>
       <div class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBG685vI07-3MsuqJxjCfzIabfFJJG-8yM-ppvjjNpD5QNtWNE4A"></a>
@@ -46,20 +46,15 @@
            <!-- <div class="panel panel-default">
             <hr>
              <div class="panel-heading">Reminders:
-
                 </div>
                 <div class="panel-body"><button type="button" class="btn btn-info">Daftar Upload<br><button type="button" class="btn btn-secondary">Jadwal Pemotretan
-
-
                 </div>
             </div>
             <hr>-->
             <!-- <div class="panel panel-default">
                 <div class="panel-heading">NOTIFICATIONS <i class="fa fa-link fa-1x"></i>
-
                 </div>
                 <div class="panel-body"><a href="http://bootply.com" class="">~Non-compliance to certain checklist items~</a>
-
                 </div>
             </div> -->
 
@@ -77,7 +72,6 @@
                 <div class="panel-heading">UPLOADED PHOTO</div>
                 <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i>
                     <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
-
                 </div>
             </div> -->
         </div>

@@ -70,6 +70,8 @@ Route::get('/book', 'BookingController@Form')
 //gunanya buat nampilin halaman 'konfirmasi' buat nampilin halaman yang isinya value-value dari
 //yang user isi tadi,
 //post data ke halaman konfirmasi
+Route::post('/edit', 'BookingController@Edit');
+
 Route::post('/konfirmasi', 'BookingController@Konfirmasi');
 
 Route::post('/save', 'BookingController@Save');

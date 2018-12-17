@@ -30,9 +30,19 @@ class BookingController extends Controller
       //   'blabla' => 'required'
       // ])
       $hasilforms = $request->all();
+      //dd($hasilforms);
       return view('Booking.konfirmasi', compact('hasilforms'));
     }
     //kalo yang diisi udah bener, jalanin yang dibawah ini biar apa yg udah diisi dimasukin ke database
+
+    public function Edit(request $request)
+    {
+
+      //$user = Auth::user();
+      $hasilforms = $request->all();
+      return view('Booking/editform', compact('hasilforms'));
+    }
+
     public function Save(Request $request)
     {
       $user = Auth::user();
