@@ -8,7 +8,7 @@
     <div align="center">
       <img src="/storage/buktiPembayaran/{{$buktipembayaran}}" alt="<?php echo $buktipembayaran; ?>" style="width:500px;height:500px;">
       <br>
-    <button type="button" class="btn btn-danger"><a href="/admin">OK</a></button>
+    <button type="button" class="btn btn-danger"><a href='{{url("/admin")}}'>OK</a></button>
     </div>
       <!-- <img src="public/storage/buktiPembayaran/<?php //echo $buktipembayaran; ?>" alt="<?php //echo $buktipembayaran; ?>" style="width:500" style="height:500"> -->
 
