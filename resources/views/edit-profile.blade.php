@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User profile form requirement</title>
+    <title>Edit Profile</title>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
     <!-- Bootstrap Core CSS -->
 <!--     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -76,27 +76,6 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Permanent Address</label>  
-  <div class="col-md-2  col-xs-4">
-  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="District" class="form-control input-md ">
-  </div>
-
-  <div class="col-md-2 col-xs-4">
-
-  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Area" class="form-control input-md ">
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Permanent Address"></label>  
-  <div class="col-md-2  col-xs-4">
-  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Street" class="form-control input-md ">
-  
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
   <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
   <div class="col-md-4">
   <div class="input-group">
@@ -110,6 +89,9 @@
   
   </div>
 </div>
+
+
+
 
 <!-- Text input-->
 <div class="form-group">
@@ -126,6 +108,26 @@
   </div>
 </div>
 
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Address</label>  
+  <div class="col-md-2  col-xs-4">
+  <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)">Address</textarea>
+  </div>
+ <!--  <div class="col-md-2 col-xs-4">
+
+  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Area" class="form-control input-md ">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Permanent Address"></label>  
+  <div class="col-md-2  col-xs-4">
+  <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Street" class="form-control input-md ">
+  
+  </div> -->
+</div>
+
 
 
 <!-- Multiple Radios (inline) -->
@@ -140,18 +142,16 @@
       <input type="radio" name="Gender" id="Gender-1" value="2">
       Female
     </label> 
-    <label class="radio-inline" for="Gender-2">
+  <!--   <label class="radio-inline" for="Gender-2">
       <input type="radio" name="Gender" id="Gender-2" value="3">
       Other
-    </label>
+    </label> -->
   </div>
 </div>
 
 
-
-
 <!-- Text input-->
-<div class="form-group">
+<!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Primary Occupation">Primary Occupation</label>  
   <div class="col-md-4">
   <div class="input-group">
@@ -164,7 +164,7 @@
   
     
   </div>
-</div>
+</div> -->
 
 
 
@@ -172,20 +172,20 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Phone number ">Phone number </label>  
   <div class="col-md-4">
-  <div class="input-group">
+  <!-- <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-phone"></i>
         
        </div>
     <input id="Phone number " name="Phone number " type="text" placeholder="Primary Phone number " class="form-control input-md">
     
-      </div>
+      </div> -->
       <div class="input-group othertop">
        <div class="input-group-addon">
      <i class="fa fa-mobile fa-1x" style="font-size: 20px;"></i>
         
        </div>
-    <input id="Phone number " name="Secondary Phone number " type="text" placeholder=" Secondary Phone number " class="form-control input-md">
+    <input id="Phone number " name="Phone number " type="text" placeholder="Phone number " class="form-control input-md">
     
       </div>
   
@@ -281,12 +281,12 @@
 
 
 <!-- Textarea -->
-<div class="form-group">
+<!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Overview (max 200 words)">Overview (max 200 words)</label>
   <div class="col-md-4">                     
     <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)">Overview</textarea>
   </div>
-</div>
+</div> -->
 
 
 <div class="form-group">
@@ -301,9 +301,9 @@
 </fieldset>
 </form>
 </div>
-<div class="col-md-2 hidden-xs">
+<!-- <div class="col-md-2 hidden-xs">
 <img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
-  </div>
+  </div> -->
 
 
 </div>

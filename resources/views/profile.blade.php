@@ -36,8 +36,9 @@
                 <!-- <li class="list-group-item "><span class="pull-left"><strong class="">Address: </strong></span> Ermita, Manila</li> -->
                 <li class="list-group-item "><span class="pull-left"><strong class="">Email: </strong></span> <?php echo $user->email; ?></li>
                 <li class="list-group-item "><span class="pull-left"><strong class="">Birthday: </strong></span></li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Age: </strong></span></li>
-                <li class="list-group-item "><span class="pull-left"><strong class="">Sex: </strong></span></li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Address: </strong></span></li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Gender: </strong></span></li>
+                <li class="list-group-item "><span class="pull-left"><strong class="">Phone Number: </strong></span></li>
                 <!-- <li class="list-group-item text-muted" contenteditable="false">Contact Details</li> -->
                 <!-- <li class="list-group-item "><span class="pull-left"><strong class="">Telephone Number: </strong></span>       514-1132</li> -->
                 <!-- <li class="list-group-item "><span class="pull-left"><strong class="">Cellphone Number: </strong></span>09159092245</li> -->

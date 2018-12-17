@@ -84,7 +84,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-20-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -159,7 +159,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-20-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -234,7 +234,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-20-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
@@ -340,7 +340,7 @@ $(document).ready(function(){
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
 
               <div class="col-md-6">
-                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-13">
+                  <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-20-13">
 
                   @if ($errors->has('location'))
                       <span class="invalid-feedback" role="alert">
