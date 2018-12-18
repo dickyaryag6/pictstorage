@@ -15,12 +15,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <link rel="stylesheet" href="{{asset('/css/app.css')}}">
   <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/modal.css')}}">
 
   <!-- <link rel="stylesheet" href="/css/desaintabel.css"> -->
 
 
 </head>
 <body class="hold-transition sidebar-mini">
+
 <div class="wrapper" id="app">
 
   <!-- Navbar -->
@@ -370,8 +372,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                          <td><?php echo $order->order_id; ?></td>
                          <td><?php echo $order->order_type; ?></td>
                          <td><?php echo $order->date; ?></td>
-                         <td><a href="#">Detail</a></td>
+                         <td><button id="detailmodal"></button>Detail</td>
                        </tr>
+                       <!-- The Modal -->
+                              <div id="myModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                  <span class="close">&times;</span>
+                                  
+                                </div>
+
+                              </div>
                        <?php endif; ?>
                      <?php endforeach; ?>
                    <?php else : ?>
@@ -533,6 +545,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <script src=/js/app.js ></script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("detailmodal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

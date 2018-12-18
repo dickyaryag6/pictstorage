@@ -23,10 +23,22 @@ class AdminController extends Controller
 
  public function admin()
  {
-     $order_lists = DB::table('bookings')
-                        ->orderBy('created_at')
-                        ->get();
-      //dd($order_lists);
+//    select first_name, last_name, order_date, order_amount
+// from customers c
+// inner join orders o
+// on c.customer_id = o.customer_id
+
+$order_lists = DB::table('Bookings')
+            ->join('users', 'users.id', '=', 'bookings.user_id')
+            ->select('bookings.*', 'users.nama')
+            ->get();
+
+
+
+     // $order_lists = DB::table('bookings')
+     //                    ->orderBy('created_at')
+     //                    ->get();
+    //  dd($orderlists);
 
      return view('Admin.master', compact('order_lists'));
  }
