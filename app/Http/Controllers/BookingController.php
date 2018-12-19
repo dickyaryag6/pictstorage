@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\User;
@@ -9,6 +10,7 @@ use Auth;
 use Illuminate\Support\Facades;
 use DB;
 use Redirect;
+
 class BookingController extends Controller
 {
     public function Form()
@@ -78,16 +80,32 @@ class BookingController extends Controller
     }
     public function showprofile($user_id)
     {
-      $booking_list = Booking::where('user_id', $user_id)->orderBy('order_id', 'desc')->get();
-      $profile = User::where('id', $user_id)->get();
-      return view('profile', compact('booking_list', 'profile'));
+
+      // $query = DB::table('users')->select('name');
+      // $users = $query->addSelect('age')->get();
+      $belumdansedangdiverifikasi = Booking::where('user_id', $user_id)
+                                          ->where('status', 'Belum diverifikasi')
+                                          ->orWhere('status', 'Sedang diverifikasi')
+                                          ->orderBy('order_id', 'desc')->paginate(1);
+
+      $terverifikasi = Booking::where('user_id', $user_id)
+                                          ->where('status','Terverifikasi')
+                                          ->orderBy('order_id', 'desc')->paginate(1);
+
+      $selesai = Booking::where('user_id', $user_id)
+                                          ->where('status','Selesai')
+                                          ->orderBy('order_id', 'desc')->paginate(1);
+
+      return view('profile', compact('belumdansedangdiverifikasi','terverifikasi','selesai', 'profile'));
     }
+
     public function buktiPembayaran($userid,$orderid)
     {
       $user = Booking::where('user_id', $userid)->get();
       $order = Booking::where('order_id', $orderid)->get();
       return view('Booking.pembayaran',compact('user', 'order'));
     }
+
     public function uploadBuktiPembayaran(request $request,$user_id, $orderid)
     {
       // $order_id = Bookings::findOrFail()

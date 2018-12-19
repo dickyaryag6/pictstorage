@@ -31,10 +31,23 @@ class AdminController extends Controller
 // inner join orders o
 // on c.customer_id = o.customer_id
 
-$order_lists = DB::table('Bookings')
+$belumdiverifikasi = DB::table('Bookings')
             ->join('users', 'users.id', '=', 'bookings.user_id')
             ->select('bookings.*', 'users.nama')
-            ->get();
+            ->where('status', 'Sedang diverifikasi')
+            ->paginate(10);
+
+            $terverifikasi= DB::table('Bookings')
+                        ->join('users', 'users.id', '=', 'bookings.user_id')
+                        ->select('bookings.*', 'users.nama')
+                        ->where('status', 'Terverifikasi')
+                        ->paginate(10);
+
+                        $selesai = DB::table('Bookings')
+                                    ->join('users', 'users.id', '=', 'bookings.user_id')
+                                    ->select('bookings.*', 'users.nama')
+                                    ->where('status', 'Selesai')
+                                    ->paginate(10);
 
 
 
@@ -43,7 +56,7 @@ $order_lists = DB::table('Bookings')
      //                    ->get();
     //  dd($orderlists);
 
-     return view('Admin.master', compact('order_lists'));
+     return view('Admin.master', compact('belumdiverifikasi','terverifikasi','selesai'));
  }
 
  public function VerifikasiPembayaran($orderid)
@@ -130,6 +143,15 @@ $order_lists = DB::table('Bookings')
 
     return redirect('admin')->with('$order_lists');
 
+ }
+
+ public function modaldaetail($order_id)
+ {
+   $orderdetail = DB::table('Bookings')
+               ->select('bookings.*')
+               ->join('users', 'users.id', '=', 'bookings.user_id')
+               ->first();
+   return view('admin.modalview', ['sd' => $sd])->render();           
  }
 
 }

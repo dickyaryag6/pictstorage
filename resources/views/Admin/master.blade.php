@@ -17,6 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
   <link rel="stylesheet" href="{{asset('/css/modal.css')}}">
 
+
   <!-- <link rel="stylesheet" href="/css/desaintabel.css"> -->
 
 
@@ -175,27 +176,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <!-- <a href="#" class="nav-link active">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Starter Pages
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a> -->
-            <ul class="nav nav-treeview">
+
+            <!-- <ul class="nav nav-treeview"> -->
               <!-- <li class="nav-item">
                 <router-link href="#" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>Dashboard</p>
                 </router-link>
               </li> -->
+              <!-- <li class="nav-item">
+                  <router-link href="" class="nav-link">
+                  <i class="nav-icon fa fa-times-circle"></i>
+                  <p>Belum dikonfirmasi</p>
+                  </router-link>
+              </li>
               <li class="nav-item">
-                <a href="{{url("/logout")}}" class="nav-link">
+                  <router-link href="#" class="nav-link">
+                  <i class="nav-icon fa fa-check"></i>
+                  <p>Sudah dikonfirmasi</p>
+                  </router-link>
+              </li>
+              <li class="nav-item">
+                  <router-link href="#" class="nav-link">
+                  <i class="nav-icon fa fa-history"></i>
+                  <p>Selesai</p>
+                  </router-link>
+              </li> -->
+              <li class="nav-item">
+                  <a href="{{url("/logout")}}" class="nav-link">
                   <i class="nav-icon fa fa-power-off"></i>
                   <p>Logout</p>
-                </a>
+                  </a>
               </li>
-            </ul>
+            <!-- </ul> -->
           </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
@@ -254,20 +267,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                        </tr>
                      </thead>
                      <tbody>
-                   <?php if (count($order_lists) > 0) :?>
-                     <?php foreach ($order_lists as $order) : ?>
-                       <?php if ($order->status === 'Belum diverifikasi') : ?>
+                   <?php if (count($belumdiverifikasi) > 0) :?>
+                     <?php foreach ($belumdiverifikasi as $order) : ?>
+                       <?php if ($order->status === 'Sedang diverifikasi') : ?>
+                         <?php $orderid=$order->order_id; ?>
                        <tr>
                          <td><?php echo $order->order_id; ?></td>
                          <td><?php echo $order->order_type; ?></td>
                          <td><?php echo $order->date; ?></td>
-                         <td><a href="#">Detail</a></td>
+                         <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target-id="1" data-target="#myModal">View All Details</button></td>
                          <td><a href="detailbuktipembayaran/<?php echo $order->order_id; ?>">Lihat Bukti Pembayaran</a></td>
                          <td><a href="/verifikasi/<?php echo $order->order_id; ?>" type="button" class="btn btn-success">Verifikasi</a></td>
                          <td><a href="/tolak/<?php echo $order->order_id; ?>" type="button" class="btn btn-danger">Tolak</a></td>
                        </tr>
                        <?php endif; ?>
                      <?php endforeach; ?>
+                    {{ $belumdiverifikasi->links() }}
                    <?php else : ?>
                      <tr>
                        <td>-</td>
@@ -300,20 +315,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                        </tr>
                      </thead>
                      <tbody>
-                   <?php if (count($order_lists) > 0) :?>
-                     <?php foreach ($order_lists as $order) : ?>
+                   <?php if (count($terverifikasi) > 0) :?>
+                     <?php foreach ($terverifikasi as $order) : ?>
                        <?php if ($order->status === 'Terverifikasi') : ?>
+                         <?php $orderid=$order->order_id; ?>
                        <tr>
                          <td><?php echo $order->order_id; ?></td>
                          <td><?php echo $order->order_type; ?></td>
                          <td><?php echo $order->date; ?></td>
-                         <td><a href="#">Detail</a></td>
+                         <td><button type="button" class="btn btn-link" data-toggle="modal" data-target-id="1" data-target="#myModal">View All Details</button></td>
                          <?php if ($order->linkhasil === null) ?>
                          <td>
-                           <form action="/linkhasil/<?php echo $order->order_id; ?>" method="post" class='col-md-9' >
+                           <form action="/linkhasil/{{$order->order_id}}" method="post" class='col-md-9'>
                              @csrf
-                               <div>
-                                   <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil" placeholder="Link Hasil Foto">
+                               <div style="display:inline-block">
+                                   <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil" placeholder="Link Hasil Foto" required>
 
                                    @if ($errors->has('linkhasil'))
                                        <span class="invalid-feedback" role="alert">
@@ -322,8 +338,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                    @endif
                                </div>
 
-                             <div class="col-md-8">
-                                 <button type="submit" class="btn btn-primary">
+                             <div style="display:inline-block">
+                                 <button type="submit">
                                      {{ __('Submit') }}
                                  </button>
                              </div>
@@ -332,10 +348,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                        </tr>
                        <?php endif; ?>
                      <?php endforeach; ?>
+                     {{ $terverifikasi->links() }}
                    <?php else : ?>
                      <tr>
-                       <td>-</td>
-                       <td>-</td>
                        <td>-</td>
                        <td>-</td>
                        <td>-</td>
@@ -352,6 +367,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <h5 class='card-title'>Selesai</h5>
               </div>
+              <!-- <div id="myModal" class="modal">
+
+
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p align="center">dddddddddddddddd</p>
+                  <p align="center">dddddddddd</p>
+                </div>
+
+              </div> -->
               <div>
                 <table>
                      <thead>
@@ -365,27 +390,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                        </tr>
                      </thead>
                      <tbody>
-                   <?php if (count($order_lists) > 0) :?>
-                     <?php foreach ($order_lists as $order) : ?>
+                   <?php if (count($selesai) > 0) :?>
+                     <?php foreach ($selesai as $order) : ?>
                        <?php if ($order->status === 'Selesai') : ?>
+                        <?php $orderid=$order->order_id; ?>
                        <tr>
                          <td><?php echo $order->order_id; ?></td>
                          <td><?php echo $order->order_type; ?></td>
                          <td><?php echo $order->date; ?></td>
-                         <td><button id="detailmodal"></button>Detail</td>
+                         <td><button type="button" class="btn btn-link" data-toggle="modal" data-target-id="1" data-target="#myModal">View All Details</button></td>
                        </tr>
                        <!-- The Modal -->
-                              <div id="myModal" class="modal">
 
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                  <span class="close">&times;</span>
-
-                                </div>
-
-                              </div>
                        <?php endif; ?>
                      <?php endforeach; ?>
+                     {{$selesai->links()}}
                    <?php else : ?>
                      <tr>
                        <td>-</td>
@@ -420,7 +439,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <br>
 
 
-                      <form action='{{url("/linkhasil")}}/<?php echo $order->order_id; ?>' method="post" class='col-md-3'>
+                      <form action='{{url("/linkhasil")}}/<?php //echo $order->order_id; ?>' method="post" class='col-md-3'>
 
                       <form action="/linkhasil/<?php //echo $order->order_id; ?>" method="post" class='col-md-3'>
 
@@ -545,7 +564,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <script src=/js/app.js ></script>
-<script>
+<!-- <script>
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -571,7 +590,42 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-</script>
+</script> -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+
+            <div class="modal-body">
+              <table class="table table-striped">
+                  <tr>
+                    <td></td>
+
+                  </tr>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+      $("#societydetails").on("show.bs.modal", function(e) {
+        var id = $(e.relatedTarget).data('orderid');
+        $.get('/detail' + id, function( data ) {
+        alert(data);
+          $(".modal-body").html(data);
+        });
+
+      });
+    });
+  </script>
 
 </body>
 </html>
