@@ -13,6 +13,9 @@ use DB;
 use Redirect;
 use App\Notifications\KonfirmasiPembayaran;
 use App\Mail\HasilFoto;
+use App\Mail\PembayaranValid;
+use App\Mail\PembayaranTidakValid;
+use Mail;
 
 class AdminController extends Controller
 {
@@ -118,7 +121,7 @@ $order_lists = DB::table('Bookings')
      //email ke user ngasi tau kalo hasil fotonya sudah selesai
      $book = DB::table('bookings')->where('order_id', '=', $orderid)->get();
      $book = $book[0];
-    \Mail::to($user)->send(new HasilFoto($book));
+     Mail::to($user)->send(new HasilFoto($book));
 
     $order_lists = DB::table('bookings')
                     ->orderBy('created_at')

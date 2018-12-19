@@ -50,14 +50,12 @@
     <table width="100%">
         <tr>
             <td align="left" style="width: 40%;">
-                <h3>Nama Klien</h3>
+                <h3>{{$book->nama}}</h3>
                 <pre>
-Street 15
-123456 City
-United Kingdom
-<br /><br />
-Date: 2018-01-01
-Identifier: #uniquehash
+
+<br />
+Date: {{$book->date}}
+Identifier: {{$book->order_id}}
 Status: Paid
 </pre>
 
@@ -86,42 +84,36 @@ Status: Paid
 <br/>
 
 <div class="invoice">
-    <h3>Invoice specification #123</h3>
+    <h3>Invoice specification</h3>
     <table width="100%">
         <thead>
         <tr>
             <th>Description</th>
-            <th>Quantity</th>
             <!-- <th>Total</th> -->
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>Item 1</td>
-            <td>1</td>
-            <td align="left">€15,-</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>jenis   :{{$book->order_type}}</td>
+            <td>Tanggal :{{$book->date}}, [[$book->jam]]</td>
+            <td align="left"></td>
         </tr>
         </tbody>
 
+
         <tfoot>
+          <hr>
         <tr>
             <td colspan="1"></td>
-            <td align="left">Total</td>
-            <td align="left" class="gray">€15,-</td>
+            <td align="left">Total</td>\
+            @if ({$book->order_type === 'wedding'})
+              <td align="left" class="gray">IDR 7.000.000</td>
+            @if ({$book->order_type === 'engagement'})
+              <td align="left" class="gray">IDR 3.500.000</td>
+            @if ({$book->order_type === 'photobooth'})
+              <td align="left" class="gray">IDR 1.500.000</td>
+            @else
+              <td align="left" class="gray">IDR 2.000.000</td>
         </tr>
         </tfoot>
     </table>
