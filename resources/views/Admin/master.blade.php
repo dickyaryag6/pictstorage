@@ -310,7 +310,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                          <td><a href="#">Detail</a></td>
                          <?php if ($order->linkhasil === null) ?>
                          <td>
-                           <form action="/linkhasil/<?php echo $order->order_id; ?>" method="post" class='col-md-9' >
+                          
+                           <form action='{{url("/linkhasil")}}/<?php echo $order->order_id; ?>' method="post" class='col-md-9' >
                              @csrf
                                <div>
                                    <input type="text" class="form-control{{ $errors->has('linkhasil') ? ' is-invalid' : '' }}" name="linkhasil" id="linkhasil" placeholder="Link Hasil Foto">
