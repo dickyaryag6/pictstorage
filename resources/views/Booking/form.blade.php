@@ -81,7 +81,7 @@ $(document).ready(function(){
           <input type="hidden" id="order_type" name="order_type" value="wedding">
 
           <div class="form-group row">
-              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
+              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Tanggal') }}</label>
 
               <div class="col-md-6">
                   <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-20">
@@ -156,7 +156,7 @@ $(document).ready(function(){
           <input type="hidden" id="order_type" name="order_type" value="engagement">
 
           <div class="form-group row">
-              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
+              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Tanggal') }}</label>
 
               <div class="col-md-6">
                   <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-20">
@@ -231,7 +231,7 @@ $(document).ready(function(){
           <input type="hidden" id="order_type" name="order_type" value="photobooth">
 
           <div class="form-group row">
-              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
+              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Tanggal') }}</label>
 
               <div class="col-md-6">
                   <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-12-20">
@@ -337,7 +337,7 @@ $(document).ready(function(){
           <input type="hidden" id="order_type" name="order_type" value="studio">
 
           <div class="form-group row">
-              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
+              <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Tanggal') }}</label>
 
               <div class="col-md-6">
                   <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus min="2018-20-13">

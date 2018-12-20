@@ -42,15 +42,14 @@
             <!-- <input type="hidden" id="order_type" name="order_type" value="wedding"> -->
             <div class="form-group row">
               <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Jenis') }}</label>
-                <div class="btn btn-dark" >
+                <div class="col-md-4">
                   <?php $ordertype=ucfirst($hasilforms['order_type']); ?>
-                  <p><?php echo $ordertype; ?></p>
+                  <p style="border-style:solid;"><?php echo $ordertype ?></p>
                 </div>
-
             </div>
             <input type="hidden" id="order_type" name="order_type" value="<?php echo $hasilforms['order_type'] ?>">
             <div class="form-group row">
-                <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
+                <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Tanggal') }}</label>
 
                 <div class="col-md-6">
                     <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" value="<?php echo $hasilforms['date']; ?>" required autofocus></input>
@@ -106,7 +105,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Date') }}</label>
+                    <label for="date" class="col-sm-4 col-form-label text-md-right">{{ __('Tanggal') }}</label>
 
                     <div class="col-md-6">
                         <input id="date" type="date" class="form-control{{ $errors->has('date') ? ' is-invalid' : '' }}" name="date" required autofocus>
@@ -178,7 +177,7 @@
                     <br>
                     <p>{{ __('Orang') }}</p>
                 </div>
-
+                @endif
                 <div class="form-group row mb-0">
                     <div class="col-md-8 offset-md-4">
                         <button type="submit" class="btn btn-primary">
@@ -187,8 +186,8 @@
                     </div>
                 </div>
             </form>
-            @endif
-<!-- 
+
+<!--
 
             <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
@@ -206,3 +205,6 @@
       </div>
     </div>
 </div>
+<br><br><br><br><br>
+@include('layouts.footer')
+</body>

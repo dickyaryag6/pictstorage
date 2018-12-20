@@ -18,10 +18,10 @@
           <?php $user = Auth::user(); ?>
              <h1 class=""><?php echo $user->nama; ?></h1>
 
-         <a href='{{url("/edit-profile")}}'> <button type="button" class="btn btn-success">Edit Profile</button></a>  <!-- <button type="button" class="btn btn-success">Access Calendar</button> -->
+         <a href='/edit-profile/{{$user->id}}'> <button type="button" class="btn btn-success">Edit Profile</button></a>  <!-- <button type="button" class="btn btn-success">Access Calendar</button> -->
 <br>
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBG685vI07-3MsuqJxjCfzIabfFJJG-8yM-ppvjjNpD5QNtWNE4A"></a>
+      <!-- <div class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBG685vI07-3MsuqJxjCfzIabfFJJG-8yM-ppvjjNpD5QNtWNE4A"></a> -->
 
         </div>
     </div>
@@ -151,7 +151,7 @@
                    @endforeach
                    {{ $terverifikasi->links() }}
                   @else
-                    <h5>Anda belum pernah Booking</h5>
+                    <h5>Belum ada booking yang sudah dikonfirmasi</h5>
                   @endif
                   <br>
                 </div>

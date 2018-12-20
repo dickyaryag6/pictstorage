@@ -22,7 +22,7 @@
     <!-- Custom CSS -->
     <style>
     body {
-       
+
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
 
@@ -43,50 +43,51 @@
    <div class="">
 <div class="row">
 <div class="col-md-10 ">
-<form class="form-horizontal">
+    <?php $user = Auth::user(); ?>
+<form class="form-horizontal" method="POST" action="update/{{$user->id}}">
 <fieldset>
-
+@csrf
 <!-- Form Name -->
 <br>
 <h2 align="center">Edit Profile</h2>
 <br>
 
-<!-- File Button --> 
-<div class="form-group">
+<!-- File Button -->
+<!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
   <div class="col-md-4">
     <input id="Upload photo" name="Upload photo" class="input-file" type="file">
   </div>
-</div>
+</div> -->
 
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Name (Full name)">Name (Full name)</label>  
+  <label class="col-md-4 control-label" for="nama">Nama</label>
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
         <i class="fa fa-user">
         </i>
        </div>
-       <input id="Name (Full name)" name="Name (Full name)" type="text" placeholder="Name (Full name)" class="form-control input-md">
-      </div>  
+       <input id="nama" name="nama" type="text" placeholder="nama" class="form-control input-md" value="{{$user->nama}}">
+      </div>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Email Address">Email Address</label>  
+  <label class="col-md-4 control-label" for="email">Email</label>
   <div class="col-md-4">
   <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-envelope-o"></i>
-        
+
        </div>
-    <input id="Email Address" name="Email Address" type="text" placeholder="Email Address" class="form-control input-md">
-    
+    <input id="email" name="email" type="text" placeholder="Email Address" class="form-control input-md" value="{{$user->email}}">
+
       </div>
-  
+
   </div>
 </div>
 
@@ -94,54 +95,54 @@
 
 
 <!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Date Of Birth">Date Of Birth</label>  
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="Date Of Birth">Date Of Birth</label>
   <div class="col-md-4">
 
   <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-birthday-cake"></i>
-        
+
        </div>
        <input id="Date Of Birth" name="Date Of Birth" type="text" placeholder="Date Of Birth" class="form-control input-md">
       </div>
   </div>
-</div>
+</div> -->
 
 <!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Address</label>  
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Address</label>
   <div class="col-md-2  col-xs-4">
   <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)">Address</textarea>
   </div>
- <!--  <div class="col-md-2 col-xs-4">
+  <div class="col-md-2 col-xs-4">
 
   <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Area" class="form-control input-md ">
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Permanent Address"></label>  
+  <label class="col-md-4 control-label" for="Permanent Address"></label>
   <div class="col-md-2  col-xs-4">
   <input id="Permanent Address" name="Permanent Address" type="text" placeholder="Street" class="form-control input-md ">
-  
-  </div> -->
-</div>
+
+  </div>
+</div> -->
 
 
 
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Gender">Gender</label>
-  <div class="col-md-4"> 
+  <label class="col-md-4 control-label" for="Jenis Kelamin">Gender</label>
+  <div class="col-md-4">
     <label class="radio-inline" for="Gender-0">
-      <input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
-      Male
-    </label> 
+      <input type="radio" name="JenisKelamin" id="Laki-laki" value="Laki-laki" checked="checked">
+      Laki-laki
+    </label>
     <label class="radio-inline" for="Gender-1">
-      <input type="radio" name="Gender" id="Gender-1" value="2">
-      Female
-    </label> 
+      <input type="radio" name="JenisKelamin" id="Perempuan" value="Perempuan">
+      Perempuan
+    </label>
   <!--   <label class="radio-inline" for="Gender-2">
       <input type="radio" name="Gender" id="Gender-2" value="3">
       Other
@@ -152,17 +153,17 @@
 
 <!-- Text input-->
 <!-- <div class="form-group">
-  <label class="col-md-4 control-label" for="Primary Occupation">Primary Occupation</label>  
+  <label class="col-md-4 control-label" for="Primary Occupation">Primary Occupation</label>
   <div class="col-md-4">
   <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-briefcase"></i>
-        
+
        </div>
       <input id="Primary Occupation" name="Primary Occupation" type="text" placeholder="Primary Occupation" class="form-control input-md">
       </div>
-  
-    
+
+
   </div>
 </div> -->
 
@@ -170,30 +171,30 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Phone number ">Phone number </label>  
+  <label class="col-md-4 control-label" for="NoTelepon">No. Telepon </label>
   <div class="col-md-4">
   <!-- <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-phone"></i>
-        
+
        </div>
     <input id="Phone number " name="Phone number " type="text" placeholder="Primary Phone number " class="form-control input-md">
-    
+
       </div> -->
       <div class="input-group othertop">
        <div class="input-group-addon">
      <i class="fa fa-mobile fa-1x" style="font-size: 20px;"></i>
-        
+
        </div>
-    <input id="Phone number " name="Phone number " type="text" placeholder="Phone number " class="form-control input-md">
-    
+    <input id="NoTelepon" name="NoTelepon" type="text" placeholder="NoTelepon" class="form-control input-md">
+
       </div>
-  
+
   </div>
 </div>
 
 
-<!-- 
+<!--
 <!-- Multiple Checkboxes -->
 <!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Languages Known">Languages Known</label>
@@ -225,31 +226,31 @@
 
 <div class="othertop">
     <label for="Languages Known-4">
-    
-     
-  
+
+
+
     </label>
 
      <input type="input" name="LanguagesKnown" id="Languages Known-4"  placeholder="Other Language">
     </div>
-    
+
   </div>
 </div>
 
  Text input
 <div class="form-group">
-  <label class="col-md-4 control-label" for="License No.">License No.</label>  
+  <label class="col-md-4 control-label" for="License No.">License No.</label>
   <div class="col-md-4">
   <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-sticky-note-o"></i>
-        
+
        </div>
    <input id="License No." name="License No." type="text" placeholder="License No." class="form-control input-md">
-    
+
       </div>
- 
-    
+
+
   </div>
 </div>
 
@@ -276,25 +277,27 @@
     </label>
     </div>
   </div>
-</div> --> --> -->
-
+</div> -->
 
 
 <!-- Textarea -->
 <!-- <div class="form-group">
   <label class="col-md-4 control-label" for="Overview (max 200 words)">Overview (max 200 words)</label>
-  <div class="col-md-4">                     
+  <div class="col-md-4">
     <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)">Overview</textarea>
   </div>
 </div> -->
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" ></label>  
+  <label class="col-md-4 control-label" ></label>
   <div class="col-md-4">
-  <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</a>
-  <a href="#" class="btn btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
-    
+    <button type="submit" class="btn btn-success">
+        <span class="glyphicon glyphicon-thumbs-up"></span> Submit
+    </button>
+  <!-- <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</a> -->
+  <!-- <a href="#" class="btn btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a> -->
+
   </div>
 </div>
 

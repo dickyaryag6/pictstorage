@@ -41,26 +41,8 @@
       </span>
       </pre>
       </table>
-      <form action='save' method="post">
-          @csrf
-          <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {?>
-            <input type="hidden" id="order_type" name="order_type" value=<?php echo $hasilforms['order_type']; ?>>
-            <input type="hidden" id="date" name="date" value=<?php echo $hasilforms['date']; ?>>
-            <input type="hidden" id="jam" name="jam" value=<?php echo $hasilforms['jam']; ?>>
-            <input type="hidden" id="location" name="location" value=<?php echo $hasilforms['location']; ?>>
-          <?php } else { ?>
-            <input type="hidden" id="order_type" name="order_type" value=<?php echo $hasilforms['order_type']; ?>>
-            <input type="hidden" id="date" name="date" value=<?php echo $hasilforms['date']; ?>>
-            <input type="hidden" id="jam" name="jam" value=<?php echo $hasilforms['jam']; ?>>
-            <input type="hidden" id="location" name="location" value=<?php echo $hasilforms['location']; ?>>
-            <input type="hidden" id="durasi" name="durasi" value=<?php echo $hasilforms['durasi']; ?>>
-            <input type="hidden" id="jumlah_orang" name="jumlah_orang" value=<?php echo $hasilforms['jumlah_orang']; ?>>
-        <?php  } ?>
-        <!-- <button type="button" href='/edit?>' class="btn btn-primary">Edit</button> -->
-        <button type="submit" class="btn btn-primary">Konfirmasi</button>
 
-      </form>
-      <form action='edit' method="post">
+      <form action='edit' method="post" style="display: inline-block;">
           @csrf
           <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {?>
             <input type="hidden" id="order_type" name="order_type" value=<?php echo $hasilforms['order_type']; ?>>
@@ -77,6 +59,26 @@
         <?php  } ?>
         <!-- <button type="button" href='/edit?>' class="btn btn-primary">Edit</button> -->
         <button type="submit" class="btn btn-primary">Edit</button>
+
+      </form>
+
+      <form action='save' method="post" style="display: inline-block;">
+          @csrf
+          <?php if ($hasilforms['order_type'] === 'wedding' || $hasilforms['order_type'] === 'engagement') {?>
+            <input type="hidden" id="order_type" name="order_type" value=<?php echo $hasilforms['order_type']; ?>>
+            <input type="hidden" id="date" name="date" value=<?php echo $hasilforms['date']; ?>>
+            <input type="hidden" id="jam" name="jam" value=<?php echo $hasilforms['jam']; ?>>
+            <input type="hidden" id="location" name="location" value=<?php echo $hasilforms['location']; ?>>
+          <?php } else { ?>
+            <input type="hidden" id="order_type" name="order_type" value=<?php echo $hasilforms['order_type']; ?>>
+            <input type="hidden" id="date" name="date" value=<?php echo $hasilforms['date']; ?>>
+            <input type="hidden" id="jam" name="jam" value=<?php echo $hasilforms['jam']; ?>>
+            <input type="hidden" id="location" name="location" value=<?php echo $hasilforms['location']; ?>>
+            <input type="hidden" id="durasi" name="durasi" value=<?php echo $hasilforms['durasi']; ?>>
+            <input type="hidden" id="jumlah_orang" name="jumlah_orang" value=<?php echo $hasilforms['jumlah_orang']; ?>>
+        <?php  } ?>
+        <!-- <button type="button" href='/edit?>' class="btn btn-primary">Edit</button> -->
+        <button type="submit" class="btn btn-primary">Konfirmasi</button>
 
       </form>
 

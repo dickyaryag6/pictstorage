@@ -21,7 +21,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
 Route::get('/register', function () {
     return view('register');
 });
@@ -31,9 +30,8 @@ Route::get('/register', function () {
 // });
 Route::get('/profile/{user}', 'BookingController@showprofile');
 
-Route::get('/edit-profile', function () {
-    return view('edit-profile');
-});
+Route::get('/edit-profile/{user_id}', 'UserController@edit');
+Route::post('/update/{user_id}', 'UserController@update');
 Route::get('/pricelist', function () {
     return view('pricelist');
 });

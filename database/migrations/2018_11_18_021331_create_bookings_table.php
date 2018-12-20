@@ -24,7 +24,7 @@ class CreateBookingsTable extends Migration
             $table->integer('jumlah_orang')->nullable();
             $table->string('bukti_pembayaran')->nullable();
             $table->string('linkhasil')->nullable();
-            $table->string('status')->default('Belum Terverifikasi');
+            $table->string('status')->default('Belum diverifikasi');
             $table->timestamps();
 
             //dibawah ini ngasi tau kalo atribut user_id dari kolom 'bookings' adalah foreign key dari

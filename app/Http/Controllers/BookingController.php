@@ -88,6 +88,7 @@ class BookingController extends Controller
                                           ->orWhere('status', 'Sedang diverifikasi')
                                           ->orderBy('order_id', 'desc')->paginate(1);
 
+
       $terverifikasi = Booking::where('user_id', $user_id)
                                           ->where('status','Terverifikasi')
                                           ->orderBy('order_id', 'desc')->paginate(1);
